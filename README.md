@@ -119,18 +119,36 @@ Weitere Merkmale:
 
 ## Veröffentlichen mit GitHub Pages
 
-1. Repository zu GitHub pushen (Branch `main`).
-2. Unter **Settings → Pages → Build and deployment** als Quelle **GitHub Actions** wählen.
-3. Der Workflow `.github/workflows/deploy.yml` baut und veröffentlicht die Seite automatisch.
-4. Die Adresse ist danach `https://<user>.github.io/<repo>/`.
+Die Website liegt auf GitHub Pages im Branch **`gh-pages`**.
+Der Branch wird aus dem Build erzeugt und sollte nicht direkt bearbeitet werden.
 
-Der Workflow setzt für Projekt-Repositories automatisch den Pfad-Präfix `/<repo>/`.
+```bash
+npm run publish
+```
+
+Das Skript:
+
+1. baut die Seite mit dem richtigen Pfad-Präfix,
+2. kopiert `_site/` in ein temporäres Verzeichnis,
+3. pusht den Inhalt nach `gh-pages`.
+
+Einmalige Einstellung auf GitHub: **Settings → Pages → Build and deployment →
+Source: Deploy from a branch → Branch: `gh-pages` → Ordner `/ (root)`**.
+
+Die Adresse ist danach `https://<user>.github.io/<repo>/`.
+Bei einem Repository namens `<user>.github.io` entfällt der Unterpfad automatisch.
+
 Für eine **eigene Domain** (z. B. `pfandlerhof.com`):
 
 1. In GitHub Pages die Domain eintragen und beim DNS-Anbieter die nötigen Einträge setzen.
-2. In `.github/workflows/deploy.yml` den Wert von `PATH_PREFIX` auf `/` ändern.
-3. In `src/_data/site.json` unter `url` die endgültige Adresse eintragen.
-4. Erneut pushen.
+2. In `src/_data/site.json` unter `url` die endgültige Adresse eintragen.
+3. Beim Veröffentlichen `PATH_PREFIX=/ npm run publish` verwenden.
+4. Erneut pushen bzw. veröffentlichen.
+
+> GitHub Actions ist bewusst nicht nötig. Die Veröffentlichung über den
+> `gh-pages`-Branch funktioniert unabhängig von Actions und verbraucht keine
+> Minuten. Wer später auf Actions umstellen möchte, kann den Build-Schritt
+> `npm run build` mit `PATH_PREFIX` in einen eigenen Workflow übernehmen.
 
 ## Vor dem Livegang prüfen
 

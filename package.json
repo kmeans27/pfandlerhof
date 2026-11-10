@@ -11,7 +11,8 @@
     "serve": "eleventy --serve",
     "watch:assets": "node scripts/build-assets.mjs --watch",
     "images": "node scripts/prepare-images.mjs",
-    "check": "node scripts/check-links.mjs"
+    "check": "node scripts/check-links.mjs",
+    "publish": "node scripts/publish.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
