@@ -6,14 +6,13 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgb(251 247 240 / 94%);
+  background: var(--header-bg);
   border-bottom: 1px solid transparent;
   transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
 }
 
 @supports (backdrop-filter: blur(12px)) {
   .site-header {
-    background: rgb(251 247 240 / 82%);
     backdrop-filter: blur(14px);
   }
 }
@@ -29,6 +28,19 @@
   justify-content: space-between;
   gap: 1.5rem;
   min-height: 5.25rem;
+}
+
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: none;
+}
+
+@media (min-width: 1181px) {
+  .site-nav {
+    margin-left: auto;
+  }
 }
 
 .brand {
@@ -145,6 +157,64 @@
   font-weight: 700;
 }
 
+/* Hell-/Dunkel-Umschalter */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.65rem;
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: border-color 180ms var(--ease), background-color 180ms var(--ease);
+}
+
+.theme-toggle:hover {
+  background: var(--white);
+  border-color: var(--green);
+}
+
+.theme-toggle__icons {
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: none;
+}
+
+.theme-toggle__icons .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.theme-toggle__sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle__moon {
+  display: none;
+}
+
+.theme-toggle--icon {
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
+}
+
+.theme-toggle--menu {
+  display: none;
+}
+
 .nav-toggle__icon {
   position: relative;
   display: grid;
@@ -168,6 +238,13 @@
 @media (max-width: 1180px) {
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .theme-toggle--menu {
+    display: inline-flex;
+    width: 100%;
+    min-height: 3rem;
+    justify-content: center;
   }
 
   .site-nav {
@@ -234,6 +311,12 @@
   }
 }
 
+@media (min-width: 1181px) and (max-width: 1280px) {
+  .site-nav__phone {
+    display: none;
+  }
+}
+
 @media (max-width: 520px) {
   .site-header__inner {
     min-height: 4.5rem;
@@ -253,6 +336,11 @@
 
   .nav-toggle {
     padding-inline: 0.85rem;
+  }
+
+  .theme-toggle--icon {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .site-nav {
@@ -495,7 +583,7 @@
 
 .apartment-card__media {
   display: block;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--green-soft);
 }
@@ -666,7 +754,7 @@
 .section--green .chip {
   background: transparent;
   border-color: rgb(255 255 255 / 25%);
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .section--green .chip__icon {
@@ -797,8 +885,48 @@
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.gallery__item[hidden] {
+  display: none;
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-filter {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 180ms var(--ease), border-color 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.gallery-filter:hover {
+  border-color: var(--green);
+}
+
+.gallery-filter[aria-pressed="true"] {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--cream);
+}
+
+.gallery-count {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .gallery__item {
@@ -818,6 +946,12 @@
   height: 100%;
   object-fit: cover;
   transition: transform 600ms var(--ease);
+}
+
+.gallery__item picture,
+.apartment-card__media picture,
+.v2-panel picture {
+  height: 100%;
 }
 
 .gallery__item:hover .gallery__img {
@@ -845,12 +979,6 @@
 }
 
 @media (max-width: 900px) {
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
   .gallery__grid {
     grid-template-columns: 1fr;
   }
@@ -914,7 +1042,7 @@
   background: rgb(255 255 255 / 92%);
   border: 0;
   border-radius: 50%;
-  color: var(--ink);
+  color: #23281f;
 }
 
 .lightbox__close {
@@ -1020,6 +1148,12 @@
   border-color: var(--green);
   outline: 3px solid rgb(169 117 47 / 22%);
   outline-offset: 1px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
 }
 
 .field--check {
@@ -1157,6 +1291,12 @@
   line-height: 1.5;
 }
 
+@media (min-width: 860px) {
+  .info-grid--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 720px) {
   .info-grid {
     grid-template-columns: 1fr;
@@ -1170,7 +1310,7 @@
 .cta-band {
   padding-block: clamp(3.5rem, 8vw, 6rem);
   background: var(--green-dark);
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .cta-band__inner {
@@ -1187,7 +1327,7 @@
 
 .cta-band h2 {
   margin-bottom: 0.6rem;
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .cta-band p {
@@ -1206,7 +1346,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--cream);
+  color: var(--on-dark);
   font-weight: 600;
   text-decoration: none;
 }
@@ -1222,7 +1362,7 @@
 .site-footer {
   padding-top: clamp(3rem, 7vw, 5rem);
   background: var(--green-deep);
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .footer__grid {
@@ -1234,7 +1374,7 @@
 
 .footer__name {
   margin-bottom: 0.4rem;
-  color: var(--cream);
+  color: var(--on-dark);
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 600;
@@ -1269,7 +1409,7 @@
 
 .footer__title {
   margin-bottom: 1rem;
-  color: var(--cream);
+  color: var(--on-dark);
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
@@ -1385,7 +1525,7 @@
     justify-content: center;
     gap: 0.5rem;
     min-height: 3.6rem;
-    color: var(--cream);
+    color: var(--on-dark);
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
@@ -1397,7 +1537,7 @@
 
   .mobile-bar__item--primary {
     background: var(--hay);
-    color: #fff;
+    color: #1b150c;
   }
 
   .mobile-bar__item .icon {

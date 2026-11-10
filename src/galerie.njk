@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Galerie"
-description: "Bilder vom Pfandlerhof, den Ferienwohnungen, dem Hof und der Landschaft im Passeiertal."
+description: "Bilder der Ferienwohnungen, der Zimmer und des Ausblicks über das Passeiertal."
 activeNav: galerie
 ---
 
@@ -14,14 +14,22 @@ activeNav: galerie
     <div class="page-hero__text">
       <p class="eyebrow">Galerie</p>
       <h1>Bilder sagen mehr als Worte.</h1>
-      <p class="page-hero__lead">Ein paar Eindrücke vom Hof, von den Wohnungen und von dem, was uns jeden Tag Freude macht. Klicken oder tippen Sie auf ein Bild, um es größer zu sehen.</p>
+      <p class="page-hero__lead">Ein paar Eindrücke von den Wohnungen, den Zimmern und dem Blick über das Passeiertal. Klicken oder tippen Sie auf ein Bild, um es größer zu sehen.</p>
     </div>
   </div>
 </section>
 
 <section class="section section--tight">
   <div class="container">
-    <div class="gallery__grid">
+    <div class="gallery-filters" role="group" aria-label="Galerie filtern">
+      <button type="button" class="gallery-filter" data-filter="all" aria-pressed="true">Alle</button>
+      <button type="button" class="gallery-filter" data-filter="wohnungen" aria-pressed="false">Wohnungen</button>
+      <button type="button" class="gallery-filter" data-filter="aussen" aria-pressed="false">Haus &amp; Ausblick</button>
+      <button type="button" class="gallery-filter" data-filter="hof" aria-pressed="false">Am Hof</button>
+    </div>
+    <p class="gallery-count" data-gallery-count aria-live="polite"></p>
+
+    <div class="gallery__grid" data-gallery-grid>
       {% for item in gallery %}
         {{ galleryItem(item) }}
       {% endfor %}

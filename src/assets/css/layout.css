@@ -26,13 +26,13 @@
 }
 
 .section--green {
-  background: var(--green);
-  color: var(--cream);
+  background: var(--green-section);
+  color: var(--on-dark);
 }
 
 .section--green h2,
 .section--green h3 {
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .section--green p {
@@ -40,7 +40,7 @@
 }
 
 .section--green a {
-  color: var(--cream);
+  color: var(--on-dark);
 }
 
 .section--green a:hover {

@@ -1,0 +1,68 @@
+/* =========================================================
+   Dunkles Design
+   ========================================================= */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --cream: #111712;
+  --paper: #182019;
+  --white: #1e2820;
+  --ink: #f3f0e7;
+  --muted: #b7c0b0;
+  --green: #a8c89f;
+  --green-dark: #0d120e;
+  --green-deep: #090d0a;
+  --green-soft: #1d281e;
+  --green-section: #1b291d;
+  --hay: #d8ab66;
+  --hay-light: #e8ca98;
+  --hay-soft: #332817;
+  --line: #2a352b;
+  --line-strong: #3b493c;
+  --header-bg: rgb(17 23 18 / 92%);
+  --shadow: 0 24px 48px -28px rgb(0 0 0 / 65%);
+}
+
+[data-theme="dark"] .site-header {
+  background: var(--header-bg);
+}
+
+[data-theme="dark"] .hero__note {
+  background: rgb(24 31 25 / 96%);
+}
+
+[data-theme="dark"] .apartment-card__badge,
+[data-theme="dark"] .apartment-detail__label {
+  color: #f2dab5;
+}
+
+[data-theme="dark"] .required {
+  color: #ff9f8d;
+}
+
+[data-theme="dark"] .btn--primary:hover {
+  background: #c3ddb8;
+  color: #172015;
+}
+
+[data-theme="dark"] .btn--light,
+[data-theme="dark"] .section--green .btn--light {
+  background: #f4f1e8;
+  color: #22382a;
+}
+
+[data-theme="dark"] .btn--light:hover,
+[data-theme="dark"] .section--green .btn--light:hover {
+  background: #ffffff;
+  color: #22382a;
+}
+
+[data-theme="dark"] .lightbox__close,
+[data-theme="dark"] .lightbox__nav {
+  color: #23281f;
+}
+
+[data-theme="dark"] .mobile-bar__item--primary {
+  color: #1b150c;
+}

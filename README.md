@@ -1,11 +1,12 @@
 # Pfandlerhof – Website
 
-Neue Website für den **Pfandlerhof**, Urlaub auf dem Bauernhof in St. Martin in Passeier (Südtirol).
-Bewusst einfach gehalten: große Schrift, klare Navigation, keine Cookies, kein Tracking, keine externen Schriften oder Karten.
+Neue Website für den **Pfandlerhof** in St. Martin in Passeier (Südtirol) – im Mittelpunkt stehen die beiden Ferienwohnungen, die Zimmer und der Blick über das Passeiertal. Der Hof ist nur noch ein kleiner Nebenstrang.
+Bewusst einfach gehalten: große Schrift, klare Navigation, keine Cookies, kein Tracking, keine externen Schriften oder Karten. Dazu ein Hell-/Dunkel-Umschalter und eine alternative Designvariante.
 
 Die Inhalte stammen von der bisherigen Website, dem Roter-Hahn-Eintrag, HolidayCheck und Airbnb.
 
 **Live-Vorschau:** <https://kmeans27.github.io/pfandlerhof/>
+**Designvariante 2:** <https://kmeans27.github.io/pfandlerhof/variante-2/>
 
 ## Schnellstart
 
@@ -30,7 +31,7 @@ Das Ergebnis liegt in `_site/` und kann auf jedem Webserver gehostet werden.
 | [Eleventy 3](https://www.11ty.dev/) | Statische Seiten aus Nunjucks-Templates |
 | [esbuild](https://esbuild.github.io/) | Bündelt und minifiziert CSS und JavaScript |
 | [sharp](https://sharp.pixelplumbing.com/) | Erzeugt WebP- und JPEG-Varianten der Fotos |
-| Vanilla JS | Navigation, Galerie-Lightbox, Anfrageformular |
+| Vanilla JS | Navigation, Hell/Dunkel-Modus, Galerie-Filter, Lightbox, Anfrageformular |
 
 Kein Framework im Browser, kein Build-Schritt beim Aufruf, keine Datenbank.
 Schriften (Fraunces, Source Sans 3) liegen selbst gehostet in `src/assets/fonts/` (SIL Open Font License).
@@ -55,14 +56,17 @@ src/
     components/         Wiederverwendbare Makros (Bild, Button, Karten …)
   assets/
     css/                tokens, base, layout, components, pages
-    js/modules/         nav, header, lightbox, inquiry-form
+                        theme-dark.css, variant-2.css
+    js/modules/         nav, header, theme, lightbox, gallery-filter,
+                        inquiry-form
     img/                Optimierte Bilder (generiert)
     fonts/              Selbst gehostete Schriften
-  index.njk             Startseite
+  index.njk             Startseite (Wohnungen, Zimmer, Ausblick)
+  variante-2.njk        Alternative Designvariante (filmisch, bildstark)
   ferienwohnungen.njk   Wohnungen & Preise
-  der-hof.njk           Hof, Tiere, Produkte
+  der-hof.njk           Am Hof: Tiere, Produkte, Hofleben
   umgebung.njk          Wandern, Ausflüge, Winter
-  galerie.njk           Bildergalerie
+  galerie.njk           Bildergalerie mit Filtern
   kontakt.njk           Kontakt, Formular, Anfahrt
   impressum.njk         Impressum
   datenschutz.njk       Datenschutz
@@ -101,22 +105,36 @@ Die Bildbreiten werden über den Filter `widths` automatisch passend gewählt:
 Wenn ein Motiv mit einer anderen Maximalbreite dazukommt, entweder die passenden
 Breiten im Manifest erzeugen oder den Filter in `eleventy.config.js` erweitern.
 
+## Hell/Dunkel & Designvarianten
+
+- Der Sonne-/Mond-Schalter im Header wechselt zwischen **Hell** und **Dunkel**.
+- Beim ersten Besuch entscheidet die Systemeinstellung; die Auswahl wird im
+  `localStorage` gespeichert (`pf-theme`).
+- Im mobilen Menü gibt es zusätzlich einen beschrifteten Schalter
+  („Dunkelmodus“/„Hellmodus“).
+- Die alternative Startseite liegt unter **`/variante-2/`** (filmischer,
+  bildstärker, mit großen Panels und einem Mosaik aus Zimmerbildern).
+  Sie ist `noindex` und nicht in der Hauptnavigation verlinkt.
+  Wenn sie besser gefällt, kann sie später zur Hauptstartseite werden.
+
 ## Qualitätssicherung
 
 ```bash
 npm run check     # prüft alle internen Links und Bildpfade in _site/
 ```
 
-Lighthouse (lokal, Startseite und Kontakt):
+Lighthouse (Startseite, Wohnungen, Galerie, Am Hof, Kontakt und Variante 2 –
+jeweils in Hell und Dunkel):
 **Accessibility 100 · Best Practices 100 · SEO 100**.
 
 Weitere Merkmale:
 
-- vollständig responsive, getestet bei 390 px und 1440 px
+- vollständig responsive, ohne horizontalen Überlauf von 360 bis 1440 px
 - Tastaturbedienbar, Fokus-Stile, Skip-Link, `aria`-Attribute
 - `prefers-reduced-motion` wird respektiert
 - keine Layoutsprünge durch feste Bildmaße und `srcset`
 - WebP mit JPEG-Fallback
+- Galerie mit Filtern und Lightbox, die nur die sichtbaren Bilder durchblättert
 - Formular funktioniert auch ohne JavaScript (öffnet dann das E-Mail-Programm)
 
 ## Veröffentlichen mit GitHub Pages

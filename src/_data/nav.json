@@ -1,13 +1,13 @@
 [
   {
     "key": "wohnungen",
-    "label": "Ferienwohnungen",
+    "label": "Wohnungen",
     "url": "/ferienwohnungen/"
   },
   {
-    "key": "hof",
-    "label": "Der Hof",
-    "url": "/der-hof/"
+    "key": "galerie",
+    "label": "Galerie",
+    "url": "/galerie/"
   },
   {
     "key": "umgebung",
@@ -15,9 +15,9 @@
     "url": "/umgebung/"
   },
   {
-    "key": "galerie",
-    "label": "Galerie",
-    "url": "/galerie/"
+    "key": "hof",
+    "label": "Am Hof",
+    "url": "/der-hof/"
   },
   {
     "key": "kontakt",

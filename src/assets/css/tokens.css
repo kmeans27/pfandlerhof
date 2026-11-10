@@ -19,6 +19,8 @@
 }
 
 :root {
+  color-scheme: light;
+
   /* Farben */
   --cream: #fbf7f0;
   --paper: #fffdf9;
@@ -29,11 +31,14 @@
   --green-dark: #22382a;
   --green-deep: #1b2d21;
   --green-soft: #e9eee5;
+  --green-section: #2e4a34;
   --hay: #96652a;
   --hay-light: #e2c290;
   --hay-soft: #f3e8d6;
   --line: #e5ded0;
   --line-strong: #d3c8b5;
+  --on-dark: #f6f2e8;
+  --header-bg: rgb(251 247 240 / 92%);
 
   /* Typografie */
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;

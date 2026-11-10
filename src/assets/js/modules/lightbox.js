@@ -1,14 +1,13 @@
 /**
  * Bildergalerie mit nativem <dialog>
  * ----------------------------------
- * Funktioniert ohne Bibliothek, ist per Tastatur bedienbar und fällt
- * ohne JavaScript auf normale Links zurück (die Bilder öffnen sich dann
- * in einem neuen Tab – siehe Markup in cards.njk).
+ * Die sichtbaren Bilder werden bei jedem Öffnen neu ermittelt, damit
+ * die Galerie-Filter auch für die Vor/Zurück-Navigation gelten.
  */
 export function initLightbox() {
-  const items = Array.from(document.querySelectorAll("[data-lightbox]"));
+  const triggers = Array.from(document.querySelectorAll("[data-lightbox]"));
   const dialog = document.getElementById("lightbox");
-  if (!items.length || !dialog || typeof dialog.showModal !== "function") return;
+  if (!triggers.length || !dialog || typeof dialog.showModal !== "function") return;
 
   const image = dialog.querySelector("[data-lightbox-img]");
   const caption = dialog.querySelector("[data-lightbox-caption]");
@@ -17,10 +16,15 @@ export function initLightbox() {
   const previous = dialog.querySelector("[data-lightbox-prev]");
   const next = dialog.querySelector("[data-lightbox-next]");
 
+  let items = [];
   let index = 0;
   let lastFocus = null;
 
+  const visibleItems = () =>
+    triggers.filter((item) => !item.hidden && item.offsetParent !== null);
+
   const show = (newIndex) => {
+    if (!items.length) return;
     index = (newIndex + items.length) % items.length;
     const item = items[index];
     const thumbnail = item.querySelector("img");
@@ -31,9 +35,12 @@ export function initLightbox() {
     counter.textContent = `${index + 1} / ${items.length}`;
   };
 
-  const open = (newIndex) => {
+  const open = (item) => {
+    items = visibleItems();
+    if (!items.length) return;
+
     lastFocus = document.activeElement;
-    show(newIndex);
+    show(items.indexOf(item));
     dialog.showModal();
     document.body.classList.add("modal-open");
     closeButton.focus();
@@ -41,10 +48,10 @@ export function initLightbox() {
 
   const close = () => dialog.close();
 
-  items.forEach((item, itemIndex) => {
+  triggers.forEach((item) => {
     item.addEventListener("click", (event) => {
       event.preventDefault();
-      open(itemIndex);
+      open(item);
     });
   });
 

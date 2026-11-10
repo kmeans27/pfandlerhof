@@ -60,6 +60,7 @@
     href="{{ ('/assets/img/' + item.src + '-' + item.width + '.jpg') | link }}"
     class="gallery__item"
     data-lightbox
+    data-category="{{ item.category }}"
     data-full="{{ ('/assets/img/' + item.src + '-' + item.width + '.jpg') | link }}"
     data-caption="{{ item.caption }}"
     aria-label="Bild vergrößern: {{ item.caption }}">

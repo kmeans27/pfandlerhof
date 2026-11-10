@@ -3,7 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2e4a34">
+  <meta name="theme-color" content="#fbf7f0">
+
+  <script>
+    // Hell/Dunkel sofort setzen, damit beim Laden nichts aufblitzt.
+    (function () {
+      try {
+        var stored = localStorage.getItem("pf-theme");
+        var theme = stored === "dark" || stored === "light"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
 
   <title>{% if isHome %}{{ title }}{% else %}{{ title }} · {{ site.name }}{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">

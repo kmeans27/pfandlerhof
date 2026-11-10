@@ -4,23 +4,15 @@
       <span class="brand__mark" aria-hidden="true">
         <svg viewBox="0 0 64 64" role="presentation">
           <rect width="64" height="64" rx="14" fill="currentColor"/>
-          <circle cx="44" cy="19" r="5" fill="#c08a3e"/>
-          <path d="M7 47 24 23l9.5 14L40 30l17 17H7Z" fill="#fbf7f0"/>
+          <circle cx="44" cy="19" r="5" fill="var(--hay)"/>
+          <path d="M7 47 24 23l9.5 14L40 30l17 17H7Z" fill="var(--cream)"/>
         </svg>
       </span>
       <span class="brand__text">
         <span class="brand__name">Pfandlerhof</span>
-        <span class="brand__sub">Urlaub auf dem Bauernhof</span>
+        <span class="brand__sub">Ferienwohnungen in Passeier</span>
       </span>
     </a>
-
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
-      <span class="nav-toggle__label">Menü</span>
-      <span class="nav-toggle__icon" aria-hidden="true">
-        {{ "menu" | icon("nav-toggle__open") | safe }}
-        {{ "close" | icon("nav-toggle__close") | safe }}
-      </span>
-    </button>
 
     <nav class="site-nav" id="primary-nav" aria-label="Hauptnavigation" data-nav>
       <ul class="site-nav__list">
@@ -34,11 +26,34 @@
         {% endfor %}
       </ul>
       <div class="site-nav__actions">
+        <button class="theme-toggle theme-toggle--menu" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <span class="theme-toggle__sun">{{ "sun" | icon | safe }}</span>
+            <span class="theme-toggle__moon">{{ "moon" | icon | safe }}</span>
+          </span>
+          <span class="theme-toggle__label" data-theme-label>Dunkelmodus</span>
+        </button>
         <a class="site-nav__phone" href="tel:{{ site.phoneHref }}">
           {{ "phone" | icon | safe }}<span>{{ site.phone }}</span>
         </a>
         <a class="btn btn--primary btn--small" href="{{ '/kontakt/#anfrage' | link }}">Anfrage</a>
       </div>
     </nav>
+
+    <div class="site-header__tools">
+      <button class="theme-toggle theme-toggle--icon" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+        <span class="theme-toggle__icons" aria-hidden="true">
+          <span class="theme-toggle__sun">{{ "sun" | icon | safe }}</span>
+          <span class="theme-toggle__moon">{{ "moon" | icon | safe }}</span>
+        </span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="nav-toggle__label">Menü</span>
+        <span class="nav-toggle__icon" aria-hidden="true">
+          {{ "menu" | icon("nav-toggle__open") | safe }}
+          {{ "close" | icon("nav-toggle__close") | safe }}
+        </span>
+      </button>
+    </div>
   </div>
 </header>
