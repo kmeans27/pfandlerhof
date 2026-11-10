@@ -17,8 +17,9 @@ const run = (command, options = {}) =>
 const remote = execSync("git remote get-url origin", { encoding: "utf8" }).trim();
 const match = remote.match(/[/:]([^/]+?)(?:\.git)?$/);
 const repoName = match ? match[1] : "pfandlerhof";
-const owner = execSync("gh api user --jq .login", { encoding: "utf8" }).trim();
-const isUserSite = repoName === `${owner}.github.io`;
+const ownerMatch = remote.match(/github\.com[/:]([^/]+)\//);
+const owner = ownerMatch ? ownerMatch[1] : "";
+const isUserSite = owner && repoName === `${owner}.github.io`;
 const prefix = process.env.PATH_PREFIX || (isUserSite ? "/" : `/${repoName}/`);
 
 console.log(`Baue Website für Pfad-Präfix "${prefix}" …`);
