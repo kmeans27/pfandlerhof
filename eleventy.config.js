@@ -11,7 +11,6 @@ export default function (eleventyConfig) {
   // Bilder, Schriften und Favicon unverändert übernehmen.
   eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
-  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({
     "src/assets/apple-touch-icon.png": "apple-touch-icon.png",

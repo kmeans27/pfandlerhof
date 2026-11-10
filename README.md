@@ -5,6 +5,8 @@ Bewusst einfach gehalten: große Schrift, klare Navigation, keine Cookies, kein 
 
 Die Inhalte stammen von der bisherigen Website, dem Roter-Hahn-Eintrag, HolidayCheck und Airbnb.
 
+**Live-Vorschau:** <https://kmeans27.github.io/pfandlerhof/>
+
 ## Schnellstart
 
 ```bash
@@ -138,12 +140,16 @@ Source: Deploy from a branch → Branch: `gh-pages` → Ordner `/ (root)`**.
 Die Adresse ist danach `https://<user>.github.io/<repo>/`.
 Bei einem Repository namens `<user>.github.io` entfällt der Unterpfad automatisch.
 
+**Aktuell** steht in `src/_data/site.json` unter `url` die Vorschau-Adresse
+`https://kmeans27.github.io/pfandlerhof` – damit stimmen Canonical-URL,
+Sitemap und Social-Media-Vorschau schon jetzt.
+
 Für eine **eigene Domain** (z. B. `pfandlerhof.com`):
 
 1. In GitHub Pages die Domain eintragen und beim DNS-Anbieter die nötigen Einträge setzen.
-2. In `src/_data/site.json` unter `url` die endgültige Adresse eintragen.
-3. Beim Veröffentlichen `PATH_PREFIX=/ npm run publish` verwenden.
-4. Erneut pushen bzw. veröffentlichen.
+2. In `src/_data/site.json` unter `url` `https://www.pfandlerhof.com` eintragen.
+3. `PATH_PREFIX=/ npm run publish` ausführen (baut ohne Unterpfad).
+4. Die Änderungen an `site.json` und am Skript auf `main` committen.
 
 > GitHub Actions ist bewusst nicht nötig. Die Veröffentlichung über den
 > `gh-pages`-Branch funktioniert unabhängig von Actions und verbraucht keine

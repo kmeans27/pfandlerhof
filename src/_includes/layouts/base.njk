@@ -17,7 +17,7 @@
   <meta property="og:title" content="{% if isHome %}{{ title }}{% else %}{{ title }} · {{ site.name }}{% endif %}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}{{ '/assets/img/og-image.jpg' | link }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="{{ '/favicon.svg' | link }}" type="image/svg+xml">
@@ -37,7 +37,7 @@
         "url": "{{ site.url }}/",
         "telephone": "{{ site.phone }}",
         "email": "{{ site.email }}",
-        "image": "{{ site.url }}{{ '/assets/img/hero-1200.jpg' | link }}",
+        "image": "{{ site.url }}/assets/img/hero-1200.jpg",
         "priceRange": "€€",
         "checkinTime": "14:00",
         "checkoutTime": "10:00",
