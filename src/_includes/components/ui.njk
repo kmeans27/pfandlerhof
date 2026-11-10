@@ -1,0 +1,43 @@
+{#
+  Wiederverwendbare Bausteine für Buttons, Abschnittstitel und Bewertungen.
+#}
+
+{% macro button(label, href, variant = "primary", iconName = "", extraClass = "") %}
+  <a class="btn btn--{{ variant }}{% if extraClass %} {{ extraClass }}{% endif %}" href="{{ href | link }}">
+    <span>{{ label }}</span>
+    {% if iconName %}{{ iconName | icon("btn__icon") | safe }}{% endif %}
+  </a>
+{% endmacro %}
+
+{% macro sectionHead(eyebrow, title, text = "", align = "left") %}
+  <header class="section-head{% if align == 'center' %} section-head--center{% endif %}">
+    {% if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+    <h2>{{ title }}</h2>
+    {% if text %}<p class="section-head__text">{{ text }}</p>{% endif %}
+  </header>
+{% endmacro %}
+
+{% macro stars(count = 5) %}
+  <span class="stars" role="img" aria-label="{{ count }} von 5 Sternen">
+    {% for i in range(0, count) %}{{ "star" | icon("stars__icon") | safe }}{% endfor %}
+  </span>
+{% endmacro %}
+
+{% macro rating(source, value, max, count, suffix = "Bewertungen") %}
+  <p class="rating">
+    {{ stars(5) }}
+    <span class="rating__value">{{ value }} / {{ max }}</span>
+    <span class="rating__meta">{{ count }} {{ suffix }} · {{ source }}</span>
+  </p>
+{% endmacro %}
+
+{% macro chip(label, iconName = "") %}
+  <li class="chip">
+    {% if iconName %}{{ iconName | icon("chip__icon") | safe }}{% endif %}
+    <span>{{ label }}</span>
+  </li>
+{% endmacro %}
+
+{% macro note(text, iconName = "info") %}
+  <p class="note">{{ iconName | icon("note__icon") | safe }}<span>{{ text }}</span></p>
+{% endmacro %}

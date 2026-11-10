@@ -1,0 +1,51 @@
+{
+  "apartment": [
+    {
+      "icon": "bed",
+      "title": "Zwei Schlafzimmer",
+      "text": "Doppelbett im Elternzimmer, Etagenbett im Kinderzimmer"
+    },
+    {
+      "icon": "bath",
+      "title": "Badezimmer",
+      "text": "Dusche, WC, Bidet und Haartrockner"
+    },
+    {
+      "icon": "kitchen",
+      "title": "Wohnküche",
+      "text": "Backofen, Geschirrspüler, Kaffeemaschine und Esstisch"
+    },
+    {
+      "icon": "balcony",
+      "title": "Balkon & Terrasse",
+      "text": "Mit Sitzgelegenheit und Blick ins Tal"
+    },
+    {
+      "icon": "wifi",
+      "title": "WLAN & SAT-TV",
+      "text": "Kostenlos, mit deutschem Satellitenprogramm"
+    },
+    {
+      "icon": "laundry",
+      "title": "Waschmaschine & Trockner",
+      "text": "Gemeinsam nutzbar, ohne Aufpreis"
+    },
+    {
+      "icon": "parking",
+      "title": "Tiefgarage",
+      "text": "Ein Stellplatz pro Wohnung, mit Fernbedienung"
+    },
+    {
+      "icon": "sun",
+      "title": "Bodenheizung",
+      "text": "Angenehm warm – auch im Winter"
+    }
+  ],
+  "baby": [
+    "Hochstuhl",
+    "Gitterbett",
+    "Wickelauflage",
+    "Fläschchenwärmer",
+    "Toilettensitz"
+  ]
+}

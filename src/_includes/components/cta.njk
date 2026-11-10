@@ -1,0 +1,18 @@
+{% macro ctaBand(title = "Wir freuen uns auf Sie.", text = "Erzählen Sie uns, wann Sie kommen möchten. Wir melden uns persönlich mit einem Angebot – ohne Buchungsportal und ohne Umwege.", eyebrow = "Anfrage", contact = {}) %}
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <p class="eyebrow eyebrow--light">{{ eyebrow }}</p>
+        <h2>{{ title }}</h2>
+        <p>{{ text }}</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--light" href="{{ '/kontakt/#anfrage' | link }}">
+          <span>Anfrage senden</span>{{ "arrow" | icon("btn__icon") | safe }}
+        </a>
+        <a class="cta-band__link" href="tel:{{ contact.phoneHref }}">{{ "phone" | icon | safe }} {{ contact.phone }}</a>
+        <a class="cta-band__link" href="mailto:{{ contact.email }}">{{ "mail" | icon | safe }} {{ contact.email }}</a>
+      </div>
+    </div>
+  </section>
+{% endmacro %}

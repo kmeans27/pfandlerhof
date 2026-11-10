@@ -1,0 +1,212 @@
+---
+layout: layouts/base.njk
+title: "Pfandlerhof – Urlaub auf dem Bauernhof in St. Martin in Passeier"
+description: "Zwei Ferienwohnungen auf einem Bauernhof in St. Martin in Passeier: Bergblick, Hoftiere, Frühstückskorb und Wanderwege ab der Haustür. Familie Pichler freut sich auf Sie."
+isHome: true
+activeNav: home
+---
+
+{% from "components/media.njk" import picture %}
+{% from "components/ui.njk" import button, stars %}
+{% from "components/cards.njk" import featureCard, apartmentCard, reviewCard, fact, galleryItem %}
+{% from "components/cta.njk" import ctaBand %}
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">St. Martin in Passeier · Südtirol</p>
+      <h1>Urlaub auf dem Bauernhof, mitten in den Bergen.</h1>
+      <p class="hero__lead">Zwei gemütliche Ferienwohnungen, echte Hoftiere und ein Blick über das ganze Passeiertal. Bei uns dürfen Sie ankommen, durchatmen und den Alltag für ein paar Tage vergessen.</p>
+      <div class="hero__actions">
+        {{ button("Ferienwohnungen ansehen", "/ferienwohnungen/", "primary", "arrow") }}
+        {{ button("Jetzt anfragen", "/kontakt/#anfrage", "secondary") }}
+      </div>
+      <div class="hero__trust">
+        <p class="rating">
+          {{ stars(5) }}
+          <span class="rating__value">{{ site.rating.value }} / 5</span>
+          <span class="rating__meta">{{ site.rating.count }} Bewertungen</span>
+        </p>
+        <span class="hero__badge">{{ "leaf" | icon | safe }} Roter Hahn · Urlaub auf dem Bauernhof</span>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      {{ picture({
+        src: "hero",
+        alt: "Der Pfandlerhof mit Stall und dem Passeiertal im Hintergrund",
+        widths: [800, 1200],
+        sizes: "(min-width: 920px) 46vw, 100vw",
+        width: 1200,
+        height: 677,
+        class: "hero__img",
+        loading: "eager",
+        priority: true
+      }) }}
+      <div class="hero__note">
+        <strong>Zwei Ferienwohnungen</strong>
+        je 56 m² · 2–4 Personen<br>ganzjährig geöffnet
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Der Pfandlerhof auf einen Blick">
+  <div class="container">
+    <ul class="facts__list">
+      {{ fact("mountain", "750 m", "Seehöhe") }}
+      {{ fact("house", "2 Wohnungen", "je 56 m²") }}
+      {{ fact("users", "2–4 Gäste", "pro Wohnung") }}
+      {{ fact("pin", "4 km St. Martin", "17 km bis Meran") }}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--wide">
+    <div>
+      <p class="eyebrow">Herzlich willkommen</p>
+      <h2>Ankommen, durchatmen, Bergluft spüren.</h2>
+      <p>Seit 2013 führen wir unser Ferienhaus oberhalb von Quellenhof – sonnig, ruhig und auf 750 Metern Höhe. Hier beginnt der Urlaub mit einem Kaffee auf dem Balkon, dem Blick auf den Jaufenkamm und dem ersten Muhen aus dem Stall.</p>
+      <p>Unsere zwei Ferienwohnungen sind Ausgangspunkt für Wanderungen am Meraner Höhenweg, für Ausflüge nach Meran und St. Martin – oder einfach für ein paar Tage, an denen nichts geplant ist. Die Kinder dürfen mithelfen, die Tiere füttern und den Hof entdecken. Die Erwachsenen dürfen zusehen – oder es sich auf der Liegewiese gemütlich machen.</p>
+      <p class="welcome__signature">Carola &amp; Ubald Pichler</p>
+    </div>
+    <div>
+      {{ picture({
+        src: "hof-weg",
+        alt: "Weg zum Pfandlerhof mit Blick auf die Berge",
+        widths: [640, 1200],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 1200,
+        height: 677,
+        class: "welcome__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Urlaub auf dem Bauernhof</p>
+      <h2>Was Ihren Urlaub bei uns besonders macht</h2>
+      <p class="section-head__text">Vieles ist bei uns selbstverständlich: der Blick, die Ruhe, die Tiere. Einiges möchten wir Ihnen besonders ans Herz legen.</p>
+    </header>
+    <div class="features__grid">
+      {% for feature in features %}
+        {{ featureCard(feature) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="wohnungen">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Ferienwohnungen</p>
+      <h2>Zwei Wohnungen mit viel Platz für Ihre Familie</h2>
+      <p class="section-head__text">Beide Wohnungen sind 56 m² groß, haben zwei Schlafzimmer und einen Balkon. Der Unterschied liegt im Detail – und im Blick aus dem Fenster.</p>
+    </header>
+    <div class="apartments__grid">
+      {% for apartment in apartments %}
+        {{ apartmentCard(apartment) }}
+      {% endfor %}
+    </div>
+    <p class="apartments__note">Beide Wohnungen lassen sich auch miteinander kombinieren. <a class="text-link" href="{{ '/ferienwohnungen/' | link }}">Alle Details und Preise {{ "arrow" | icon("text-link__icon") | safe }}</a></p>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container split split--reverse">
+    <div>
+      <p class="eyebrow">Aus der Hofküche</p>
+      <h2>Der Frühstückskorb kommt vom Hof.</h2>
+      <p>Eier von unseren Hühnern, Milch von unseren Kühen, Butter, Speck, Käse und Marmeladen aus der eigenen Küche: Auf Wunsch stellen wir Ihnen jeden Morgen einen Frühstückskorb zusammen. Sagen Sie uns einfach, was Sie mögen – wir richten uns nach Ihren Wünschen.</p>
+      <ul class="chips">
+        <li class="chip">Eier</li>
+        <li class="chip">Frische Milch</li>
+        <li class="chip">Butter</li>
+        <li class="chip">Speck</li>
+        <li class="chip">Käse</li>
+        <li class="chip">Hausgemachte Marmelade</li>
+        <li class="chip">Brot</li>
+        <li class="chip">Obst der Saison</li>
+      </ul>
+      <p class="u-mt"><a class="text-link" href="{{ '/der-hof/#produkte' | link }}">Hofeigene Produkte entdecken {{ "arrow" | icon("text-link__icon") | safe }}</a></p>
+    </div>
+    <div>
+      {{ picture({
+        src: "fruehstueck",
+        alt: "Frühstückskorb mit hofeigenen Produkten auf der Terrasse",
+        widths: [640, 1024],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 1024,
+        height: 698,
+        class: "breakfast__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Gästestimmen</p>
+      <h2>Was unsere Gäste sagen</h2>
+      <p class="section-head__text">Viele kommen als Gäste und fahren als Freunde wieder nach Hause. Ein paar Stimmen möchten wir Ihnen weitergeben.</p>
+    </header>
+    <div class="reviews__grid">
+      {% for review in reviews %}
+        {% if loop.index <= 3 %}
+          {{ reviewCard(review) }}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="review-summary">
+      <p class="rating">
+        {{ stars(5) }}
+        <span class="rating__value">{{ site.rating.value }} / {{ site.rating.max }}</span>
+        <span class="rating__meta">{{ site.rating.count }} Bewertungen bei {{ site.rating.source }}</span>
+      </p>
+      <p class="rating">
+        {{ stars(5) }}
+        <span class="rating__value">{{ site.holidayCheck.value }} / {{ site.holidayCheck.max }}</span>
+        <span class="rating__meta">{{ site.holidayCheck.count }} Bewertungen bei HolidayCheck · {{ site.holidayCheck.recommendation }} Weiterempfehlung</span>
+      </p>
+    </div>
+    <p class="review-source">Gekürzte Originalzitate von Airbnb und HolidayCheck.</p>
+  </div>
+</section>
+
+<section class="section section--green">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow eyebrow--light">Rund um den Hof</p>
+      <h2>Wandern, radeln, abschalten.</h2>
+      <p class="section-head__text">Der Pfandlerhof liegt dort, wo das Passeiertal seine sonnige Seite zeigt. Ob große Wanderung oder kleiner Spaziergang – vor der Haustür beginnt beides.</p>
+    </header>
+    <div class="teaser-grid">
+      <article class="teaser">
+        <span class="teaser__icon">{{ "hiking" | icon | safe }}</span>
+        <p class="teaser__meta">Direkt vor der Haustür</p>
+        <h3>Meraner Höhenweg</h3>
+        <p>Der bekannte Höhenweg rund um die Texelgruppe lässt sich in Etappen erwandern. Wir sagen Ihnen gerne, wo Sie am besten einsteigen.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon">{{ "pin" | icon | safe }}</span>
+        <p class="teaser__meta">4 km / 17 km</p>
+        <h3>St. Martin &amp; Meran</h3>
+        <p>Der Dorfplatz von St. Martin, die Promenade in Meran und die Laubengasse: alles gut für einen halben oder einen ganzen Tag.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon">{{ "snow" | icon | safe }}</span>
+        <p class="teaser__meta">23 bis 44 km</p>
+        <h3>Winter in den Bergen</h3>
+        <p>Pfelders, Ratschings und Meran 2000 sind schnell erreichbar. Rodeln, Schneeschuhwandern und Einkehr gehören bei uns dazu.</p>
+      </article>
+    </div>
+    <p class="u-mt-lg">{{ button("Umgebung entdecken", "/umgebung/", "light", "arrow") }}</p>
+  </div>
+</section>
+
+{{ ctaBand("Wir freuen uns auf Sie.", "Erzählen Sie uns, wann Sie kommen möchten – wir melden uns persönlich mit einem Angebot. Am schnellsten geht es telefonisch.", "Anfrage", site) }}

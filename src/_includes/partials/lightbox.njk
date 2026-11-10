@@ -1,0 +1,16 @@
+<dialog class="lightbox" id="lightbox" aria-label="Bildergalerie">
+  <button class="lightbox__close" type="button" data-lightbox-close aria-label="Galerie schließen">
+    {{ "close" | icon | safe }}
+  </button>
+  <img class="lightbox__img" data-lightbox-img alt="">
+  <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Vorheriges Bild">
+    {{ "arrow" | icon | safe }}
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Nächstes Bild">
+    {{ "arrow" | icon | safe }}
+  </button>
+  <div class="lightbox__bar">
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <p class="lightbox__counter" data-lightbox-counter aria-live="polite"></p>
+  </div>
+</dialog>

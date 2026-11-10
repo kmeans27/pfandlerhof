@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: "Impressum"
+description: "Impressum und Anbieterkennzeichnung des Pfandlerhofs, Familie Pichler, St. Martin in Passeier."
+activeNav: kontakt
+---
+
+<section class="legal">
+  <div class="container container--narrow">
+    <p class="eyebrow">Rechtliches</p>
+    <h1>Impressum</h1>
+
+    <div class="legal-meta">
+      <strong>{{ site.legalName }}</strong><br>
+      Geschäftsführerin: Carola Müller<br>
+      {{ site.address.street }}<br>
+      I-{{ site.address.postalCode }} {{ site.address.city }} ({{ site.address.province }})<br>
+      {{ site.address.country }}
+    </div>
+
+    <div class="prose">
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a><br>
+        E-Mail: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+
+      <h2>Unternehmensdaten</h2>
+      <p>
+        Mehrwertsteuernummer: {{ site.vat }}<br>
+        Steuernummer: {{ site.taxId }}<br>
+        {{ site.chamber }}<br>
+        CIN (Registrierungsnummer der Unterkunft): {{ site.cin }}
+      </p>
+
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>Carola Müller, Anschrift wie oben.</p>
+
+      <h2>Online-Streitbeilegung</h2>
+      <p>
+        Plattform der EU-Kommission für die Online-Streitbeilegung:
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+        Unsere E-Mail-Adresse finden Sie oben.
+      </p>
+
+      <h2>Bildnachweis</h2>
+      <p>Familie Pichler, Roter Hahn – Urlaub auf dem Bauernhof sowie Holidu/Airbnb.</p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Preise und Verfügbarkeiten sind unverbindlich; verbindlich ist das Angebot, das wir Ihnen persönlich bestätigen.</p>
+
+      <h2>Haftung für Links</h2>
+      <p>Unsere Website enthält Links zu externen Websites, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Die Inhalte und Bilder dieser Website sind urheberrechtlich geschützt. Eine Verwendung außerhalb der gesetzlichen Grenzen – insbesondere die Vervielfältigung oder Weitergabe – bedarf unserer schriftlichen Zustimmung.</p>
+    </div>
+  </div>
+</section>

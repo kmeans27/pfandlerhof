@@ -1,0 +1,191 @@
+[
+  {
+    "src": "hero",
+    "width": 1200,
+    "height": 677,
+    "alt": "Der Pfandlerhof mit Stall und dem Passeiertal im Hintergrund",
+    "caption": "Der Pfandlerhof mit Blick über das Passeiertal"
+  },
+  {
+    "src": "hof-weg",
+    "width": 1200,
+    "height": 677,
+    "alt": "Weg zum Pfandlerhof mit Blick auf die Berge",
+    "caption": "So sieht es aus, wenn Sie bei uns ankommen"
+  },
+  {
+    "src": "haus-sommer",
+    "width": 900,
+    "height": 370,
+    "alt": "Das Ferienhaus des Pfandlerhofs im Sommer",
+    "caption": "Unser Ferienhaus im Sommer"
+  },
+  {
+    "src": "haus-terrasse",
+    "width": 900,
+    "height": 370,
+    "alt": "Südseite des Ferienhauses mit Terrasse",
+    "caption": "Südseite mit Terrasse"
+  },
+  {
+    "src": "liegewiese",
+    "width": 900,
+    "height": 370,
+    "alt": "Liegewiese vor dem Ferienhaus",
+    "caption": "Platz zum Sonnen und Ausruhen"
+  },
+  {
+    "src": "hof-sommer",
+    "width": 900,
+    "height": 370,
+    "alt": "Der Pfandlerhof auf 750 Metern Seehöhe",
+    "caption": "Der Hof liegt auf 750 Metern"
+  },
+  {
+    "src": "balkon",
+    "width": 900,
+    "height": 370,
+    "alt": "Balkon mit Blick ins Passeiertal",
+    "caption": "Balkon mit Blick ins Tal"
+  },
+  {
+    "src": "eingang",
+    "width": 1024,
+    "height": 767,
+    "alt": "Eingang zum Ferienhaus",
+    "caption": "Eingang zum Ferienhaus"
+  },
+  {
+    "src": "blick-st-martin",
+    "width": 1024,
+    "height": 372,
+    "alt": "Blick auf St. Martin und das Passeiertal",
+    "caption": "Blick auf St. Martin"
+  },
+  {
+    "src": "berge",
+    "width": 900,
+    "height": 370,
+    "alt": "Bergpanorama über dem Passeiertal",
+    "caption": "Bergpanorama über dem Passeiertal"
+  },
+  {
+    "src": "berge-2",
+    "width": 900,
+    "height": 370,
+    "alt": "Morgenstimmung in den Bergen",
+    "caption": "Morgenstimmung in den Bergen"
+  },
+  {
+    "src": "wohnen-1",
+    "width": 1440,
+    "height": 961,
+    "alt": "Wohnbereich mit Sofa und offener Balkontür",
+    "caption": "Wohnbereich mit Zugang zum Balkon"
+  },
+  {
+    "src": "wohnen-2",
+    "width": 1440,
+    "height": 961,
+    "alt": "Wohnküche mit Esstisch",
+    "caption": "Wohnküche mit Esstisch"
+  },
+  {
+    "src": "essen",
+    "width": 1440,
+    "height": 960,
+    "alt": "Esstisch mit Blick ins Grüne",
+    "caption": "Esstisch mit Blick ins Grüne"
+  },
+  {
+    "src": "wohnen-3",
+    "width": 1440,
+    "height": 960,
+    "alt": "Wohnzimmer mit Sofa und Fernseher",
+    "caption": "Wohnzimmer"
+  },
+  {
+    "src": "kueche",
+    "width": 1440,
+    "height": 960,
+    "alt": "Küchenzeile mit Backofen und Geschirrspüler",
+    "caption": "Küchenzeile mit Backofen und Geschirrspüler"
+  },
+  {
+    "src": "kinderzimmer",
+    "width": 1024,
+    "height": 687,
+    "alt": "Kinderzimmer mit Etagenbett",
+    "caption": "Kinderzimmer mit Etagenbett"
+  },
+  {
+    "src": "elternzimmer",
+    "width": 1024,
+    "height": 687,
+    "alt": "Elternschlafzimmer mit Doppelbett",
+    "caption": "Elternschlafzimmer"
+  },
+  {
+    "src": "bad",
+    "width": 1024,
+    "height": 687,
+    "alt": "Badezimmer mit Dusche und Waschbecken",
+    "caption": "Badezimmer mit Dusche"
+  },
+  {
+    "src": "wohnkueche",
+    "width": 1024,
+    "height": 687,
+    "alt": "Wohnküche der zweiten Ferienwohnung",
+    "caption": "Wohnküche der zweiten Wohnung"
+  },
+  {
+    "src": "kueche-2",
+    "width": 1024,
+    "height": 687,
+    "alt": "Küche der zweiten Ferienwohnung",
+    "caption": "Küche der zweiten Wohnung"
+  },
+  {
+    "src": "kinderzimmer-2",
+    "width": 1024,
+    "height": 687,
+    "alt": "Kinderzimmer der zweiten Ferienwohnung",
+    "caption": "Kinderzimmer der zweiten Wohnung"
+  },
+  {
+    "src": "elternzimmer-2",
+    "width": 1024,
+    "height": 687,
+    "alt": "Elternschlafzimmer der zweiten Ferienwohnung",
+    "caption": "Elternschlafzimmer der zweiten Wohnung"
+  },
+  {
+    "src": "bad-2",
+    "width": 1024,
+    "height": 687,
+    "alt": "Badezimmer der zweiten Ferienwohnung",
+    "caption": "Badezimmer der zweiten Wohnung"
+  },
+  {
+    "src": "bad-3",
+    "width": 1024,
+    "height": 687,
+    "alt": "Dusche der zweiten Ferienwohnung",
+    "caption": "Dusche der zweiten Wohnung"
+  },
+  {
+    "src": "wohnen-4",
+    "width": 1024,
+    "height": 687,
+    "alt": "Wohnbereich der zweiten Ferienwohnung",
+    "caption": "Wohnbereich der zweiten Wohnung"
+  },
+  {
+    "src": "fruehstueck",
+    "width": 1024,
+    "height": 698,
+    "alt": "Frühstückskorb mit hofeigenen Produkten auf der Terrasse",
+    "caption": "Frühstückskorb mit hofeigenen Produkten"
+  }
+]

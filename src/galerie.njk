@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: "Galerie"
+description: "Bilder vom Pfandlerhof, den Ferienwohnungen, dem Hof und der Landschaft im Passeiertal."
+activeNav: galerie
+---
+
+{% from "components/ui.njk" import note %}
+{% from "components/cards.njk" import galleryItem %}
+{% from "components/cta.njk" import ctaBand %}
+
+<section class="page-hero page-hero--plain">
+  <div class="container">
+    <div class="page-hero__text">
+      <p class="eyebrow">Galerie</p>
+      <h1>Bilder sagen mehr als Worte.</h1>
+      <p class="page-hero__lead">Ein paar Eindrücke vom Hof, von den Wohnungen und von dem, was uns jeden Tag Freude macht. Klicken oder tippen Sie auf ein Bild, um es größer zu sehen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="gallery__grid">
+      {% for item in gallery %}
+        {{ galleryItem(item) }}
+      {% endfor %}
+    </div>
+    {{ note("Die Fotos zeigen beide Ferienwohnungen. Möbel und Dekoration können leicht variieren – fragen Sie einfach nach, wenn Ihnen etwas wichtig ist.", "info") }}
+  </div>
+</section>
+
+{{ ctaBand("Gefällt Ihnen, was Sie sehen?", "Dann schreiben Sie uns – wir beantworten gerne alle Fragen zu den Wohnungen, zum Hof und zur Anreise.", "Anfrage senden", site) }}

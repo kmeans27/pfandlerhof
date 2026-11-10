@@ -1,0 +1,21 @@
+{
+  "name": "pfandlerhof-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website für den Pfandlerhof – Urlaub auf dem Bauernhof in St. Martin in Passeier, Südtirol.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build-assets.mjs && eleventy",
+    "build:assets": "node scripts/build-assets.mjs",
+    "serve": "eleventy --serve",
+    "watch:assets": "node scripts/build-assets.mjs --watch",
+    "images": "node scripts/prepare-images.mjs",
+    "check": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "esbuild": "^0.24.0",
+    "sharp": "^0.33.5"
+  }
+}

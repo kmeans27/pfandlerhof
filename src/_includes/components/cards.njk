@@ -1,0 +1,97 @@
+{% from "components/media.njk" import picture %}
+
+{% macro featureCard(item) %}
+  <article class="feature">
+    <span class="feature__icon">{{ item.icon | icon | safe }}</span>
+    <h3 class="feature__title">{{ item.title }}</h3>
+    <p class="feature__text">{{ item.text }}</p>
+  </article>
+{% endmacro %}
+
+{% macro apartmentCard(apartment) %}
+  <article class="apartment-card">
+    <a class="apartment-card__media" href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}" tabindex="-1" aria-hidden="true">
+      {{ picture({
+        src: apartment.image,
+        alt: apartment.imageAlt,
+        widths: [640, 960],
+        sizes: "(min-width: 900px) 50vw, 100vw",
+        width: 1440,
+        height: 961,
+        class: "apartment-card__img"
+      }) }}
+    </a>
+    <div class="apartment-card__body">
+      <p class="apartment-card__badge">{{ apartment.highlight }}</p>
+      <h3 class="apartment-card__title">
+        <a href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}">{{ apartment.name }}</a>
+      </h3>
+      <p class="apartment-card__meta">{{ apartment.size }} · {{ apartment.guests }}</p>
+      <p class="apartment-card__text">{{ apartment.summary }}</p>
+      <ul class="check-list">
+        {% for feature in apartment.features %}
+          <li>{{ "check" | icon("check-list__icon") | safe }}<span>{{ feature }}</span></li>
+        {% endfor %}
+      </ul>
+      <div class="apartment-card__foot">
+        <p class="price"><span class="price__label">ab</span> {{ apartment.priceFrom }} € <span class="price__unit">/ Nacht</span></p>
+        <a class="text-link" href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}">
+          Details ansehen {{ "arrow" | icon("text-link__icon") | safe }}
+        </a>
+      </div>
+    </div>
+  </article>
+{% endmacro %}
+
+{% macro reviewCard(review) %}
+  <figure class="review">
+    <span class="review__mark" aria-hidden="true">„</span>
+    <blockquote class="review__text">{{ review.text }}</blockquote>
+    <figcaption class="review__author">
+      <strong>{{ review.author }}</strong>
+      <span>{{ review.meta }}</span>
+    </figcaption>
+  </figure>
+{% endmacro %}
+
+{% macro galleryItem(item, sizes = "(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw") %}
+  {% set widths = item.width | widths %}
+  <a
+    href="{{ ('/assets/img/' + item.src + '-' + item.width + '.jpg') | link }}"
+    class="gallery__item"
+    data-lightbox
+    data-full="{{ ('/assets/img/' + item.src + '-' + item.width + '.jpg') | link }}"
+    data-caption="{{ item.caption }}"
+    aria-label="Bild vergrößern: {{ item.caption }}">
+    {{ picture({
+      src: item.src,
+      alt: item.alt,
+      widths: widths,
+      sizes: sizes,
+      width: item.width,
+      height: item.height,
+      class: "gallery__img"
+    }) }}
+    <span class="gallery__caption">{{ item.caption }}</span>
+  </a>
+{% endmacro %}
+
+{% macro infoTile(item) %}
+  <li class="info-tile">
+    <span class="info-tile__icon">{{ item.icon | icon | safe }}</span>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.text }}</p>
+    </div>
+  </li>
+{% endmacro %}
+
+{% macro fact(iconName, value, label) %}
+  <li class="fact">
+    <span class="fact__icon">{{ iconName | icon | safe }}</span>
+    <span>
+      <strong class="fact__value">{{ value }}</strong>
+      <span class="fact__label">{{ label }}</span>
+    </span>
+  </li>
+{% endmacro %}

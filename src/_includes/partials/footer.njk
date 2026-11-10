@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">Pfandlerhof</p>
+        <p class="footer__tagline">Urlaub auf dem Bauernhof<br>in St. Martin in Passeier</p>
+        <p class="footer__rating">
+          {{ "star" | icon("footer__star") | safe }}
+          <span><strong>{{ site.rating.value }}</strong> / 5 · {{ site.rating.count }} Bewertungen</span>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Kontakt</h2>
+        <address class="footer__address">
+          {{ site.hostsFamily }}<br>
+          {{ site.address.street }}<br>
+          I-{{ site.address.postalCode }} {{ site.address.city }}<br>
+          {{ site.address.country }}
+        </address>
+        <p><a href="tel:{{ site.phoneHref }}">{{ "phone" | icon | safe }} {{ site.phone }}</a></p>
+        <p><a href="mailto:{{ site.email }}">{{ "mail" | icon | safe }} {{ site.email }}</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Seiten</h2>
+        <ul class="footer__list">
+          <li><a href="{{ '/' | link }}">Startseite</a></li>
+          {% for item in nav %}
+            <li><a href="{{ item.url | link }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Rechtliches</h2>
+        <ul class="footer__list">
+          <li><a href="{{ '/impressum/' | link }}">Impressum</a></li>
+          <li><a href="{{ '/datenschutz/' | link }}">Datenschutz</a></li>
+          <li><a href="{{ site.links.roterHahn }}" target="_blank" rel="noopener">Roter Hahn</a></li>
+          <li><a href="{{ site.links.airbnb }}" target="_blank" rel="noopener">Airbnb</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© {{ year }} Pfandlerhof · Familie Pichler · MwSt.-Nr. {{ site.vat }}</p>
+      <p class="footer__note">Alle Preise in Euro, inkl. Mehrwertsteuer. Änderungen und Irrtümer vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" aria-label="Schnellkontakt">
+  <a class="mobile-bar__item" href="tel:{{ site.phoneHref }}">
+    {{ "phone" | icon | safe }}<span>Anrufen</span>
+  </a>
+  <a class="mobile-bar__item mobile-bar__item--primary" href="{{ '/kontakt/#anfrage' | link }}">
+    {{ "mail" | icon | safe }}<span>Anfrage</span>
+  </a>
+</div>

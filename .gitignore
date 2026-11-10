@@ -1,0 +1,14 @@
+# Abhängigkeiten und Build-Ergebnisse
+node_modules/
+_site/
+
+# Betriebssystem & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Temporäre Dateien der Bildaufbereitung
+assets-src/contact*.jpg
+assets-src/*.html

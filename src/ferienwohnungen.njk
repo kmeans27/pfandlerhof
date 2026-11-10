@@ -1,0 +1,195 @@
+---
+layout: layouts/base.njk
+title: "Ferienwohnungen & Preise"
+description: "Zwei Ferienwohnungen mit je 56 m², zwei Schlafzimmern und Balkon. Preise, Ausstattung und alles, was Sie vor der Buchung wissen möchten."
+activeNav: wohnungen
+---
+
+{% from "components/media.njk" import picture %}
+{% from "components/ui.njk" import button, note %}
+{% from "components/cards.njk" import infoTile %}
+{% from "components/cta.njk" import ctaBand %}
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__text">
+      <p class="eyebrow">Ferienwohnungen</p>
+      <h1>Zwei Wohnungen, viel Platz und ein weites Tal.</h1>
+      <p class="page-hero__lead">Beide Ferienwohnungen sind 56 m² groß, haben zwei Schlafzimmer, eine voll ausgestattete Wohnküche und einen Balkon mit Blick ins Passeiertal. Sie können einzeln oder gemeinsam gebucht werden.</p>
+    </div>
+    <div>
+      {{ picture({
+        src: "essen",
+        alt: "Esstisch der Ferienwohnung mit Blick ins Grüne",
+        widths: [640, 960, 1440],
+        sizes: "(min-width: 900px) 42vw, 100vw",
+        width: 1440,
+        height: 960,
+        class: "page-hero__img",
+        loading: "eager"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    {% for apartment in apartments %}
+      <article class="apartment-detail{% if loop.index % 2 == 0 %} apartment-detail--reverse{% endif %}" id="{{ apartment.slug }}">
+        <div class="apartment-detail__media">
+          {{ picture({
+            src: apartment.image,
+            alt: apartment.imageAlt,
+            widths: [640, 960, 1440],
+            sizes: "(min-width: 900px) 48vw, 100vw",
+            width: 1440,
+            height: 961,
+            class: "apartment-detail__img"
+          }) }}
+        </div>
+        <div>
+          <p class="apartment-detail__label">{{ apartment.highlight }}</p>
+          <h2>{{ apartment.name }}</h2>
+          <p class="apartment-detail__meta">{{ apartment.size }} · {{ apartment.guests }} · ab {{ apartment.priceFrom }} € / Nacht</p>
+          <p>{{ apartment.summary }}</p>
+          <ul class="check-list">
+            {% for feature in apartment.features %}
+              <li>{{ "check" | icon("check-list__icon") | safe }}<span>{{ feature }}</span></li>
+            {% endfor %}
+          </ul>
+          <div class="apartment-detail__foot">
+            <p class="price"><span class="price__label">ab</span> {{ apartment.priceFrom }} € <span class="price__unit">/ Nacht</span></p>
+            {{ button("Diese Wohnung anfragen", ("/kontakt/?wohnung=" + apartment.slug + "#anfrage"), "primary", "arrow") }}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Ausstattung</p>
+      <h2>In jeder Wohnung steckt dasselbe.</h2>
+      <p class="section-head__text">Wir haben versucht, an alles zu denken – vom Geschirrspüler bis zur Wickelauflage. Wenn Ihnen etwas fehlt, fragen Sie einfach.</p>
+    </header>
+    <ul class="info-grid">
+      {% for item in amenities.apartment %}
+        {{ infoTile(item) }}
+      {% endfor %}
+    </ul>
+    <p class="u-mt">Für die Kleinsten auf Wunsch: {% for item in amenities.baby %}<span class="chip">{{ item }}</span>{% if not loop.last %} {% endif %}{% endfor %}</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Grundriss</p>
+      <h2>So sind die Wohnungen aufgebaut.</h2>
+      <p>Beide Ferienwohnungen haben denselben Grundriss: vorne die Wohnküche mit Esstisch, in der Mitte Bad und Schlafzimmer, hinten das Kinderzimmer mit Etagenbett. Die Wohnungen liegen spiegelgleich nebeneinander.</p>
+      <ul class="check-list">
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Wohnküche mit Zugang zum Balkon</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Elternschlafzimmer mit Doppelbett</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Kinderzimmer mit Etagenbett</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Badezimmer mit Dusche, WC und Bidet</span></li>
+      </ul>
+      {{ note("Der Grundriss dient zur Orientierung. Möbel und Aufteilung können leicht variieren.", "info") }}
+    </div>
+    <figure class="floorplan">
+      {{ picture({
+        src: "grundriss",
+        alt: "Grundriss der beiden Ferienwohnungen mit Wohnküche, Bad und zwei Schlafzimmern",
+        widths: [530],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 530,
+        height: 580
+      }) }}
+      <figcaption>Grundriss der beiden Ferienwohnungen</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="preise">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Preise</p>
+      <h2>Klare Preise, keine Überraschungen.</h2>
+      <p class="section-head__text">Die Preise gelten pro Ferienwohnung und Nacht für zwei Personen. In der Hochsaison kann der Preis höher liegen – den genauen Preis bestätigen wir Ihnen im Angebot.</p>
+    </header>
+
+    <div class="price-cards">
+      {% for apartment in apartments %}
+        <article class="price-card">
+          <h3>{{ apartment.name }}</h3>
+          <p class="price-card__meta">{{ apartment.size }} · {{ apartment.guests }}</p>
+          <p class="price-card__price"><span>ab</span> {{ apartment.priceFrom }} € <small>/ Nacht</small></p>
+          <a class="btn btn--secondary btn--small" href="{{ ('/kontakt/?wohnung=' + apartment.slug + '#anfrage') | link }}">Anfragen</a>
+        </article>
+      {% endfor %}
+    </div>
+
+    <table class="price-table">
+      <caption>Zusätzliche Personen und Extras</caption>
+      <thead>
+        <tr>
+          <th scope="col">Leistung</th>
+          <th scope="col">Preis</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for extra in prices.extras %}
+          <tr>
+            <th scope="row">{{ extra.label }}</th>
+            <td>{{ extra.value }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="u-mt-lg">
+      <h3>Gut zu wissen</h3>
+      <ul class="info-grid u-mt">
+        {{ infoTile({ icon: "clock", title: "Anreise", text: "Ab 14:00 Uhr. Bei Ankunft nach 19:00 Uhr bitten wir um eine kurze Nachricht." }) }}
+        {{ infoTile({ icon: "calendar", title: "Abreise", text: "Bis 10:00 Uhr." }) }}
+        {{ infoTile({ icon: "parking", title: "Garage", text: "Ein Stellplatz in der hauseigenen Tiefgarage ist inklusive." }) }}
+        {{ infoTile({ icon: "paw", title: "Haustiere", text: "Brave Hunde sind willkommen – bitte fragen Sie vor der Buchung." }) }}
+      </ul>
+    </div>
+
+    <ul class="notes-list">
+      {% for note in prices.notes %}
+        <li>{{ note }}</li>
+      {% endfor %}
+    </ul>
+
+    {{ note("Rauchen ist in allen Wohnungen nicht erlaubt. Wir bitten um Verständnis.") }}
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Frühstück &amp; Hofprodukte</p>
+      <h2>Morgens duftet es nach frischem Brot.</h2>
+      <p>Auf Wunsch bringen wir Ihnen einen Frühstückskorb mit Eiern, Milch, Butter, Käse, Speck, Joghurt, Brot und hausgemachten Marmeladen. Auch eine Marende – eine deftige Jause für unterwegs – oder ein Lunchpaket stellen wir gerne zusammen.</p>
+      <p>Den Preis stimmen wir je nach Inhalt mit Ihnen ab. Sagen Sie uns einfach, was Sie mögen.</p>
+      <p>Unsere hofeigenen Produkte können Sie direkt bei uns kaufen – vom Frischkäse über Kaminwurzen bis zum Heukissen.</p>
+      <p class="u-mt"><a class="text-link" href="{{ '/der-hof/#produkte' | link }}">Mehr über unsere Produkte {{ "arrow" | icon("text-link__icon") | safe }}</a></p>
+    </div>
+    <div>
+      {{ picture({
+        src: "fruehstueck",
+        alt: "Frühstückskorb mit hofeigenen Produkten auf der Terrasse",
+        widths: [640, 1024],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 1024,
+        height: 698,
+        class: "breakfast__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+{{ ctaBand("Passt eine der Wohnungen?", "Sagen Sie uns Ihren Wunschtermin und wie viele Personen kommen – wir antworten persönlich und unverbindlich.", "Verfügbarkeit anfragen", site) }}

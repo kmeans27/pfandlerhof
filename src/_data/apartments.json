@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "jaufenblick",
+    "name": "Ferienwohnung Jaufenblick",
+    "shortName": "Jaufenblick",
+    "size": "56 m²",
+    "guests": "2–4 Personen",
+    "priceFrom": 120,
+    "image": "wohnen-2",
+    "imageAlt": "Wohnküche der Ferienwohnung Jaufenblick mit Esstisch und Blick zum Balkon",
+    "highlight": "Mit Infrarotkabine",
+    "summary": "Unsere Wohnung mit Infrarotkabine, zwei Schlafzimmern und Blick zum Jaufenkamm. Ideal für Familien, die nach einem Wandertag noch einmal richtig abschalten möchten.",
+    "features": [
+      "2 Schlafzimmer: Doppelbett und Etagenbett",
+      "Infrarotkabine",
+      "Balkon und Terrasse",
+      "Haustiere erlaubt"
+    ]
+  },
+  {
+    "slug": "meranersicht",
+    "name": "Ferienwohnung Meranersicht",
+    "shortName": "Meranersicht",
+    "size": "56 m²",
+    "guests": "2–4 Personen",
+    "priceFrom": 110,
+    "image": "wohnen-1",
+    "imageAlt": "Wohnbereich der Ferienwohnung Meranersicht mit Sofa und offener Balkontür",
+    "highlight": "Blick bis nach Meran",
+    "summary": "Die sonnige Wohnung mit großzügigem Wohnbereich und Balkon. Vom Esstisch aus schauen Sie über St. Martin bis nach Meran – besonders schön beim Frühstück.",
+    "features": [
+      "2 Schlafzimmer: Doppelbett und Etagenbett",
+      "Großer Balkon mit Bergblick",
+      "Wohnküche mit Geschirrspüler",
+      "Haustiere erlaubt"
+    ]
+  }
+]

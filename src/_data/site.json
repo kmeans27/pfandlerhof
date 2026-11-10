@@ -1,0 +1,50 @@
+{
+  "name": "Pfandlerhof",
+  "legalName": "Pfandlerhof d. Pichler Ubald",
+  "tagline": "Urlaub auf dem Bauernhof",
+  "region": "St. Martin in Passeier · Südtirol",
+  "description": "Zwei Ferienwohnungen auf einem Bauernhof in St. Martin in Passeier: Bergblick, Hoftiere, Frühstückskorb und Wanderwege ab der Haustür.",
+  "url": "https://www.pfandlerhof.com",
+  "language": "de",
+  "address": {
+    "street": "Kalmtaler Straße 5",
+    "postalCode": "39010",
+    "city": "St. Martin in Passeier",
+    "province": "BZ",
+    "country": "Italien",
+    "countryCode": "IT"
+  },
+  "phone": "+39 347 1604505",
+  "phoneHref": "+393471604505",
+  "email": "info@pfandlerhof.com",
+  "whatsapp": "393471604505",
+  "vat": "IT 01377250210",
+  "taxId": "PCHBLD61D14H989Q",
+  "cin": "IT021083B5JOAOHOIV",
+  "chamber": "Eintrag in der Handelskammer Bozen: 116678, seit 01.01.1990",
+  "hosts": "Carola Müller & Ubald Pichler",
+  "hostsFamily": "Familie Pichler",
+  "since": 2013,
+  "elevation": "750 m",
+  "checkIn": "ab 14:00 Uhr",
+  "checkOut": "bis 10:00 Uhr",
+  "deposit": 200,
+  "rating": {
+    "value": "4,83",
+    "max": 5,
+    "count": 66,
+    "source": "Airbnb"
+  },
+  "holidayCheck": {
+    "value": "6,0",
+    "max": 6,
+    "count": 9,
+    "recommendation": "100 %"
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pfandlerhof%2C%20Kalmtaler%20Stra%C3%9Fe%205%2C%2039010%20St.%20Martin%20in%20Passeier",
+  "routeUrl": "https://www.google.com/maps/dir/?api=1&destination=Pfandlerhof%2C%20Kalmtaler%20Stra%C3%9Fe%205%2C%2039010%20St.%20Martin%20in%20Passeier",
+  "links": {
+    "roterHahn": "https://www.roterhahn.it/de/urlaub-auf-dem-bauernhof/suedtirol/ferienwohnungen-und-zimmer/pfandlerhof-st-martin-in-passeier+4635-1",
+    "airbnb": "https://www.airbnb.com/rooms/44055778"
+  }
+}

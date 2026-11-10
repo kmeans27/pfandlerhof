@@ -1,0 +1,39 @@
+{#
+  Responsive Bilder
+  -----------------
+  Erzeugt <picture> mit WebP-Quellen und JPEG-Fallback.
+  Die Dateien liegen unter /assets/img/<name>-<breite>.(webp|jpg).
+#}
+
+{% macro picture(opts) %}
+  {% set widths = opts.widths or [640, 960] %}
+  {% set smallest = widths | first %}
+  {% set largest = widths | last %}
+  {% set sizes = opts.sizes or "100vw" %}
+  <picture class="picture{% if opts.pictureClass %} {{ opts.pictureClass }}{% endif %}">
+    <source
+      type="image/webp"
+      srcset="{% for w in widths %}{{ ('/assets/img/' + opts.src + '-' + w + '.webp') | link }} {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+      sizes="{{ sizes }}">
+    <img
+      src="{{ ('/assets/img/' + opts.src + '-' + largest + '.jpg') | link }}"
+      srcset="{% for w in widths %}{{ ('/assets/img/' + opts.src + '-' + w + '.jpg') | link }} {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+      sizes="{{ sizes }}"
+      width="{{ opts.width }}"
+      height="{{ opts.height }}"
+      alt="{{ opts.alt }}"
+      class="{{ opts.class or '' }}"
+      loading="{{ opts.loading or 'lazy' }}"
+      decoding="{{ opts.decoding or 'async' }}"
+      {% if opts.priority %}fetchpriority="high"{% endif %}>
+  </picture>
+{% endmacro %}
+
+{% macro figure(opts) %}
+  <figure class="figure{% if opts.class %} {{ opts.class }}{% endif %}">
+    {{ picture(opts) }}
+    {% if opts.caption %}
+      <figcaption class="figure__caption">{{ opts.caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endmacro %}

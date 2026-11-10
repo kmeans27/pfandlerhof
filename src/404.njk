@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: "Seite nicht gefunden"
+description: "Diese Seite existiert nicht. Zurück zur Startseite des Pfandlerhofs."
+permalink: /404.html
+noindex: true
+---
+
+{% from "components/ui.njk" import button %}
+
+<section class="page-hero page-hero--plain">
+  <div class="container container--narrow u-center">
+    <p class="eyebrow">Fehler 404</p>
+    <h1>Diese Seite gibt es nicht.</h1>
+    <p class="lead">Vielleicht hat sich der Link geändert oder die Seite ist umgezogen. Kehren Sie zur Startseite zurück – oder rufen Sie uns einfach an.</p>
+    <div class="hero__actions hero__actions--center">
+      {{ button("Zur Startseite", "/", "primary", "arrow") }}
+      {{ button("Kontakt & Anfahrt", "/kontakt/", "secondary") }}
+    </div>
+  </div>
+</section>

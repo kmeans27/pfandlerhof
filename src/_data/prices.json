@@ -1,0 +1,36 @@
+{
+  "extras": [
+    {
+      "label": "Jede weitere Person",
+      "value": "15 € / Nacht"
+    },
+    {
+      "label": "Kinder von 0 bis 5 Jahren",
+      "value": "gratis"
+    },
+    {
+      "label": "Kinder von 5 bis 10 Jahren",
+      "value": "6 € / Nacht"
+    },
+    {
+      "label": "Kinder von 10 bis 15 Jahren",
+      "value": "12 € / Nacht"
+    },
+    {
+      "label": "Haustiere",
+      "value": "auf Anfrage"
+    },
+    {
+      "label": "Kurtaxe",
+      "value": "2,30 € pro Person / Nacht"
+    }
+  ],
+  "notes": [
+    "Alle Preise gelten pro Ferienwohnung und Nacht für zwei Personen, inklusive Mehrwertsteuer, Bettwäsche, Handtüchern, WLAN und Garage.",
+    "Die Kurtaxe wird vor Ort eingehoben. Kinder bis 14 Jahre sind davon befreit.",
+    "Der Frühstückskorb und hofeigene Produkte sind nicht inklusive – wir stellen Ihnen gerne zusammen, was Sie möchten.",
+    "Bei einer fixen Reservierung bitten wir um eine Anzahlung von 200 € pro Ferienwohnung innerhalb von sieben Tagen.",
+    "Bei rechtzeitiger Stornierung kann die Anzahlung für einen späteren Aufenthalt innerhalb eines Jahres verwendet werden. Bei kurzfristiger Stornierung oder vorzeitiger Abreise verrechnen wir den vollen Aufenthaltspreis. Wir empfehlen eine Reiserücktrittsversicherung.",
+    "Bezahlung in Bar, mit Bankomat- oder Kreditkarte sowie per Überweisung."
+  ]
+}

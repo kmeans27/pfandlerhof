@@ -1,0 +1,182 @@
+---
+layout: layouts/base.njk
+title: "Der Hof"
+description: "Kühe, Schafe, Ponys, Hühner und ein Hund: Der Pfandlerhof ist ein Bauernhof mit Viehhaltung. Erfahren Sie mehr über den Alltag, die Tiere und unsere Produkte."
+activeNav: hof
+---
+
+{% from "components/media.njk" import picture %}
+{% from "components/ui.njk" import note %}
+{% from "components/cta.njk" import ctaBand %}
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__text">
+      <p class="eyebrow">Der Hof</p>
+      <h1>Ein Bauernhof, der lebt.</h1>
+      <p class="page-hero__lead">Kühe, Schafe, Ponys, Hühner und ein Hund: Am Pfandlerhof gehört der bäuerliche Alltag zum Urlaub dazu. Wer möchte, darf mithelfen – und lernt dabei mehr über das Leben in den Bergen als in jedem Museum.</p>
+    </div>
+    <div>
+      {{ picture({
+        src: "hof-sommer",
+        alt: "Der Pfandlerhof auf 750 Metern Seehöhe",
+        widths: [480, 900],
+        sizes: "(min-width: 900px) 42vw, 100vw",
+        width: 900,
+        height: 370,
+        class: "page-hero__img",
+        loading: "eager"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container split split--wide">
+    <div>
+      <p class="eyebrow">Bauernhof mit Viehhaltung</p>
+      <h2>Arbeit, die man riechen, hören und schmecken kann.</h2>
+      <p>Wir halten Grauvieh zur Fleischproduktion und Schafe. Im Sommer ziehen die Schafe auf die Alm – im Winter stehen sie wieder im Stall bei uns. Daneben leben Ponys, Schweine, Hühner, Katzen, Zwerghasen, Meerschweinchen und unser Hofhund am Pfandlerhof.</p>
+      <p>Die Kinder dürfen füttern, streicheln und staunen; die Erwachsenen oft genauso. Unsere Gäste sagen, dass ihnen die Gastfreundschaft, die Tiere und das Essen am besten gefallen. Wir freuen uns, wenn Sie Teil davon werden.</p>
+      <ul class="animal-list">
+        {% for animal in farm.animals %}
+          <li>{{ "paw" | icon | safe }}<span>{{ animal }}</span></li>
+        {% endfor %}
+      </ul>
+      {{ note("Die Schafe sind im Sommer auf der Alm. Welche Tiere gerade am Hof sind, sehen Sie am besten bei einem Besuch – oder fragen Sie uns einfach.", "info") }}
+    </div>
+    <div>
+      {{ picture({
+        src: "haus-terrasse",
+        alt: "Südseite des Ferienhauses mit Terrasse und Liegewiese",
+        widths: [480, 900],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 900,
+        height: 370,
+        class: "welcome__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Hofleben</p>
+      <h2>Mitmachen ist ausdrücklich erwünscht.</h2>
+      <p class="section-head__text">Wir zeigen Ihnen gerne, wie ein Bergbauernhof das Jahr über arbeitet. Ohne Zeitdruck und ohne Pflicht – aber mit viel Gelegenheit, selbst Hand anzulegen.</p>
+    </header>
+    <div class="experience-grid">
+      {% for experience in farm.experiences %}
+        <article class="experience">
+          <span class="experience__icon">{{ experience.icon | icon | safe }}</span>
+          <h3>{{ experience.title }}</h3>
+          <p>{{ experience.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fruehstueck">
+  <div class="container split split--reverse">
+    <div>
+      <p class="eyebrow">Frühstückskorb</p>
+      <h2>Mit Liebe zusammengestellt.</h2>
+      <p>Der Frühstückskorb ist kein Buffet, sondern ein Korb voller Dinge, die es bei uns wirklich gibt: Eier, frische Milch, Butter, Joghurt, Frischkäse, Speck, Käse, Brot, Marmeladen, Sirup und je nach Saison Obst und Gemüse aus dem Garten.</p>
+      <p>Wir stellen ihn nach Ihren Wünschen und Verträglichkeiten zusammen. Sagen Sie uns einfach am Vorabend, was Sie mögen – und wann Sie frühstücken möchten.</p>
+      <ul class="chips">
+        <li class="chip">Eier</li>
+        <li class="chip">Milch</li>
+        <li class="chip">Butter</li>
+        <li class="chip">Joghurt</li>
+        <li class="chip">Frischkäse</li>
+        <li class="chip">Speck</li>
+        <li class="chip">Käse</li>
+        <li class="chip">Brot</li>
+        <li class="chip">Marmelade</li>
+        <li class="chip">Sirup</li>
+        <li class="chip">Obst &amp; Gemüse</li>
+      </ul>
+    </div>
+    <div>
+      {{ picture({
+        src: "fruehstueck",
+        alt: "Frühstückskorb mit hofeigenen Produkten auf der Terrasse",
+        widths: [640, 1024],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 1024,
+        height: 698,
+        class: "breakfast__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper" id="produkte">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Hofeigene Produkte</p>
+      <h2>Was Sie bei uns mitnehmen können.</h2>
+      <p>In unserer Produktecke können Sie kaufen, was Ihnen geschmeckt hat: frische Eier und Milch, Butter, Joghurt, Frischkäse, Speck, Kaminwurzen, Marmeladen, Sirupe, Kompotte, Trockenobst, Tomatensugo, Eierteigwaren, Brot, Gewürzsalze und Heukissen.</p>
+      <p>Vieles davon landet auch in unserem Frühstückskorb oder in der Marende für unterwegs. Fragen Sie einfach danach.</p>
+      <ul class="chips">
+        {% for product in farm.products %}
+          <li class="chip">{{ product }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="contact-card">
+      <p class="eyebrow">Produktecke</p>
+      <h3>Fragen Sie einfach nach.</h3>
+      <p>Unsere Produkte stehen nicht rund um die Uhr bereit – vieles wird frisch gemacht und ist schnell vergriffen. Sagen Sie uns am besten am Vorabend, was Sie gerne hätten, dann legen wir es Ihnen zurecht.</p>
+      <ul class="check-list">
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Frische Milch und Eier</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Butter, Joghurt und Frischkäse</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Speck, Kaminwurzen und Brot</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Marmeladen, Sirupe und Kompotte</span></li>
+      </ul>
+      {{ note("Auch als Mitbringsel für zu Hause: Heukissen, Gewürzsalze und Trockenobst.", "heart") }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--green">
+  <div class="container split split--wide">
+    <div>
+      <p class="eyebrow eyebrow--light">Nachhaltig &amp; bodenständig</p>
+      <h2>Wir leben von und mit der Natur.</h2>
+      <p>Unser Trinkwasser kommt aus der eigenen Quelle, der Strom von der Photovoltaikanlage, das Warmwasser von der Sonne und die Wärme von Holzpellets. Das ist keine Marketingidee, sondern seit jeher die einfachste Lösung für einen Hof in den Bergen.</p>
+      <ul class="sustain-list">
+        {% for item in farm.sustainability %}
+          <li>{{ "leaf" | icon | safe }}<span>{{ item }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow eyebrow--light">Für Kinder &amp; Erwachsene</p>
+      <h2>Platz zum Spielen, Sitzen, Staunen.</h2>
+      <ul class="chips">
+        {% for item in farm.outdoor %}
+          <li class="chip">{{ item.icon | icon | safe }}<span>{{ item.label }}</span></li>
+        {% endfor %}
+      </ul>
+      <p class="u-mt">Auf der Liegewiese finden Sie Schatten, Sonne und Ruhe. Für die Kinder gibt es genug zu entdecken – und für die Erwachsenen einen Grill, einen Kräutergarten und die Hofkapelle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside class="naserhof">
+      <span class="naserhof__icon">{{ "hiking" | icon | safe }}</span>
+      <div>
+        <p class="eyebrow">Dienstagstradition</p>
+        <h2>Dienstags zum Naserhof.</h2>
+        <p>Seit Jahren gehen wir dienstags gemeinsam zum Berggasthaus Naserhof – gute Küche, traditionelle Live-Musik und ein Weg, der sich auch mit Kindern gut gehen lässt. Wer nicht gehen möchte, fährt mit dem Auto und spaziert das letzte Stück.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{{ ctaBand("Lust auf Hofleben?", "Kommen Sie vorbei, schauen Sie sich um und lernen Sie uns kennen. Wir beantworten Ihre Fragen gerne persönlich.", "Kontakt aufnehmen", site) }}

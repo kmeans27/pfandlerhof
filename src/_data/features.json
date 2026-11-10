@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "mountain",
+    "title": "Bergblick & Ruhe",
+    "text": "Sonnige, ruhige Lage auf 750 Metern – vom Jaufenkamm über St. Martin bis nach Meran."
+  },
+  {
+    "icon": "cow",
+    "title": "Tiere am Hof",
+    "text": "Kühe, Schafe, Ponys, Hühner, Katzen und unser Hofhund – zum Anschauen und Kennenlernen."
+  },
+  {
+    "icon": "basket",
+    "title": "Frühstückskorb",
+    "text": "Eier, Milch, Butter, Speck, Käse und Marmeladen aus eigener Herstellung – auf Wunsch jeden Morgen."
+  },
+  {
+    "icon": "kids",
+    "title": "Für Kinder",
+    "text": "Spielplatz, Trampolin, Spielhaus, Tischfußball und viele Tiere zum Staunen."
+  },
+  {
+    "icon": "hiking",
+    "title": "Wandern ab der Haustür",
+    "text": "Meraner Höhenweg, Waalwege und Almwanderungen beginnen direkt bei uns."
+  },
+  {
+    "icon": "wifi",
+    "title": "Einfach ankommen",
+    "text": "WLAN, Tiefgarage, Waschmaschine und Trockner – damit der Urlaub unkompliziert bleibt."
+  }
+]

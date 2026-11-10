@@ -1,0 +1,104 @@
+{
+  "animals": [
+    "Kühe und Kälber (Grauvieh)",
+    "Jungrinder",
+    "Schafe",
+    "Ponys",
+    "Schweine",
+    "Hühner",
+    "Katzen",
+    "Zwerghasen",
+    "Meerschweinchen",
+    "Hofhund"
+  ],
+  "experiences": [
+    {
+      "icon": "users",
+      "title": "Hofführung",
+      "text": "Wir zeigen Ihnen den Stall, die Tiere und erzählen, wie ein Bergbauernhof das Jahr über arbeitet."
+    },
+    {
+      "icon": "cow",
+      "title": "Stallbesuche & Mitarbeit",
+      "text": "Wer möchte, darf beim Füttern, Misten oder bei der Heuernte mithelfen – ohne Muss, mit viel Freude."
+    },
+    {
+      "icon": "basket",
+      "title": "Butter machen & verkosten",
+      "text": "Butter, Frischkäse oder Marmelade selbst machen und danach gemeinsam probieren."
+    },
+    {
+      "icon": "leaf",
+      "title": "Bauerngarten",
+      "text": "Kräuter, Gemüse und Beeren aus dem eigenen Garten – je nachdem, was gerade Saison hat."
+    },
+    {
+      "icon": "sun",
+      "title": "Heuernte miterleben",
+      "text": "Im Sommer wird das Heu eingebracht. Wer mit anpacken möchte, ist herzlich willkommen."
+    },
+    {
+      "icon": "heart",
+      "title": "Basteln & Kaffeekränzchen",
+      "text": "Kleine Bastelnachmittage und gemütliche Kaffeerunden, besonders für unsere jüngsten Gäste."
+    }
+  ],
+  "products": [
+    "Eier",
+    "Frische Milch",
+    "Butter",
+    "Joghurt",
+    "Frischkäse",
+    "Speck",
+    "Kaminwurzen",
+    "Marmeladen",
+    "Sirupe",
+    "Kompotte",
+    "Trockenobst",
+    "Trockengemüse",
+    "Gemüseantipasto",
+    "Caponata",
+    "Tomatensugo",
+    "Eierteigwaren",
+    "Brot",
+    "Gewürzsalze",
+    "Heukissen",
+    "Obst und Gemüse nach Saison"
+  ],
+  "outdoor": [
+    {
+      "icon": "kids",
+      "label": "Spielplatz mit Schaukel, Rutsche und Sandkasten"
+    },
+    {
+      "icon": "sun",
+      "label": "Liegewiese und Terrasse"
+    },
+    {
+      "icon": "house",
+      "label": "Kinderspielhaus und Trampolin"
+    },
+    {
+      "icon": "users",
+      "label": "Tischfußball und Gemeinschaftsgrill"
+    },
+    {
+      "icon": "leaf",
+      "label": "Kräutergarten und Bauerngarten"
+    },
+    {
+      "icon": "heart",
+      "label": "Hofkapelle"
+    },
+    {
+      "icon": "hiking",
+      "label": "Kinderfahrräder und Fahrradverleih"
+    }
+  ],
+  "sustainability": [
+    "Trinkwasser aus eigener Quelle",
+    "Strom aus Photovoltaik",
+    "Warmwasser mit thermischer Solaranlage",
+    "Heizen mit Holzpellets"
+  ]
+}

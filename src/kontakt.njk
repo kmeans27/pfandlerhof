@@ -1,0 +1,217 @@
+---
+layout: layouts/base.njk
+title: "Kontakt & Anfahrt"
+description: "So erreichen Sie den Pfandlerhof: Kalmtaler Straße 5, 39010 St. Martin in Passeier. Telefon, E-Mail, Anfahrt mit dem Auto oder Bus – und das Anfrageformular."
+activeNav: kontakt
+---
+
+{% from "components/media.njk" import picture %}
+{% from "components/ui.njk" import button, note, stars %}
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__text">
+      <p class="eyebrow">Kontakt &amp; Anfahrt</p>
+      <h1>Wir sind gerne für Sie da.</h1>
+      <p class="page-hero__lead">Fragen zur Wohnung, zum Hof oder zur Anreise? Rufen Sie einfach an oder schreiben Sie uns. Wir antworten persönlich – meist noch am selben Tag.</p>
+    </div>
+    <div>
+      {{ picture({
+        src: "eingang",
+        alt: "Eingang zum Ferienhaus des Pfandlerhofs",
+        widths: [640, 1024],
+        sizes: "(min-width: 900px) 42vw, 100vw",
+        width: 1024,
+        height: 767,
+        class: "page-hero__img",
+        loading: "eager"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <h2>Kontakt</h2>
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="contact-item__icon">{{ "pin" | icon | safe }}</span>
+          <div>
+            <h3>Adresse</h3>
+            <p>Familie Pichler<br>{{ site.address.street }}<br>I-{{ site.address.postalCode }} {{ site.address.city }} ({{ site.address.province }})<br>{{ site.address.country }}</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon">{{ "phone" | icon | safe }}</span>
+          <div>
+            <h3>Telefon</h3>
+            <p><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon">{{ "mail" | icon | safe }}</span>
+          <div>
+            <h3>E-Mail</h3>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon">{{ "chat" | icon | safe }}</span>
+          <div>
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">Nachricht schreiben</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item__icon">{{ "clock" | icon | safe }}</span>
+          <div>
+            <h3>An- und Abreise</h3>
+            <p>Anreise {{ site.checkIn }}<br>Abreise {{ site.checkOut }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-actions">
+        {{ button("Route planen", site.routeUrl, "secondary", "pin") }}
+      </div>
+      <p class="contact-languages">{{ "chat" | icon | safe }} Wir sprechen Deutsch, Italienisch und Englisch.</p>
+      <p class="rating u-mt">
+        {{ stars(5) }}
+        <span class="rating__value">{{ site.rating.value }} / {{ site.rating.max }}</span>
+        <span class="rating__meta">{{ site.rating.count }} Bewertungen bei {{ site.rating.source }}</span>
+      </p>
+      {{ note("Auf Wunsch holen wir Sie von der nächsten Bus- oder Bahnstation ab. Sagen Sie uns einfach rechtzeitig Bescheid.", "info") }}
+    </div>
+
+    <div class="contact-card" id="anfrage">
+      <h2>Anfrage senden</h2>
+      <p class="section-head__text">Schreiben Sie uns Ihren Wunschtermin. Wir prüfen die Verfügbarkeit und melden uns mit einem persönlichen Angebot.</p>
+      <p class="form__hint">Mit <span class="required" aria-hidden="true">*</span> gekennzeichnete Felder sind Pflichtfelder.</p>
+
+      <form
+        class="form u-mt"
+        data-inquiry-form
+        data-recipient="{{ site.email }}"
+        action="mailto:{{ site.email }}"
+        method="post"
+        enctype="text/plain">
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">E-Mail <span class="required" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="phone">Telefon <span class="hint">(optional)</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="apartment">Ferienwohnung</label>
+            <select id="apartment" name="apartment">
+              <option value="">Noch offen</option>
+              {% for apartment in apartments %}
+                <option value="{{ apartment.slug }}">{{ apartment.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="arrival">Anreise <span class="required" aria-hidden="true">*</span></label>
+            <input id="arrival" name="arrival" type="date" required>
+          </div>
+          <div class="field">
+            <label for="departure">Abreise <span class="required" aria-hidden="true">*</span></label>
+            <input id="departure" name="departure" type="date" required>
+          </div>
+        </div>
+
+        <div class="form__row form__row--3">
+          <div class="field">
+            <label for="adults">Erwachsene <span class="required" aria-hidden="true">*</span></label>
+            <select id="adults" name="adults" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="children">Kinder</label>
+            <select id="children" name="children">
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="childrenAge">Alter der Kinder</label>
+            <input id="childrenAge" name="childrenAge" type="text" placeholder="z. B. 4 und 7">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" rows="5" placeholder="Haben Sie besondere Wünsche? Möchten Sie einen Frühstückskorb? Fragen zur Anreise?"></textarea>
+        </div>
+
+        <div class="field field--check">
+          <input id="privacy" name="privacy" type="checkbox" required>
+          <label for="privacy">Ich habe die <a href="{{ '/datenschutz/' | link }}">Datenschutzhinweise</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung dieser Anfrage verwendet werden. <span class="required" aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">
+            <span>Anfrage per E-Mail senden</span>{{ "mail" | icon("btn__icon") | safe }}
+          </button>
+          <span class="form__note">Es öffnet sich Ihr E-Mail-Programm. Sie können uns auch <a href="mailto:{{ site.email }}">direkt schreiben</a> oder anrufen.</span>
+        </div>
+
+        <p class="form__status" data-form-status role="status" tabindex="-1">
+          Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die Nachricht dort ab. Falls sich nichts öffnet, schreiben Sie uns bitte direkt an <a href="mailto:{{ site.email }}">{{ site.email }}</a> oder rufen Sie an.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container split split--wide">
+    <div>
+      <p class="eyebrow">Anfahrt mit dem Auto</p>
+      <h2>Zwei Wege führen zu uns.</h2>
+      <p>Für das Navigationsgerät: <strong>Kalmtaler Straße 5, 39010 St. Martin in Passeier</strong>. Die letzten Meter führen in einer Kurve am Hof vorbei – Sie sehen das Haus mit dem großen Balkon schon von weitem.</p>
+      <ol class="arrival-steps">
+        <li><strong>Variante 1 (über Bozen):</strong> Brenner – Sterzing – Bozen, Ausfahrt Süd – Schnellstraße (MeBo) bis Meran Süd – Beschilderung Jaufenpass/Timmelsjoch/Passeiertal – Riffian – Saltaus – Quellenhof – Kalmtal – Kalmtaler Straße – Pfandlerhof.</li>
+        <li><strong>Variante 2 (über den Jaufenpass):</strong> Brenner – Ausfahrt Sterzing – Jaufenpass – St. Leonhard – St. Martin – Kalmtal – Kalmtaler Straße – Pfandlerhof.</li>
+      </ol>
+      <div class="map-actions">
+        {{ button("Route in Google Maps", site.routeUrl, "secondary", "pin") }}
+      </div>
+    </div>
+    <div>
+      {{ picture({
+        src: "haus-sommer",
+        alt: "Das Ferienhaus des Pfandlerhofs im Sommer",
+        widths: [480, 900],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 900,
+        height: 370,
+        class: "welcome__img"
+      }) }}
+      <h3 class="u-mt">Mit dem Zug oder Bus</h3>
+      <p>Mit dem Zug bis Meran oder Bozen, weiter mit dem Bus ins Passeiertal bis St. Martin oder Quellenhof. Von dort holen wir Sie auf Wunsch ab – bitte sagen Sie uns vorher Bescheid.</p>
+    </div>
+  </div>
+</section>

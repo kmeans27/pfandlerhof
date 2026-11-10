@@ -1,0 +1,149 @@
+---
+layout: layouts/base.njk
+title: "Umgebung & Ausflüge"
+description: "Meraner Höhenweg, Waalwege, Meran und drei Skigebiete: Der Pfandlerhof liegt ideal für Wanderurlaub, Familienausflüge und Wintertage im Passeiertal."
+activeNav: umgebung
+---
+
+{% from "components/media.njk" import picture %}
+{% from "components/ui.njk" import button, note %}
+{% from "components/cta.njk" import ctaBand %}
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div class="page-hero__text">
+      <p class="eyebrow">Umgebung</p>
+      <h1>Zwischen Meraner Höhenweg und Meran.</h1>
+      <p class="page-hero__lead">Der Pfandlerhof liegt auf 750 Metern oberhalb von Quellenhof – ruhig genug zum Abschalten und nah genug für alles, was Sie unternehmen möchten. Wanderwege beginnen vor der Haustür, St. Martin ist vier Kilometer entfernt.</p>
+    </div>
+    <div>
+      {{ picture({
+        src: "blick-st-martin",
+        alt: "Blick auf St. Martin und das Passeiertal",
+        widths: [640, 1024],
+        sizes: "(min-width: 900px) 42vw, 100vw",
+        width: 1024,
+        height: 372,
+        class: "page-hero__img",
+        loading: "eager"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container split split--wide">
+    <div>
+      <p class="eyebrow">Die Lage</p>
+      <h2>Oben angekommen, unten alles erreichbar.</h2>
+      <p>Die Straße zum Hof ist durchgehend asphaltiert und führt in einer Kurve am Haus vorbei. Vom Balkon schauen Sie über St. Martin bis nach Meran; hinter dem Haus beginnt die Wiese, ein Stück weiter der Wald.</p>
+      <p>Wer ohne Auto anreist: Auf Wunsch holen wir Sie von der nächsten Bus- oder Bahnstation ab. Sagen Sie uns einfach vorher Bescheid.</p>
+      <div class="map-actions">
+        {{ button("Route planen", site.routeUrl, "secondary", "pin") }}
+        <a class="text-link" href="{{ site.mapsUrl }}" target="_blank" rel="noopener">Auf Google Maps ansehen {{ "arrow" | icon("text-link__icon") | safe }}</a>
+      </div>
+    </div>
+    <div>
+      <ul class="distance-list">
+        <li><span>St. Martin</span><strong>4 km</strong></li>
+        <li><span>Meran</span><strong>17 km</strong></li>
+        <li><span>Hirzer Seilbahn</span><strong>2,8 km</strong></li>
+        <li><span>Golfclub Passeier</span><strong>2,5 km</strong></li>
+        <li><span>Sandhof (Geburtshaus Andreas Hofer)</span><strong>6 km</strong></li>
+        <li><span>Wallfahrtskirche Riffian</span><strong>5,3 km</strong></li>
+        <li><span>Skigebiet Pfelders</span><strong>23 km</strong></li>
+        <li><span>Skigebiet Meran 2000</span><strong>35 km</strong></li>
+        <li><span>Skigebiet Ratschings</span><strong>44 km</strong></li>
+        <li><span>Bozen</span><strong>ca. 40 km</strong></li>
+      </ul>
+      {{ note("Alle Entfernungen sind Fahrtstrecken ab dem Hof und ungefähre Angaben.", "info") }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Wandern &amp; Berg</p>
+      <h2>Der Weg beginnt direkt bei uns.</h2>
+      <p class="section-head__text">Ob gemütlicher Waalweg oder große Höhenrunde – wir sagen Ihnen gerne, welche Tour zu Ihrem Tag und zu Ihren Kindern passt.</p>
+    </header>
+    <div class="activity-grid">
+      <article class="activity">
+        <span class="activity__icon">{{ "mountain" | icon | safe }}</span>
+        <h3>Meraner Höhenweg</h3>
+        <p>Der bekannte Höhenweg rund um die Texelgruppe verläuft oberhalb des Tales. Mehrere Einstiege sind von uns aus gut erreichbar – für einzelne Etappen oder mehrere Tage.</p>
+      </article>
+      <article class="activity">
+        <span class="activity__icon">{{ "sun" | icon | safe }}</span>
+        <h3>Hirzer &amp; Waalwege</h3>
+        <p>Mit der Hirzer Seilbahn geht es in wenigen Minuten nach oben. Unten locken die Waalwege: flach, familienfreundlich und mit vielen Möglichkeiten zur Einkehr.</p>
+      </article>
+      <article class="activity">
+        <span class="activity__icon">{{ "house" | icon | safe }}</span>
+        <h3>St. Martin &amp; Meran</h3>
+        <p>St. Martin erreichen Sie in wenigen Minuten, Meran in einer halben Stunde. Promenade, Laubengasse, Therme und das Geburtshaus von Andreas Hofer lohnen einen Ausflug.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split split--reverse">
+    <div>
+      <p class="eyebrow">Mit Kindern</p>
+      <h2>Keine Langeweile, versprochen.</h2>
+      <p>Auf dem Hof gibt es einen Spielplatz mit Schaukel, Rutsche und Sandkasten, ein Trampolin, ein Spielhaus, Tischfußball und Kinderfahrräder. Und dann sind da noch die Tiere, die meist spannender sind als alles andere.</p>
+      <p>Für Regentage oder einen Tapetenwechsel: Die Therme Meran, das MuseumPasseier in St. Leonhard und der Sandhof in St. Martin sind schnell erreicht.</p>
+      <ul class="check-list">
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Spielplatz, Trampolin und Spielhaus direkt am Hof</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Tiere füttern und den Stall kennenlernen</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Kinderfahrräder und kindertaugliche Wanderwege in der Nähe</span></li>
+        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Babyausstattung auf Wunsch: Hochstuhl, Gitterbett, Wickelauflage</span></li>
+      </ul>
+    </div>
+    <div>
+      {{ picture({
+        src: "liegewiese",
+        alt: "Liegewiese vor dem Ferienhaus mit Blick auf die Berge",
+        widths: [480, 900],
+        sizes: "(min-width: 860px) 46vw, 100vw",
+        width: 900,
+        height: 370,
+        class: "welcome__img"
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section class="section section--green">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow eyebrow--light">Winter</p>
+      <h2>Schnee, Rodeln, Einkehr.</h2>
+      <p class="section-head__text">Im Winter ist es bei uns ruhig – und trotzdem ist die nächste Piste nicht weit. Drei Skigebiete liegen zwischen 23 und 44 Kilometern entfernt.</p>
+    </header>
+    <div class="teaser-grid">
+      <article class="teaser">
+        <span class="teaser__icon">{{ "snow" | icon | safe }}</span>
+        <p class="teaser__meta">23 km</p>
+        <h3>Pfelders</h3>
+        <p>Kleines, familienfreundliches Skigebiet am Ende des Passeiertals – ideal für einen entspannten Tag mit Kindern.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon">{{ "mountain" | icon | safe }}</span>
+        <p class="teaser__meta">35 km</p>
+        <h3>Meran 2000</h3>
+        <p>Das große Skigebiet über Meran bietet viele Pisten und eine lange Saison. Auch für Rodler und Winterwanderer geeignet.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon">{{ "hiking" | icon | safe }}</span>
+        <p class="teaser__meta">44 km</p>
+        <h3>Ratschings</h3>
+        <p>Ein weiteres schneesicheres Gebiet mit modernen Bahnen – gut für alle, die etwas mehr Abwechslung möchten.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{ ctaBand("Urlaub am Berg – wir helfen bei der Planung.", "Sagen Sie uns, was Sie vorhaben: Wandern, Skifahren, Ausflüge mit Kindern oder einfach nichts. Wir geben Ihnen gerne Tipps aus erster Hand.", "Fragen stellen", site) }}
