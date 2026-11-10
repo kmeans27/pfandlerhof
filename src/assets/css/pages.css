@@ -832,6 +832,10 @@
   margin-bottom: 0.6rem;
 }
 
+.naserhof .eyebrow {
+  color: var(--green);
+}
+
 .naserhof p:last-child {
   margin-bottom: 0;
 }

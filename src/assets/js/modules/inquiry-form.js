@@ -62,6 +62,28 @@ export function initInquiryForm() {
   const status = form.querySelector("[data-form-status]");
   const recipient = form.dataset.recipient;
   const apartmentSelect = form.elements.apartment;
+  const arrival = form.elements.arrival;
+  const departure = form.elements.departure;
+
+  // Vergangene Tage sind für eine Anfrage nicht sinnvoll.
+  const now = new Date();
+  const today = [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, "0"),
+    String(now.getDate()).padStart(2, "0"),
+  ].join("-");
+
+  if (arrival && departure) {
+    arrival.min = today;
+    departure.min = today;
+
+    arrival.addEventListener("change", () => {
+      departure.min = arrival.value || today;
+      if (departure.value && departure.value < departure.min) {
+        departure.value = "";
+      }
+    });
+  }
 
   // Vorauswahl über den Link, z. B. /kontakt/?wohnung=jaufenblick#anfrage
   const requestedApartment = new URLSearchParams(window.location.search).get("wohnung");
