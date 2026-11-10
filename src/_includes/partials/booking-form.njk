@@ -1,0 +1,100 @@
+{% set compact = bookingCompact %}
+<form
+  class="form{% if compact %} form--compact{% endif %}"
+  data-inquiry-form
+  data-recipient="{{ site.email }}"
+  action="mailto:{{ site.email }}"
+  method="post"
+  enctype="text/plain">
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="email">E-Mail <span class="required" aria-hidden="true">*</span></label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="arrival">Anreise <span class="required" aria-hidden="true">*</span></label>
+      <input id="arrival" name="arrival" type="date" required>
+    </div>
+    <div class="field">
+      <label for="departure">Abreise <span class="required" aria-hidden="true">*</span></label>
+      <input id="departure" name="departure" type="date" required>
+    </div>
+  </div>
+
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="adults">Erwachsene <span class="required" aria-hidden="true">*</span></label>
+      <select id="adults" name="adults" required>
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="children">Kinder</label>
+      <select id="children" name="children">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="apartment">Ferienwohnung</label>
+    <select id="apartment" name="apartment">
+      <option value="">Noch offen</option>
+      {% for apartment in apartments %}
+        <option value="{{ apartment.slug }}">{{ apartment.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  {% if not compact %}
+    <div class="form__row form__row--2">
+      <div class="field">
+        <label for="phone">Telefon <span class="hint">(optional)</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="childrenAge">Alter der Kinder</label>
+        <input id="childrenAge" name="childrenAge" type="text" placeholder="z. B. 4 und 7">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="message">Ihre Nachricht</label>
+      <textarea id="message" name="message" rows="5" placeholder="Haben Sie besondere Wünsche? Möchten Sie einen Frühstückskorb? Fragen zur Anreise?"></textarea>
+    </div>
+  {% endif %}
+
+  <div class="field field--check">
+    <input id="privacy" name="privacy" type="checkbox" required>
+    <label for="privacy">Ich habe die <a href="{{ '/datenschutz/' | link }}">Datenschutzhinweise</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung dieser Anfrage verwendet werden. <span class="required" aria-hidden="true">*</span></label>
+  </div>
+
+  <div class="form__actions">
+    <button class="btn btn--primary{% if compact %} btn--block{% endif %}" type="submit">
+      <span>{% if compact %}Anfrage senden{% else %}Anfrage per E-Mail senden{% endif %}</span>{{ "mail" | icon("btn__icon") | safe }}
+    </button>
+    {% if not compact %}
+      <span class="form__note">Es öffnet sich Ihr E-Mail-Programm. Sie können uns auch <a href="mailto:{{ site.email }}">direkt schreiben</a> oder anrufen.</span>
+    {% endif %}
+  </div>
+
+  <p class="form__status" data-form-status role="status" tabindex="-1">
+    Ihr E-Mail-Programm sollte sich jetzt geöffnet haben. Bitte senden Sie die Nachricht dort ab. Falls sich nichts öffnet, schreiben Sie uns bitte direkt an <a href="mailto:{{ site.email }}">{{ site.email }}</a> oder rufen Sie an.
+  </p>
+</form>

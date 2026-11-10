@@ -9,6 +9,10 @@
   padding-inline: var(--gutter);
 }
 
+.container--wide {
+  max-width: 1400px;
+}
+
 .container--narrow {
   max-width: var(--container-narrow);
 }

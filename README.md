@@ -52,7 +52,8 @@ src/
     nav.json            Hauptnavigation
   _includes/
     layouts/base.njk    Grundgerüst jeder Seite
-    partials/           Header, Footer, Lightbox, Schnellkontakt
+    partials/           Header, Footer, Lightbox, Schnellkontakt,
+                        booking-form.njk (wiederverwendbares Anfrageformular)
     components/         Wiederverwendbare Makros (Bild, Button, Karten …)
   assets/
     css/                tokens, base, layout, components, pages
@@ -112,10 +113,13 @@ Breiten im Manifest erzeugen oder den Filter in `eleventy.config.js` erweitern.
   `localStorage` gespeichert (`pf-theme`).
 - Im mobilen Menü gibt es zusätzlich einen beschrifteten Schalter
   („Dunkelmodus“/„Hellmodus“).
+- Das **Anfrageformular steht direkt im Hero der Startseite** und noch einmal
+  auf der Kontaktseite. Beide nutzen dasselbe Partial, aber die Hero-Variante
+  ist kompakt (ohne Telefon/Nachricht).
+- Die Startseite arbeitet mit großen Bildern: Full-Bleed-Hero, breite
+  Wohnungspanels, zweispaltige Raumbleiche und eine breite Galerie.
 - Die alternative Startseite liegt unter **`/variante-2/`** (filmischer,
-  bildstärker, mit großen Panels und einem Mosaik aus Zimmerbildern).
-  Sie ist `noindex` und nicht in der Hauptnavigation verlinkt.
-  Wenn sie besser gefällt, kann sie später zur Hauptstartseite werden.
+  bildstärker). Sie ist `noindex`, nicht verlinkt und noch als Entwurf gedacht.
 
 ## Qualitätssicherung
 

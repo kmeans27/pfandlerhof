@@ -28,12 +28,17 @@ activeNav: galerie
       <button type="button" class="gallery-filter" data-filter="hof" aria-pressed="false">Am Hof</button>
     </div>
     <p class="gallery-count" data-gallery-count aria-live="polite"></p>
+  </div>
 
+  <div class="container container--wide">
     <div class="gallery__grid" data-gallery-grid>
       {% for item in gallery %}
         {{ galleryItem(item) }}
       {% endfor %}
     </div>
+  </div>
+
+  <div class="container">
     {{ note("Die Fotos zeigen beide Ferienwohnungen. Möbel und Dekoration können leicht variieren – fragen Sie einfach nach, wenn Ihnen etwas wichtig ist.", "info") }}
   </div>
 </section>

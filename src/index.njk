@@ -8,19 +8,29 @@ activeNav: wohnungen
 
 {% from "components/media.njk" import picture %}
 {% from "components/ui.njk" import button, stars %}
-{% from "components/cards.njk" import apartmentCard, reviewCard, fact, infoTile %}
+{% from "components/cards.njk" import reviewCard, fact, infoTile %}
 {% from "components/cta.njk" import ctaBand %}
 
-<section class="hero">
-  <div class="container hero__grid">
+<section class="hero hero--booking" id="anfrage">
+  <div class="hero__bg">
+    {{ picture({
+      src: "hero",
+      alt: "Der Pfandlerhof mit Blick über das Passeiertal",
+      widths: [800, 1200],
+      sizes: "100vw",
+      width: 1200,
+      height: 677,
+      class: "hero__bg-img",
+      loading: "eager",
+      priority: true
+    }) }}
+  </div>
+
+  <div class="container hero__inner">
     <div class="hero__text">
-      <p class="eyebrow">Ferienwohnungen · St. Martin in Passeier</p>
+      <p class="eyebrow eyebrow--light">Ferienwohnungen · St. Martin in Passeier</p>
       <h1>Wohnen mit Blick über das Passeiertal.</h1>
       <p class="hero__lead">Zwei Wohnungen mit je 56 m², zwei Schlafzimmern und Balkon. Ruhig über dem Tal, vier Kilometer von St. Martin – und mit einem Blick, der morgens schon Urlaub macht.</p>
-      <div class="hero__actions">
-        {{ button("Wohnungen ansehen", "/ferienwohnungen/", "primary", "arrow") }}
-        {{ button("Verfügbarkeit anfragen", "/kontakt/#anfrage", "secondary") }}
-      </div>
       <div class="hero__trust">
         <p class="rating">
           {{ stars(5) }}
@@ -30,32 +40,17 @@ activeNav: wohnungen
         <span class="hero__badge">{{ "leaf" | icon | safe }} Roter Hahn · Urlaub auf dem Bauernhof</span>
         <span class="hero__badge">{{ "check" | icon | safe }} Direkt beim Gastgeber</span>
       </div>
+      <p class="hero__scroll">
+        <a href="#wohnungen">Die Wohnungen ansehen {{ "arrow" | icon("hero__scroll-icon") | safe }}</a>
+      </p>
     </div>
 
-    <div class="hero__media">
-      {{ picture({
-        src: "hero",
-        alt: "Der Pfandlerhof mit Blick über das Passeiertal",
-        widths: [800, 1200],
-        sizes: "(min-width: 920px) 54vw, 100vw",
-        width: 1200,
-        height: 677,
-        class: "hero__img",
-        loading: "eager",
-        priority: true
-      }) }}
-      <figure class="hero__inset">
-        {{ picture({
-          src: "wohnen-1",
-          alt: "Wohnbereich der Ferienwohnung mit Blick zum Balkon",
-          widths: [640, 960],
-          sizes: "(min-width: 920px) 20vw, 0vw",
-          width: 1440,
-          height: 961,
-          loading: "eager"
-        }) }}
-        <figcaption class="hero__inset-label">Wohnbereich mit Balkon</figcaption>
-      </figure>
+    <div class="hero__panel">
+      <p class="eyebrow">Anfrage</p>
+      <h2>Verfügbarkeit anfragen</h2>
+      <p class="hero__panel-text">Sagen Sie uns Ihren Wunschtermin – wir antworten persönlich mit einem Angebot. Ohne Buchungsgebühr.</p>
+      {% set bookingCompact = true %}
+      {% include "partials/booking-form.njk" %}
     </div>
   </div>
 </section>
@@ -78,9 +73,36 @@ activeNav: wohnungen
       <h2>Zwei Wohnungen, die sich wie zu Hause anfühlen.</h2>
       <p class="section-head__text">Beide sind 56 m² groß, haben zwei Schlafzimmer, eine voll ausgestattete Wohnküche und einen Balkon. Sie können einzeln oder gemeinsam gebucht werden.</p>
     </header>
-    <div class="apartments__grid">
+    <div class="apartment-list">
       {% for apartment in apartments %}
-        {{ apartmentCard(apartment) }}
+        <article class="apartment-feature{% if loop.index % 2 == 0 %} apartment-feature--reverse{% endif %}">
+          <div class="apartment-feature__media">
+            {{ picture({
+              src: apartment.image,
+              alt: apartment.imageAlt,
+              widths: [640, 960, 1440],
+              sizes: "(min-width: 900px) 56vw, 100vw",
+              width: 1440,
+              height: 961,
+              class: "apartment-feature__img"
+            }) }}
+          </div>
+          <div class="apartment-feature__body">
+            <p class="apartment-card__badge">{{ apartment.highlight }}</p>
+            <h3 class="apartment-feature__title">{{ apartment.name }}</h3>
+            <p class="apartment-feature__meta">{{ apartment.size }} · {{ apartment.guests }} · ab {{ apartment.priceFrom }} € / Nacht</p>
+            <p>{{ apartment.summary }}</p>
+            <ul class="check-list">
+              {% for feature in apartment.features %}
+                <li>{{ "check" | icon("check-list__icon") | safe }}<span>{{ feature }}</span></li>
+              {% endfor %}
+            </ul>
+            <div class="apartment-feature__actions">
+              {{ button("Diese Wohnung anfragen", ("/kontakt/?wohnung=" + apartment.slug + "#anfrage"), "primary", "arrow") }}
+              <a class="text-link" href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}">Details ansehen {{ "arrow" | icon("text-link__icon") | safe }}</a>
+            </div>
+          </div>
+        </article>
       {% endfor %}
     </div>
     <p class="apartments__note">Beide Wohnungen lassen sich auch miteinander kombinieren. <a class="text-link" href="{{ '/ferienwohnungen/' | link }}">Alle Details und Preise {{ "arrow" | icon("text-link__icon") | safe }}</a></p>
@@ -94,6 +116,8 @@ activeNav: wohnungen
       <h2>Wohnküche, Schlafzimmer, Balkon.</h2>
       <p class="section-head__text">Große Fenster, viel Holz und genug Platz für die ganze Familie. So sehen die Räume aus, in denen Sie Ihren Urlaub verbringen.</p>
     </header>
+  </div>
+  <div class="container container--wide">
     <div class="room-grid">
       <figure class="room">
         {{ picture({
@@ -162,6 +186,8 @@ activeNav: wohnungen
         <figcaption>Badezimmer mit Dusche</figcaption>
       </figure>
     </div>
+  </div>
+  <div class="container">
     <p class="u-center u-mt">{{ button("Alle Bilder ansehen", "/galerie/", "secondary", "arrow") }}</p>
   </div>
 </section>
