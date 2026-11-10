@@ -25,7 +25,7 @@
 
   <link rel="preload" href="{{ '/assets/fonts/source-sans-3-latin.woff2' | link }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/fraunces-latin.woff2' | link }}" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | link }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | link }}?v={{ buildId }}">
 
   {% if isHome %}
     <script type="application/ld+json">
@@ -73,6 +73,6 @@
 
   {% include "partials/lightbox.njk" %}
 
-  <script src="{{ '/assets/js/main.js' | link }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | link }}?v={{ buildId }}" defer></script>
 </body>
 </html>

@@ -66,6 +66,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
 
+  // Cache-Buster für CSS und JavaScript (ändert sich bei jedem Build).
+  eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
+
   return {
     dir: {
       input: "src",
