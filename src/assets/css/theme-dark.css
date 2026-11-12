@@ -5,23 +5,24 @@
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --cream: #111712;
-  --paper: #182019;
-  --white: #1e2820;
-  --ink: #f3f0e7;
-  --muted: #b7c0b0;
-  --green: #a8c89f;
-  --green-dark: #0d120e;
-  --green-deep: #090d0a;
-  --green-soft: #1d281e;
-  --green-section: #1b291d;
-  --hay: #d8ab66;
-  --hay-light: #e8ca98;
-  --hay-soft: #332817;
-  --line: #2a352b;
-  --line-strong: #3b493c;
-  --header-bg: rgb(17 23 18 / 92%);
-  --shadow: 0 24px 48px -28px rgb(0 0 0 / 65%);
+  --cream: #0f1511;
+  --paper: #161e18;
+  --white: #1c261f;
+  --ink: #f2eee4;
+  --muted: #b4bcb0;
+  --green: #c3d6bc;
+  --green-dark: #0a100c;
+  --green-deep: #070b09;
+  --green-soft: #1c2820;
+  --green-section: #16251a;
+  --hay: #d6a17c;
+  --hay-light: #e6c0a3;
+  --hay-soft: #33261d;
+  --line: #29332b;
+  --line-strong: #3b473c;
+  --on-primary: #101a13;
+  --header-bg: rgb(15 21 17 / 94%);
+  --shadow: 0 30px 60px -40px rgb(0 0 0 / 70%);
 }
 
 [data-theme="dark"] .site-header {
@@ -29,12 +30,12 @@
 }
 
 [data-theme="dark"] .hero__note {
-  background: rgb(24 31 25 / 96%);
+  background: rgb(22 30 24 / 96%);
 }
 
 [data-theme="dark"] .apartment-card__badge,
 [data-theme="dark"] .apartment-detail__label {
-  color: #f2dab5;
+  color: #f0d6c2;
 }
 
 [data-theme="dark"] .required {
@@ -42,7 +43,7 @@
 }
 
 [data-theme="dark"] .btn--primary:hover {
-  background: #c3ddb8;
+  background: #d3e3cd;
   color: #172015;
 }
 

@@ -1,17 +1,8 @@
-<header class="site-header" data-header>
+<header class="site-header{% if headerOverlay %} site-header--overlay{% endif %}" data-header>
   <div class="container site-header__inner">
     <a class="brand" href="{{ '/' | link }}">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64" role="presentation">
-          <rect width="64" height="64" rx="14" fill="currentColor"/>
-          <circle cx="44" cy="19" r="5" fill="var(--hay)"/>
-          <path d="M7 47 24 23l9.5 14L40 30l17 17H7Z" fill="var(--cream)"/>
-        </svg>
-      </span>
-      <span class="brand__text">
-        <span class="brand__name">Pfandlerhof</span>
-        <span class="brand__sub">Ferienwohnungen in Passeier</span>
-      </span>
+      <span class="brand__name">Pfandlerhof</span>
+      <span class="brand__sub">Ferienwohnungen in Passeier</span>
     </a>
 
     <nav class="site-nav" id="primary-nav" aria-label="Hauptnavigation" data-nav>

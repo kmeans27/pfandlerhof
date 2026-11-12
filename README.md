@@ -1,12 +1,19 @@
 # Pfandlerhof – Website
 
 Neue Website für den **Pfandlerhof** in St. Martin in Passeier (Südtirol) – im Mittelpunkt stehen die beiden Ferienwohnungen, die Zimmer und der Blick über das Passeiertal. Der Hof ist nur noch ein kleiner Nebenstrang.
-Bewusst einfach gehalten: große Schrift, klare Navigation, keine Cookies, kein Tracking, keine externen Schriften oder Karten. Dazu ein Hell-/Dunkel-Umschalter und eine alternative Designvariante.
+Bewusst einfach gehalten: große Schrift, klare Navigation, keine Cookies, kein Tracking, keine externen Schriften oder Karten. Dazu ein Hell-/Dunkel-Umschalter und eine alternative Lookbook-Variante.
 
-Die Inhalte stammen von der bisherigen Website, dem Roter-Hahn-Eintrag, HolidayCheck und Airbnb.
+Die Inhalte stammen von der bisherigen Website, dem Roter-Hahn-Eintrag, HolidayCheck, Airbnb und Booking.com.
 
 **Live-Vorschau:** <https://kmeans27.github.io/pfandlerhof/>
 **Designvariante 2:** <https://kmeans27.github.io/pfandlerhof/variante-2/>
+
+> **Nächste Schritte**
+> 1. Preise, Kurtaxe und Haustierregelung mit der Familie bestätigen.
+> 2. Impressum und Datenschutz rechtlich prüfen.
+> 3. Bildrechte der Booking-/Airbnb-Fotos klären oder durch eigene Fotos ersetzen.
+> 4. `pfandlerhof.com` umstellen und `site.url` aktualisieren.
+> 5. Anfrageformular auf einem echten Handy testen.
 
 ## Schnellstart
 
@@ -34,7 +41,7 @@ Das Ergebnis liegt in `_site/` und kann auf jedem Webserver gehostet werden.
 | Vanilla JS | Navigation, Hell/Dunkel-Modus, Galerie-Filter, Lightbox, Anfrageformular |
 
 Kein Framework im Browser, kein Build-Schritt beim Aufruf, keine Datenbank.
-Schriften (Fraunces, Source Sans 3) liegen selbst gehostet in `src/assets/fonts/` (SIL Open Font License).
+Schriften (Fraunces, Instrument Sans) liegen selbst gehostet in `src/assets/fonts/` (SIL Open Font License).
 
 ## Aufbau
 
@@ -63,7 +70,7 @@ src/
     img/                Optimierte Bilder (generiert)
     fonts/              Selbst gehostete Schriften
   index.njk             Startseite (Wohnungen, Zimmer, Ausblick)
-  variante-2.njk        Alternative Designvariante (filmisch, bildstark)
+  variante-2.njk        Lookbook-Variante (vollflächige Bildkapitel)
   ferienwohnungen.njk   Wohnungen & Preise
   der-hof.njk           Am Hof: Tiere, Produkte, Hofleben
   umgebung.njk          Wandern, Ausflüge, Winter
@@ -95,14 +102,14 @@ Das ist Absicht: Wer eine Seite umbauen möchte, öffnet genau eine Datei.
 2. In `scripts/prepare-images.mjs` einen Eintrag ergänzen:
 
    ```js
-   { slug: "neues-foto", file: "neues-foto.jpg", widths: [640, 960, 1440] },
+   { slug: "neues-foto", file: "neues-foto.jpg", widths: [640, 960, 1400, 1600] },
    ```
 
 3. `npm run images` ausführen.
 4. Das Bild in `src/_data/gallery.json` oder direkt im Template verwenden.
 
 Die Bildbreiten werden über den Filter `widths` automatisch passend gewählt:
-1440 → 640/960/1440 · 1200 → 800/1200 · 1024 → 640/1024 · sonst 480/900.
+2400 → 800/1200/1600/2400 · 1600 → 640/960/1400/1600 · 1024 → 640/1024 · sonst 480/900.
 Wenn ein Motiv mit einer anderen Maximalbreite dazukommt, entweder die passenden
 Breiten im Manifest erzeugen oder den Filter in `eleventy.config.js` erweitern.
 
@@ -118,8 +125,9 @@ Breiten im Manifest erzeugen oder den Filter in `eleventy.config.js` erweitern.
   ist kompakt (ohne Telefon/Nachricht).
 - Die Startseite arbeitet mit großen Bildern: Full-Bleed-Hero, breite
   Wohnungspanels, zweispaltige Raumbleiche und eine breite Galerie.
-- Die alternative Startseite liegt unter **`/variante-2/`** (filmischer,
-  bildstärker). Sie ist `noindex`, nicht verlinkt und noch als Entwurf gedacht.
+- Die alternative Startseite liegt unter **`/variante-2/`** (Lookbook mit
+  vollflächigen Bildkapiteln, großem Zitat und eigener Buchungsleiste).
+  Sie ist `noindex`, nicht verlinkt und noch als Entwurf gedacht.
 
 ## Qualitätssicherung
 
@@ -183,7 +191,7 @@ Für eine **eigene Domain** (z. B. `pfandlerhof.com`):
 - [ ] **Preise und Kurtaxe** mit der Familie abstimmen (Stand der Daten: 2026).
 - [ ] **Haustier-Preis** ergänzen, sobald er verbindlich feststeht (aktuell „auf Anfrage“).
 - [ ] **Impressum und Datenschutz** rechtlich prüfen lassen.
-- [ ] **Bildrechte** klären: Ein Teil der Innenaufnahmen stammt aus dem Airbnb-/Holidu-Inserat. Am besten durch eigene, aktuelle Fotos ersetzen.
+- [ ] **Bildrechte** klären: Ein Teil der Innenaufnahmen stammt aus dem Booking-/Airbnb-Inserat. Am besten durch eigene, aktuelle Fotos ersetzen.
 - [ ] **Formular** auf einem echten Handy und in Outlook/Apple Mail testen.
 - [ ] **Domain** umstellen und `site.url` aktualisieren.
 

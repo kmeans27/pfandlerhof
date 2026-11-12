@@ -4,22 +4,23 @@ title: "Pfandlerhof – Ferienwohnungen mit Bergblick in St. Martin in Passeier"
 description: "Zwei Ferienwohnungen mit je 56 m², zwei Schlafzimmern und Balkon mit Blick über das Passeiertal. Ruhig gelegen, vier Kilometer von St. Martin in Passeier."
 isHome: true
 activeNav: wohnungen
+headerOverlay: true
 ---
 
 {% from "components/media.njk" import picture %}
 {% from "components/ui.njk" import button, stars %}
-{% from "components/cards.njk" import reviewCard, fact, infoTile %}
+{% from "components/cards.njk" import reviewCard, infoTile %}
 {% from "components/cta.njk" import ctaBand %}
 
-<section class="hero hero--booking" id="anfrage">
+<section class="hero hero--home">
   <div class="hero__bg">
     {{ picture({
       src: "hero",
       alt: "Der Pfandlerhof mit Blick über das Passeiertal",
-      widths: [800, 1200],
+      widths: [800, 1200, 1600, 2400],
       sizes: "100vw",
-      width: 1200,
-      height: 677,
+      width: 2400,
+      height: 1350,
       class: "hero__bg-img",
       loading: "eager",
       priority: true
@@ -27,69 +28,84 @@ activeNav: wohnungen
   </div>
 
   <div class="container hero__inner">
-    <div class="hero__text">
-      <p class="eyebrow eyebrow--light">Ferienwohnungen · St. Martin in Passeier</p>
-      <h1>Wohnen mit Blick über das Passeiertal.</h1>
-      <p class="hero__lead">Zwei Wohnungen mit je 56 m², zwei Schlafzimmern und Balkon. Ruhig über dem Tal, vier Kilometer von St. Martin – und mit einem Blick, der morgens schon Urlaub macht.</p>
-      <div class="hero__trust">
-        <p class="rating">
-          {{ stars(5) }}
-          <span class="rating__value">{{ site.rating.value }} / 5</span>
-          <span class="rating__meta">{{ site.rating.count }} Bewertungen</span>
-        </p>
-        <span class="hero__badge">{{ "leaf" | icon | safe }} Roter Hahn · Urlaub auf dem Bauernhof</span>
-        <span class="hero__badge">{{ "check" | icon | safe }} Direkt beim Gastgeber</span>
-      </div>
-      <p class="hero__scroll">
-        <a href="#wohnungen">Die Wohnungen ansehen {{ "arrow" | icon("hero__scroll-icon") | safe }}</a>
-      </p>
+    <p class="eyebrow eyebrow--light">Passeiertal · Südtirol</p>
+    <h1>Wohnen über dem Passeiertal.</h1>
+    <p class="hero__lead">Zwei Ferienwohnungen mit 56 m², zwei Schlafzimmern und Balkon. Ruhig, sonnig und nur vier Kilometer von St. Martin.</p>
+    <div class="hero__actions">
+      {{ button("Verfügbarkeit anfragen", "#anfrage", "light", "arrow") }}
+      {{ button("Wohnungen ansehen", "#wohnungen", "secondary") }}
     </div>
+  </div>
+</section>
 
-    <div class="hero__panel">
-      <p class="eyebrow">Anfrage</p>
-      <h2>Verfügbarkeit anfragen</h2>
-      <p class="hero__panel-text">Sagen Sie uns Ihren Wunschtermin – wir antworten persönlich mit einem Angebot. Ohne Buchungsgebühr.</p>
+<div class="trust-strip">
+  <div class="container trust-strip__inner">
+    <p class="rating">
+      {{ stars(5) }}
+      <span class="rating__value">{{ site.rating.value }} / 5</span>
+      <span class="rating__meta">{{ site.rating.count }} Bewertungen bei {{ site.rating.source }}</span>
+    </p>
+    <span>{{ "leaf" | icon | safe }} Roter Hahn · Urlaub auf dem Bauernhof</span>
+    <span>{{ "check" | icon | safe }} Direkt beim Gastgeber</span>
+  </div>
+</div>
+
+<section class="booking-band" id="anfrage">
+  <div class="container booking-band__inner">
+    <div class="booking-band__intro">
+      <p class="eyebrow eyebrow--light">Direkt beim Gastgeber</p>
+      <h2>Verfügbarkeit anfragen.</h2>
+      <p>Sagen Sie uns Ihren Wunschtermin. Wir prüfen die Verfügbarkeit und antworten persönlich mit einem Angebot – ohne Buchungsgebühr.</p>
+      <div class="booking-band__contact">
+        <a href="tel:{{ site.phoneHref }}">{{ "phone" | icon | safe }} {{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}">{{ "mail" | icon | safe }} {{ site.email }}</a>
+      </div>
+    </div>
+    <div class="booking-band__form">
       {% set bookingCompact = true %}
       {% include "partials/booking-form.njk" %}
     </div>
   </div>
 </section>
 
-<section class="facts" aria-label="Die Wohnungen auf einen Blick">
-  <div class="container">
-    <ul class="facts__list">
-      {{ fact("ruler", "56 m²", "Wohnfläche") }}
-      {{ fact("bed", "2 Schlafzimmer", "Doppelbett + Etagenbett") }}
-      {{ fact("users", "2–4 Gäste", "pro Wohnung") }}
-      {{ fact("star", "ab 110 €", "pro Nacht") }}
-    </ul>
+<section class="section">
+  <div class="container intro-statement" data-reveal>
+    <div>
+      <p class="eyebrow">Die Wohnungen</p>
+      <h2>Zwei Wohnungen. Ein Tal. Viel Ruhe.</h2>
+    </div>
+    <div class="intro-statement__text">
+      <p>Beide Wohnungen sind 56 m² groß, haben zwei Schlafzimmer, eine voll ausgestattete Wohnküche und einen Balkon. Sie wohnen für sich – mit eigenem Eingang, eigener Küche und viel Platz.</p>
+      <p>Der Hof liegt ruhig über dem Tal, St. Martin ist in wenigen Minuten erreichbar. Wandern, Skifahren oder einfach nichts tun: Von hier aus geht beides.</p>
+      <div class="intro-statement__meta">
+        <span>56 m²</span>
+        <span>2 Schlafzimmer</span>
+        <span>2–4 Gäste</span>
+        <span>Balkon mit Bergblick</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section" id="wohnungen">
   <div class="container">
-    <header class="section-head section-head--center">
-      <p class="eyebrow">Die Wohnungen</p>
-      <h2>Zwei Wohnungen, die sich wie zu Hause anfühlen.</h2>
-      <p class="section-head__text">Beide sind 56 m² groß, haben zwei Schlafzimmer, eine voll ausgestattete Wohnküche und einen Balkon. Sie können einzeln oder gemeinsam gebucht werden.</p>
-    </header>
     <div class="apartment-list">
       {% for apartment in apartments %}
-        <article class="apartment-feature{% if loop.index % 2 == 0 %} apartment-feature--reverse{% endif %}">
+        <article class="apartment-feature{% if loop.index % 2 == 0 %} apartment-feature--reverse{% endif %}" data-reveal>
           <div class="apartment-feature__media">
             {{ picture({
               src: apartment.image,
               alt: apartment.imageAlt,
-              widths: [640, 960, 1440],
-              sizes: "(min-width: 900px) 56vw, 100vw",
-              width: 1440,
-              height: 961,
+              widths: [640, 960, 1400, 1600],
+              sizes: "(min-width: 900px) 58vw, 100vw",
+              width: 1600,
+              height: 1067,
               class: "apartment-feature__img"
             }) }}
           </div>
           <div class="apartment-feature__body">
-            <p class="apartment-card__badge">{{ apartment.highlight }}</p>
-            <h3 class="apartment-feature__title">{{ apartment.name }}</h3>
+            <p class="apartment-feature__index">Wohnung {{ loop.index }} / {{ apartments | length }}</p>
+            <h2 class="apartment-feature__title">{{ apartment.shortName }}</h2>
             <p class="apartment-feature__meta">{{ apartment.size }} · {{ apartment.guests }} · ab {{ apartment.priceFrom }} € / Nacht</p>
             <p>{{ apartment.summary }}</p>
             <ul class="check-list">
@@ -111,102 +127,91 @@ activeNav: wohnungen
 
 <section class="section section--paper">
   <div class="container">
-    <header class="section-head">
-      <p class="eyebrow">Ein Blick hinein</p>
-      <h2>Wohnküche, Schlafzimmer, Balkon.</h2>
-      <p class="section-head__text">Große Fenster, viel Holz und genug Platz für die ganze Familie. So sehen die Räume aus, in denen Sie Ihren Urlaub verbringen.</p>
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Die Räume</p>
+      <h2>Ein Blick hinein.</h2>
+      <p class="section-head__text">Wohnküche, Schlafzimmer, Balkon – große Fenster, viel Holz und genug Platz für die ganze Familie.</p>
     </header>
   </div>
   <div class="container container--wide">
-    <div class="room-grid">
-      <figure class="room">
+    <div class="room-grid" data-reveal>
+      <figure class="room room--living">
         {{ picture({
           src: "wohnen-2",
           alt: "Wohnküche mit Esstisch und offener Küche",
-          widths: [640, 960, 1440],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 1440,
-          height: 961
+          widths: [640, 960, 1400, 1600],
+          sizes: "(min-width: 900px) 58vw, 100vw",
+          width: 1600,
+          height: 1067
         }) }}
         <figcaption>Wohnküche mit Esstisch</figcaption>
       </figure>
-      <figure class="room">
+      <figure class="room room--bedroom">
         {{ picture({
-          src: "essen",
-          alt: "Esstisch mit Blick ins Grüne",
-          widths: [640, 960, 1440],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 1440,
-          height: 960
-        }) }}
-        <figcaption>Esstisch mit Blick ins Grüne</figcaption>
-      </figure>
-      <figure class="room">
-        {{ picture({
-          src: "balkon",
-          alt: "Balkon mit Blick ins Passeiertal",
-          widths: [480, 900],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 900,
-          height: 370
-        }) }}
-        <figcaption>Balkon mit Blick ins Tal</figcaption>
-      </figure>
-      <figure class="room">
-        {{ picture({
-          src: "elternzimmer-2",
+          src: "elternzimmer",
           alt: "Elternschlafzimmer mit Doppelbett",
-          widths: [640, 1024],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 1024,
-          height: 687
+          widths: [640, 960, 1400, 1600],
+          sizes: "(min-width: 900px) 42vw, 100vw",
+          width: 1600,
+          height: 1067
         }) }}
         <figcaption>Elternschlafzimmer</figcaption>
       </figure>
-      <figure class="room">
+      <figure class="room room--third">
         {{ picture({
-          src: "kinderzimmer-2",
+          src: "essen",
+          alt: "Esstisch mit Blick ins Grüne",
+          widths: [640, 960, 1400, 1600],
+          sizes: "(min-width: 900px) 32vw, 50vw",
+          width: 1600,
+          height: 1067
+        }) }}
+        <figcaption>Esstisch mit Blick ins Grüne</figcaption>
+      </figure>
+      <figure class="room room--third">
+        {{ picture({
+          src: "kinderzimmer",
           alt: "Kinderzimmer mit Etagenbett",
-          widths: [640, 1024],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 1024,
-          height: 687
+          widths: [640, 960, 1400, 1600],
+          sizes: "(min-width: 900px) 32vw, 50vw",
+          width: 1600,
+          height: 1068
         }) }}
         <figcaption>Kinderzimmer mit Etagenbett</figcaption>
       </figure>
-      <figure class="room">
+      <figure class="room room--third">
         {{ picture({
-          src: "bad-2",
-          alt: "Badezimmer mit Dusche und Waschbecken",
-          widths: [640, 1024],
-          sizes: "(min-width: 700px) 50vw, 100vw",
-          width: 1024,
-          height: 687
+          src: "bad",
+          alt: "Badezimmer mit Dusche",
+          widths: [640, 960, 1400, 1600],
+          sizes: "(min-width: 900px) 32vw, 50vw",
+          width: 1600,
+          height: 1067
         }) }}
         <figcaption>Badezimmer mit Dusche</figcaption>
       </figure>
     </div>
   </div>
   <div class="container">
-    <p class="u-center u-mt">{{ button("Alle Bilder ansehen", "/galerie/", "secondary", "arrow") }}</p>
+    <p class="u-center u-mt-lg">{{ button("Alle Bilder ansehen", "/galerie/", "secondary", "arrow") }}</p>
   </div>
 </section>
 
 <section class="view-band" aria-label="Der Ausblick">
   <div class="view-band__media">
     {{ picture({
-      src: "blick-st-martin",
-      alt: "Blick vom Pfandlerhof auf St. Martin und das Passeiertal",
-      widths: [640, 1024],
+      src: "view",
+      alt: "Der Blick vom Pfandlerhof auf St. Martin und das Passeiertal",
+      widths: [800, 1200, 1600, 2400],
       sizes: "100vw",
-      width: 1024,
-      height: 372,
+      width: 2400,
+      height: 1350,
       class: "view-band__img"
     }) }}
   </div>
   <div class="container view-band__content">
     <p class="eyebrow eyebrow--light">Der Ausblick</p>
-    <h2>Vom Balkon bis nach Meran.</h2>
+    <h2>Der Blick bleibt.</h2>
     <p>Der Jaufenkamm links, St. Martin unten im Tal, Meran in der Ferne. Diesen Blick haben Sie jeden Morgen – und abends mit Sternen.</p>
     {{ button("Mehr Bilder", "/galerie/", "light", "arrow") }}
   </div>
@@ -214,12 +219,12 @@ activeNav: wohnungen
 
 <section class="section">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head" data-reveal>
       <p class="eyebrow">Ausstattung</p>
       <h2>Alles, was Sie brauchen.</h2>
       <p class="section-head__text">Vom Geschirrspüler bis zur Fußbodenheizung: Die Wohnungen sind so eingerichtet, dass Sie nach der Anreise nichts mehr besorgen müssen.</p>
     </header>
-    <ul class="info-grid info-grid--three">
+    <ul class="info-grid info-grid--three" data-reveal>
       {% for item in amenities.apartment %}
         {% if loop.index <= 6 %}
           {{ infoTile(item) }}
@@ -232,12 +237,11 @@ activeNav: wohnungen
 
 <section class="section section--paper">
   <div class="container">
-    <header class="section-head section-head--center">
+    <header class="section-head" data-reveal>
       <p class="eyebrow">Gästestimmen</p>
-      <h2>Was unsere Gäste sagen</h2>
-      <p class="section-head__text">Viele kommen als Gäste und fahren als Freunde wieder nach Hause. Ein paar Stimmen möchten wir Ihnen weitergeben.</p>
+      <h2>Was Gäste sagen.</h2>
     </header>
-    <div class="reviews__grid">
+    <div class="reviews__grid" data-reveal>
       {% for review in reviews %}
         {% if loop.index <= 3 %}
           {{ reviewCard(review) }}
@@ -262,12 +266,12 @@ activeNav: wohnungen
 
 <section class="section section--green">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head" data-reveal>
       <p class="eyebrow eyebrow--light">Rund um die Wohnungen</p>
       <h2>Wandern, radeln, abschalten.</h2>
       <p class="section-head__text">Der Pfandlerhof liegt dort, wo das Passeiertal seine sonnige Seite zeigt. Ob große Wanderung oder kleiner Spaziergang – vor der Haustür beginnt beides.</p>
     </header>
-    <div class="teaser-grid">
+    <div class="teaser-grid" data-reveal>
       <article class="teaser">
         <span class="teaser__icon">{{ "hiking" | icon | safe }}</span>
         <p class="teaser__meta">Direkt vor der Haustür</p>

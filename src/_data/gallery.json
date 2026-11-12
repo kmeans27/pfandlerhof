@@ -1,218 +1,162 @@
 [
   {
     "src": "hero",
-    "width": 1200,
-    "height": 677,
-    "alt": "Der Pfandlerhof mit Stall und dem Passeiertal im Hintergrund",
-    "caption": "Der Pfandlerhof mit Blick über das Passeiertal",
-    "category": "aussen"
+    "width": 2400,
+    "height": 1350,
+    "category": "aussen",
+    "alt": "Der Pfandlerhof mit Blick über das Passeiertal",
+    "caption": "Der Pfandlerhof mit Blick über das Passeiertal"
   },
   {
-    "src": "hof-weg",
-    "width": 1200,
-    "height": 677,
-    "alt": "Weg zum Pfandlerhof mit Blick auf die Berge",
-    "caption": "So sieht es aus, wenn Sie bei uns ankommen",
-    "category": "aussen"
-  },
-  {
-    "src": "haus-sommer",
-    "width": 900,
-    "height": 370,
-    "alt": "Das Ferienhaus des Pfandlerhofs im Sommer",
-    "caption": "Unser Ferienhaus im Sommer",
-    "category": "hof"
-  },
-  {
-    "src": "haus-terrasse",
-    "width": 900,
-    "height": 370,
-    "alt": "Südseite des Ferienhauses mit Terrasse",
-    "caption": "Südseite mit Terrasse",
-    "category": "hof"
-  },
-  {
-    "src": "liegewiese",
-    "width": 900,
-    "height": 370,
-    "alt": "Liegewiese vor dem Ferienhaus",
-    "caption": "Platz zum Sonnen und Ausruhen",
-    "category": "hof"
-  },
-  {
-    "src": "hof-sommer",
-    "width": 900,
-    "height": 370,
-    "alt": "Der Pfandlerhof auf 750 Metern Seehöhe",
-    "caption": "Der Hof liegt auf 750 Metern",
-    "category": "hof"
-  },
-  {
-    "src": "balkon",
-    "width": 900,
-    "height": 370,
-    "alt": "Balkon mit Blick ins Passeiertal",
-    "caption": "Balkon mit Blick ins Tal",
-    "category": "aussen"
-  },
-  {
-    "src": "eingang",
-    "width": 1024,
-    "height": 767,
-    "alt": "Eingang zum Ferienhaus",
-    "caption": "Eingang zum Ferienhaus",
-    "category": "aussen"
-  },
-  {
-    "src": "blick-st-martin",
-    "width": 1024,
-    "height": 372,
-    "alt": "Blick auf St. Martin und das Passeiertal",
-    "caption": "Blick auf St. Martin",
-    "category": "aussen"
-  },
-  {
-    "src": "berge",
-    "width": 900,
-    "height": 370,
-    "alt": "Bergpanorama über dem Passeiertal",
-    "caption": "Bergpanorama über dem Passeiertal",
-    "category": "aussen"
-  },
-  {
-    "src": "berge-2",
-    "width": 900,
-    "height": 370,
-    "alt": "Morgenstimmung in den Bergen",
-    "caption": "Morgenstimmung in den Bergen",
-    "category": "aussen"
+    "src": "view",
+    "width": 2400,
+    "height": 1350,
+    "category": "aussen",
+    "alt": "Der Blick vom Hof über das Tal",
+    "caption": "Der Blick vom Hof ins Tal"
   },
   {
     "src": "wohnen-1",
-    "width": 1440,
-    "height": 961,
-    "alt": "Wohnbereich mit Sofa und offener Balkontür",
-    "caption": "Wohnbereich mit Zugang zum Balkon",
-    "category": "wohnungen"
-  },
-  {
-    "src": "wohnen-2",
-    "width": 1440,
-    "height": 961,
-    "alt": "Wohnküche mit Esstisch",
-    "caption": "Wohnküche mit Esstisch",
-    "category": "wohnungen"
-  },
-  {
-    "src": "essen",
-    "width": 1440,
-    "height": 960,
-    "alt": "Esstisch mit Blick ins Grüne",
-    "caption": "Esstisch mit Blick ins Grüne",
-    "category": "wohnungen"
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Wohnbereich mit Sofa und Blick zum Balkon",
+    "caption": "Wohnbereich mit Balkon"
   },
   {
     "src": "wohnen-3",
-    "width": 1440,
-    "height": 960,
-    "alt": "Wohnzimmer mit Sofa und Fernseher",
-    "caption": "Wohnzimmer",
-    "category": "wohnungen"
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Wohnbereich mit Sofa, Esstisch und Küche",
+    "caption": "Wohnen und Essen in einem Raum"
+  },
+  {
+    "src": "wohnen-2",
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Wohnküche mit Esstisch und offener Küche",
+    "caption": "Wohnküche mit Esstisch"
+  },
+  {
+    "src": "essen",
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Esstisch mit Blick ins Grüne",
+    "caption": "Esstisch mit Blick ins Grüne"
   },
   {
     "src": "kueche",
-    "width": 1440,
-    "height": 960,
-    "alt": "Küchenzeile mit Backofen und Geschirrspüler",
-    "caption": "Küchenzeile mit Backofen und Geschirrspüler",
-    "category": "wohnungen"
-  },
-  {
-    "src": "kinderzimmer",
-    "width": 1024,
-    "height": 687,
-    "alt": "Kinderzimmer mit Etagenbett",
-    "caption": "Kinderzimmer mit Etagenbett",
-    "category": "wohnungen"
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Küche mit Backofen und Geschirrspüler",
+    "caption": "Küche mit Backofen und Geschirrspüler"
   },
   {
     "src": "elternzimmer",
-    "width": 1024,
-    "height": 687,
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
     "alt": "Elternschlafzimmer mit Doppelbett",
-    "caption": "Elternschlafzimmer",
-    "category": "wohnungen"
-  },
-  {
-    "src": "bad",
-    "width": 1024,
-    "height": 687,
-    "alt": "Badezimmer mit Dusche und Waschbecken",
-    "caption": "Badezimmer mit Dusche",
-    "category": "wohnungen"
-  },
-  {
-    "src": "wohnkueche",
-    "width": 1024,
-    "height": 687,
-    "alt": "Wohnküche der zweiten Ferienwohnung",
-    "caption": "Wohnküche der zweiten Wohnung",
-    "category": "wohnungen"
-  },
-  {
-    "src": "kueche-2",
-    "width": 1024,
-    "height": 687,
-    "alt": "Küche der zweiten Ferienwohnung",
-    "caption": "Küche der zweiten Wohnung",
-    "category": "wohnungen"
-  },
-  {
-    "src": "kinderzimmer-2",
-    "width": 1024,
-    "height": 687,
-    "alt": "Kinderzimmer der zweiten Ferienwohnung",
-    "caption": "Kinderzimmer der zweiten Wohnung",
-    "category": "wohnungen"
+    "caption": "Elternschlafzimmer"
   },
   {
     "src": "elternzimmer-2",
-    "width": 1024,
-    "height": 687,
-    "alt": "Elternschlafzimmer der zweiten Ferienwohnung",
-    "caption": "Elternschlafzimmer der zweiten Wohnung",
-    "category": "wohnungen"
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Elternschlafzimmer der zweiten Wohnung",
+    "caption": "Elternschlafzimmer, zweite Wohnung"
+  },
+  {
+    "src": "kinderzimmer",
+    "width": 1600,
+    "height": 1068,
+    "category": "wohnungen",
+    "alt": "Kinderzimmer mit Etagenbett",
+    "caption": "Kinderzimmer mit Etagenbett"
+  },
+  {
+    "src": "kinderzimmer-2",
+    "width": 1600,
+    "height": 1068,
+    "category": "wohnungen",
+    "alt": "Kinderzimmer der zweiten Wohnung",
+    "caption": "Kinderzimmer, zweite Wohnung"
+  },
+  {
+    "src": "bad",
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Badezimmer mit Dusche und Waschbecken",
+    "caption": "Badezimmer mit Dusche"
   },
   {
     "src": "bad-2",
-    "width": 1024,
-    "height": 687,
-    "alt": "Badezimmer der zweiten Ferienwohnung",
-    "caption": "Badezimmer der zweiten Wohnung",
-    "category": "wohnungen"
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Badezimmer der zweiten Wohnung",
+    "caption": "Badezimmer, zweite Wohnung"
   },
   {
-    "src": "bad-3",
-    "width": 1024,
-    "height": 687,
-    "alt": "Dusche der zweiten Ferienwohnung",
-    "caption": "Dusche der zweiten Wohnung",
-    "category": "wohnungen"
+    "src": "balkon",
+    "width": 1600,
+    "height": 1067,
+    "category": "wohnungen",
+    "alt": "Balkon mit Tisch und Blick ins Tal",
+    "caption": "Balkon mit Sitzgelegenheit"
   },
   {
-    "src": "wohnen-4",
-    "width": 1024,
-    "height": 687,
-    "alt": "Wohnbereich der zweiten Ferienwohnung",
-    "caption": "Wohnbereich der zweiten Wohnung",
-    "category": "wohnungen"
+    "src": "haus-terrasse",
+    "width": 1600,
+    "height": 1067,
+    "category": "aussen",
+    "alt": "Terrasse und Eingang des Ferienhauses",
+    "caption": "Terrasse und Eingang"
+  },
+  {
+    "src": "haus-strasse",
+    "width": 1600,
+    "height": 1067,
+    "category": "aussen",
+    "alt": "Der Weg zum Pfandlerhof",
+    "caption": "Der Weg zum Hof"
+  },
+  {
+    "src": "haus-strasse-2",
+    "width": 1600,
+    "height": 1067,
+    "category": "aussen",
+    "alt": "Der Pfandlerhof von der Straße aus",
+    "caption": "Der Hof von der Straße"
+  },
+  {
+    "src": "spielplatz",
+    "width": 1600,
+    "height": 1067,
+    "category": "hof",
+    "alt": "Spielplatz mit Schaukel am Hof",
+    "caption": "Spielplatz am Hof"
+  },
+  {
+    "src": "spielplatz-2",
+    "width": 1600,
+    "height": 1067,
+    "category": "hof",
+    "alt": "Spielplatz mit Rutsche und Wiese",
+    "caption": "Spielplatz und Rutsche"
   },
   {
     "src": "fruehstueck",
     "width": 1024,
     "height": 698,
+    "category": "hof",
     "alt": "Frühstückskorb mit hofeigenen Produkten auf der Terrasse",
-    "caption": "Frühstückskorb mit hofeigenen Produkten",
-    "category": "hof"
+    "caption": "Frühstückskorb mit hofeigenen Produkten"
   }
 ]

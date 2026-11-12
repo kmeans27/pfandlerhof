@@ -42,7 +42,8 @@ export default function (eleventyConfig) {
 
   // Passende Bildbreiten anhand der Originalbreite.
   eleventyConfig.addFilter("widths", (width) => {
-    if (width >= 1440) return [640, 960, 1440];
+    if (width >= 2400) return [800, 1200, 1600, 2400];
+    if (width >= 1600) return [640, 960, 1400, 1600];
     if (width >= 1200) return [800, 1200];
     if (width >= 1024) return [640, 1024];
     return [480, 900];

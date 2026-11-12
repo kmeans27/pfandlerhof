@@ -9,54 +9,50 @@
  *
  * Aufruf: npm run images
  */
-import { mkdir } from "node:fs/promises";
+import { mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
 const SRC = "assets-src/original";
 const OUT = "src/assets/img";
 
-/** @type {{slug:string, file:string, widths?:number[], cropTop?:number, aspect?:number}[]} */
+/** @type {{slug:string, file:string, widths?:number[], cropTop?:number}[]} */
 const images = [
-  { slug: "hero", file: "rh1.jpg", widths: [800, 1200] },
-  { slug: "hof-weg", file: "rh2.jpg", widths: [640, 800, 1200] },
-  { slug: "haus-sommer", file: "1b.jpg", widths: [480, 900] },
-  { slug: "haus-terrasse", file: "4a.jpg", widths: [480, 900] },
-  { slug: "liegewiese", file: "5a.jpg", widths: [480, 900] },
-  { slug: "hof-sommer", file: "8a.jpg", widths: [480, 900] },
-  { slug: "balkon", file: "11.jpg", widths: [480, 900] },
-  { slug: "eingang", file: "phoca_thumb_l_p1010489.jpg", widths: [640, 1024] },
-  { slug: "blick-st-martin", file: "phoca_thumb_l_pfandlerhof_pan1a.jpg", widths: [640, 1024] },
-  { slug: "berge", file: "08.jpg", widths: [480, 900] },
-  { slug: "berge-2", file: "07.jpg", widths: [480, 900] },
-  { slug: "wohnen-1", file: "ab1.jpg", widths: [640, 960, 1440] },
-  { slug: "wohnen-2", file: "ab2.jpg", widths: [640, 960, 1440] },
-  { slug: "essen", file: "ab3.jpg", widths: [640, 960, 1440] },
-  { slug: "wohnen-3", file: "ab4.jpg", widths: [640, 960, 1440] },
-  { slug: "kueche", file: "ab5.jpg", widths: [640, 960, 1440] },
-  { slug: "kinderzimmer", file: "phoca_thumb_l_dsc_9935.jpg", widths: [640, 1024] },
-  { slug: "elternzimmer", file: "phoca_thumb_l_dsc_9936.jpg", widths: [640, 1024] },
-  { slug: "bad", file: "phoca_thumb_l_dsc_9938.jpg", widths: [640, 1024] },
-  { slug: "wohnkueche", file: "phoca_thumb_l_dsc_9939.jpg", widths: [640, 1024] },
-  { slug: "kueche-2", file: "phoca_thumb_l_dsc_9940.jpg", widths: [640, 1024] },
-  { slug: "kinderzimmer-2", file: "phoca_thumb_l_dsc_9963.jpg", widths: [640, 1024] },
-  { slug: "elternzimmer-2", file: "phoca_thumb_l_dsc_9964.jpg", widths: [640, 1024] },
-  { slug: "bad-2", file: "phoca_thumb_l_dsc_9968.jpg", widths: [640, 1024] },
-  { slug: "bad-3", file: "phoca_thumb_l_dsc_9969.jpg", widths: [640, 1024] },
-  { slug: "wohnen-4", file: "phoca_thumb_l_dsc_9973.jpg", widths: [640, 1024] },
-  { slug: "grundriss", file: "wohnungen-uebersicht2.jpg", widths: [530] },
+  { slug: "hero", file: "rh1-2400.webp", widths: [800, 1200, 1600, 2400] },
+  { slug: "view", file: "rh2-2400.webp", widths: [800, 1200, 1600, 2400] },
+  { slug: "wohnen-1", file: "bk1.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "wohnen-2", file: "bk4.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "wohnen-3", file: "bk9.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "essen", file: "bk5.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "kueche", file: "bk10.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "elternzimmer", file: "bk2.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "elternzimmer-2", file: "bk7.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "kinderzimmer", file: "bk12.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "kinderzimmer-2", file: "bk13.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "bad", file: "bk3.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "bad-2", file: "bk8.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "balkon", file: "bk14.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "spielplatz", file: "bk15.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "spielplatz-2", file: "bk16.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "haus-terrasse", file: "bk6.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "haus-strasse", file: "bk17.jpg", widths: [640, 960, 1400, 1600] },
+  { slug: "haus-strasse-2", file: "bk18.jpg", widths: [640, 960, 1400, 1600] },
   {
     slug: "fruehstueck",
     file: "phoca_thumb_l_fruehstueckskorb-1024x768.jpg",
     widths: [640, 1024],
     cropTop: 70,
   },
+  { slug: "grundriss", file: "wohnungen-uebersicht2.jpg", widths: [530] },
 ];
 
 const jpeg = { quality: 82, progressive: true, mozjpeg: true };
 const webp = { quality: 78, effort: 5 };
 
 async function main() {
+  // Alte, nicht mehr benötigte Varianten entfernen, damit das Verzeichnis
+  // nicht über die Jahre anwächst.
+  await rm(OUT, { recursive: true, force: true });
   await mkdir(OUT, { recursive: true });
 
   for (const image of images) {
@@ -94,7 +90,7 @@ async function main() {
   }
 
   // Social-Media-Vorschaubild (1200 × 630)
-  await sharp(path.join(SRC, "rh1.jpg"))
+  await sharp(path.join(SRC, "rh1-2400.webp"))
     .resize(1200, 630, { fit: "cover", position: "attention" })
     .jpeg({ quality: 84, progressive: true, mozjpeg: true })
     .toFile(path.join(OUT, "og-image.jpg"));

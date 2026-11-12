@@ -1,177 +1,165 @@
 ---
 layout: layouts/base.njk
 title: "Designvariante 2"
-description: "Alternative, bildstarke Designvariante der Pfandlerhof-Website."
+description: "Alternative Lookbook-Variante der Pfandlerhof-Website."
 permalink: /variante-2/
 noindex: true
 activeNav: wohnungen
+headerOverlay: true
 ---
 
 {% from "components/media.njk" import picture %}
-{% from "components/ui.njk" import button, stars %}
+{% from "components/ui.njk" import stars %}
 {% from "components/cards.njk" import reviewCard %}
-{% from "components/cta.njk" import ctaBand %}
 
-<div class="v2-banner">
-  <div class="container">
-    <span>Designvariante 2 · Entwurf</span>
-    <a href="{{ '/' | link }}">Zur Hauptversion</a>
-  </div>
-</div>
-
-<section class="v2-hero">
-  <div class="v2-hero__media">
+<section class="lb-hero">
+  <div class="lb-hero__bg">
     {{ picture({
       src: "hero",
       alt: "Der Pfandlerhof mit Blick über das Passeiertal",
-      widths: [800, 1200],
+      widths: [800, 1200, 1600, 2400],
       sizes: "100vw",
-      width: 1200,
-      height: 677,
-      class: "v2-hero__img",
+      width: 2400,
+      height: 1350,
+      class: "lb-hero__img",
       loading: "eager",
       priority: true
     }) }}
   </div>
-  <div class="v2-hero__content">
-    <div class="container">
-      <p class="eyebrow eyebrow--light">Ferienwohnungen · Passeiertal</p>
-      <h1>Ihr Urlaub beginnt auf dem Balkon.</h1>
-      <p>Zwei Wohnungen mit 56 m², zwei Schlafzimmern und einem Blick über das ganze Passeiertal. Ruhig, sonnig und nur vier Kilometer von St. Martin entfernt.</p>
-      <div class="v2-hero__actions">
-        {{ button("Wohnungen ansehen", "/ferienwohnungen/", "light", "arrow") }}
-        {{ button("Anfragen", "/kontakt/#anfrage", "secondary") }}
-      </div>
-      <p class="v2-hero__meta">2 Wohnungen · je 56 m² · 2–4 Personen · ab 110 € / Nacht</p>
-    </div>
+  <div class="container lb-hero__content">
+    <p class="eyebrow eyebrow--light">Passeiertal · Südtirol</p>
+    <h1>Wohnen über dem Tal.</h1>
+    <p>Zwei Ferienwohnungen mit 56 m², zwei Schlafzimmern und Balkon. Ruhig, sonnig und nur vier Kilometer von St. Martin.</p>
+    <a class="btn btn--light" href="#anfrage">Verfügbarkeit anfragen {{ "arrow" | icon("btn__icon") | safe }}</a>
   </div>
+  <a class="lb-scroll" href="#lb-ankommen" aria-label="Zu den Wohnungen scrollen">Zu den Wohnungen</a>
 </section>
 
-<section class="v2-intro">
-  <div class="container v2-intro__grid">
-    <div>
-      <p class="eyebrow">Zum Ankommen</p>
-      <h2>Weniger Hotel. Mehr zu Hause.</h2>
-    </div>
-    <div>
-      <p>Zwei Schlafzimmer, eine Wohnküche mit Esstisch und ein Balkon, auf dem man den ganzen Tag sitzen könnte. Die Wohnungen sind großzügig, ruhig und so ausgestattet, dass Sie nach der Anreise nichts mehr brauchen.</p>
-      <p>Ob als Paar, mit Kindern oder mit Freunden: Sie wohnen für sich, haben aber den Hof und die Gastgeber direkt vor der Tür.</p>
-      <ul class="check-list">
-        <li>{{ "check" | icon("check-list__icon") | safe }}<span>56 m² mit zwei Schlafzimmern</span></li>
-        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Wohnküche mit Geschirrspüler und Backofen</span></li>
-        <li>{{ "check" | icon("check-list__icon") | safe }}<span>Balkon mit Blick über das Tal</span></li>
-        <li>{{ "check" | icon("check-list__icon") | safe }}<span>WLAN, Tiefgarage und Waschmaschine inklusive</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="v2-apartments">
+<div class="lb-meta">
   <div class="container">
-    <div class="v2-panel-grid">
+    <span>56 m²</span>
+    <span>2 Schlafzimmer</span>
+    <span>Balkon mit Bergblick</span>
+    <span>2–4 Gäste</span>
+  </div>
+</div>
+
+<section class="lb-chapter" id="lb-ankommen">
+  <div class="lb-chapter__media">
+    {{ picture({
+      src: "haus-terrasse",
+      alt: "Terrasse und Eingang des Ferienhauses",
+      widths: [640, 960, 1400, 1600],
+      sizes: "100vw",
+      width: 1600,
+      height: 1067,
+      class: "lb-chapter__img"
+    }) }}
+  </div>
+  <div class="container lb-chapter__text">
+    <p class="eyebrow">01 · Ankommen</p>
+    <h2>Der Hof liegt über dem Tal.</h2>
+    <p>Die Straße führt in einer Kurve am Haus vorbei. Dahinter beginnt die Wiese, ein Stück weiter der Wald. Auf der anderen Seite: St. Martin, Meran und der Jaufenkamm.</p>
+  </div>
+</section>
+
+<section class="lb-chapter lb-chapter--reverse">
+  <div class="lb-chapter__media">
+    {{ picture({
+      src: "wohnen-2",
+      alt: "Wohnküche mit Esstisch und offener Küche",
+      widths: [640, 960, 1400, 1600],
+      sizes: "100vw",
+      width: 1600,
+      height: 1067,
+      class: "lb-chapter__img"
+    }) }}
+  </div>
+  <div class="container lb-chapter__text">
+    <p class="eyebrow">02 · Wohnen</p>
+    <h2>Ein Raum für alles.</h2>
+    <p>Wohnküche, Esstisch, Sofa – und auf der anderen Seite die offene Küche. Große Fenster, viel Holz und genug Platz für vier Personen.</p>
+  </div>
+</section>
+
+<section class="lb-duo">
+  <div class="container container--wide lb-duo__grid">
+    <figure>
+      {{ picture({
+        src: "elternzimmer",
+        alt: "Elternschlafzimmer mit Doppelbett",
+        widths: [640, 960, 1400, 1600],
+        sizes: "(min-width: 800px) 50vw, 100vw",
+        width: 1600,
+        height: 1067
+      }) }}
+      <figcaption>Elternschlafzimmer</figcaption>
+    </figure>
+    <figure>
+      {{ picture({
+        src: "kinderzimmer",
+        alt: "Kinderzimmer mit Etagenbett",
+        widths: [640, 960, 1400, 1600],
+        sizes: "(min-width: 800px) 50vw, 100vw",
+        width: 1600,
+        height: 1068
+      }) }}
+      <figcaption>Kinderzimmer mit Etagenbett</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="lb-quote">
+  <div class="lb-quote__media">
+    {{ picture({
+      src: "view",
+      alt: "Der Blick vom Pfandlerhof auf St. Martin und das Passeiertal",
+      widths: [800, 1200, 1600, 2400],
+      sizes: "100vw",
+      width: 2400,
+      height: 1350,
+      class: "lb-quote__img"
+    }) }}
+  </div>
+  <div class="container lb-quote__content">
+    <p class="eyebrow eyebrow--light">Der Blick</p>
+    <blockquote>„Morgens Kaffee auf dem Balkon, abends Sterne über dem Tal.“</blockquote>
+  </div>
+</section>
+
+<section class="lb-apartments">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Die Wohnungen</p>
+      <h2>Zwei Möglichkeiten.</h2>
+    </header>
+    <div class="lb-panels">
       {% for apartment in apartments %}
-        <a class="v2-panel" href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}">
+        <a class="lb-panel" href="{{ ('/ferienwohnungen/#' + apartment.slug) | link }}">
           {{ picture({
             src: apartment.image,
             alt: apartment.imageAlt,
-            widths: [640, 960, 1440],
+            widths: [640, 960, 1400, 1600],
             sizes: "(min-width: 800px) 50vw, 100vw",
-            width: 1440,
-            height: 961
+            width: 1600,
+            height: 1067
           }) }}
-          <div class="v2-panel__body">
-            <p class="v2-panel__eyebrow">{{ apartment.highlight }}</p>
-            <h2>{{ apartment.name }}</h2>
-            <p>{{ apartment.summary }}</p>
-            <span class="v2-panel__price">ab {{ apartment.priceFrom }} € <small>/ Nacht</small></span>
-          </div>
+          <span class="lb-panel__body">
+            <span class="lb-panel__eyebrow">Wohnung {{ loop.index }} / {{ apartments | length }}</span>
+            <strong class="lb-panel__title">{{ apartment.shortName }}</strong>
+            <span class="lb-panel__meta">{{ apartment.size }} · {{ apartment.guests }} · ab {{ apartment.priceFrom }} € / Nacht</span>
+          </span>
         </a>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="v2-rooms">
-  <div class="container">
-    <header class="section-head">
-      <p class="eyebrow">Die Räume</p>
-      <h2>Große Bilder, echte Räume.</h2>
-      <p class="section-head__text">Wohnküche, Schlafzimmer, Kinderzimmer – so sieht es aus, wenn Sie bei uns ankommen.</p>
-    </header>
-    <div class="v2-room-grid">
-      <figure class="v2-room v2-room--large">
-        {{ picture({
-          src: "wohnen-2",
-          alt: "Wohnküche mit Esstisch und offener Küche",
-          widths: [640, 960, 1440],
-          sizes: "(min-width: 760px) 55vw, 100vw",
-          width: 1440,
-          height: 961
-        }) }}
-        <figcaption>Wohnküche mit Esstisch</figcaption>
-      </figure>
-      <figure class="v2-room">
-        {{ picture({
-          src: "elternzimmer-2",
-          alt: "Elternschlafzimmer mit Doppelbett",
-          widths: [640, 1024],
-          sizes: "(min-width: 760px) 40vw, 100vw",
-          width: 1024,
-          height: 687
-        }) }}
-        <figcaption>Elternschlafzimmer</figcaption>
-      </figure>
-      <figure class="v2-room">
-        {{ picture({
-          src: "kinderzimmer-2",
-          alt: "Kinderzimmer mit Etagenbett",
-          widths: [640, 1024],
-          sizes: "(min-width: 760px) 40vw, 100vw",
-          width: 1024,
-          height: 687
-        }) }}
-        <figcaption>Kinderzimmer mit Etagenbett</figcaption>
-      </figure>
-      <figure class="v2-room v2-room--wide">
-        {{ picture({
-          src: "essen",
-          alt: "Esstisch mit Blick ins Grüne",
-          widths: [640, 960, 1440],
-          sizes: "100vw",
-          width: 1440,
-          height: 960
-        }) }}
-        <figcaption>Esstisch mit Blick ins Grüne</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="view-band" aria-label="Der Ausblick">
-  <div class="view-band__media">
-    {{ picture({
-      src: "blick-st-martin",
-      alt: "Blick vom Pfandlerhof auf St. Martin und das Passeiertal",
-      widths: [640, 1024],
-      sizes: "100vw",
-      width: 1024,
-      height: 372,
-      class: "view-band__img"
-    }) }}
-  </div>
-  <div class="container view-band__content">
-    <p class="eyebrow eyebrow--light">Der Ausblick</p>
-    <h2>Vom Balkon bis nach Meran.</h2>
-    <p>Der Jaufenkamm links, St. Martin unten im Tal, Meran in der Ferne. Diesen Blick haben Sie jeden Morgen – und abends mit Sternen.</p>
-    {{ button("Galerie ansehen", "/galerie/", "light", "arrow") }}
-  </div>
-</section>
-
-<section class="section">
+<section class="section section--paper">
   <div class="container">
     <header class="section-head section-head--center">
       <p class="eyebrow">Gästestimmen</p>
-      <h2>Was unsere Gäste sagen</h2>
+      <h2>Was Gäste sagen.</h2>
     </header>
     <div class="reviews__grid">
       {% for review in reviews %}
@@ -180,7 +168,7 @@ activeNav: wohnungen
         {% endif %}
       {% endfor %}
     </div>
-    <div class="v2-trust">
+    <div class="review-summary">
       <p class="rating">
         {{ stars(5) }}
         <span class="rating__value">{{ site.rating.value }} / {{ site.rating.max }}</span>
@@ -195,4 +183,29 @@ activeNav: wohnungen
   </div>
 </section>
 
-{{ ctaBand("Welche Wohnung darf es sein?", "Sagen Sie uns Ihren Wunschtermin – wir antworten persönlich mit einem Angebot.", "Anfrage", site) }}
+<section class="booking-band" id="anfrage">
+  <div class="container booking-band__inner">
+    <div class="booking-band__intro">
+      <p class="eyebrow eyebrow--light">Direkt beim Gastgeber</p>
+      <h2>Verfügbarkeit anfragen.</h2>
+      <p>Sagen Sie uns Ihren Wunschtermin – wir antworten persönlich mit einem Angebot.</p>
+      <div class="booking-band__contact">
+        <a href="tel:{{ site.phoneHref }}">{{ "phone" | icon | safe }} {{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}">{{ "mail" | icon | safe }} {{ site.email }}</a>
+      </div>
+    </div>
+    <div class="booking-band__form">
+      {% set bookingCompact = true %}
+      {% include "partials/booking-form.njk" %}
+    </div>
+  </div>
+</section>
+
+<a class="lb-cta btn btn--primary" href="#anfrage">Verfügbarkeit anfragen {{ "arrow" | icon("btn__icon") | safe }}</a>
+
+<footer class="lb-footer">
+  <div class="container lb-footer__inner">
+    <p><strong>Designvariante 2</strong> · Entwurf</p>
+    <a href="{{ '/' | link }}">Zur Hauptversion {{ "arrow" | icon("text-link__icon") | safe }}</a>
+  </div>
+</footer>

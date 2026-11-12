@@ -5,14 +5,14 @@
 @font-face {
   font-family: "Fraunces";
   src: url("../fonts/fraunces-latin.woff2") format("woff2");
-  font-weight: 500 700;
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Source Sans 3";
-  src: url("../fonts/source-sans-3-latin.woff2") format("woff2");
+  font-family: "Instrument Sans";
+  src: url("../fonts/instrument-sans-latin.woff2") format("woff2");
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -22,39 +22,42 @@
   color-scheme: light;
 
   /* Farben */
-  --cream: #fbf7f0;
-  --paper: #fffdf9;
+  --cream: #f6f2ea;
+  --paper: #fcfaf6;
   --white: #ffffff;
-  --ink: #23281f;
-  --muted: #5b6157;
-  --green: #2e4a34;
-  --green-dark: #22382a;
-  --green-deep: #1b2d21;
-  --green-soft: #e9eee5;
-  --green-section: #2e4a34;
-  --hay: #96652a;
-  --hay-light: #e2c290;
-  --hay-soft: #f3e8d6;
-  --line: #e5ded0;
-  --line-strong: #d3c8b5;
-  --on-dark: #f6f2e8;
-  --header-bg: rgb(251 247 240 / 92%);
+  --ink: #19211b;
+  --muted: #5f665c;
+  --green: #223a2a;
+  --green-dark: #15251b;
+  --green-deep: #101a13;
+  --green-soft: #e7ece4;
+  --green-section: #1c3023;
+  --hay: #a45c3a;
+  --hay-light: #d9a57f;
+  --hay-soft: #f1e2d7;
+  --line: #ddd6c8;
+  --line-strong: #c9bfac;
+  --on-dark: #f6f2ea;
+  --on-primary: #f6f2ea;
+  --header-bg: rgb(246 242 234 / 94%);
 
   /* Typografie */
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Maße */
-  --container: 1180px;
-  --container-narrow: 780px;
-  --gutter: clamp(1.25rem, 4vw, 2.75rem);
-  --section: clamp(4rem, 9vw, 7.5rem);
-  --radius-sm: 10px;
-  --radius: 18px;
-  --radius-lg: 28px;
+  --container: 1280px;
+  --container-wide: 1480px;
+  --container-narrow: 800px;
+  --gutter: clamp(1.25rem, 4vw, 3.25rem);
+  --section: clamp(4.5rem, 10vw, 9rem);
+  --radius-sm: 2px;
+  --radius: 2px;
+  --radius-lg: 3px;
+  --header-h: 5.25rem;
 
   /* Schatten & Bewegung */
-  --shadow-sm: 0 1px 2px rgb(35 40 31 / 6%);
-  --shadow: 0 24px 48px -28px rgb(35 40 31 / 35%);
+  --shadow-sm: 0 1px 2px rgb(25 33 27 / 6%);
+  --shadow: 0 30px 60px -40px rgb(25 33 27 / 45%);
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
