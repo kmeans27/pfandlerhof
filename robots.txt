@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kmeans27.github.io/pfandlerhof/sitemap.xml

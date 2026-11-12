@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+
+  <script>
+    // Hell/Dunkel sofort setzen, damit beim Laden nichts aufblitzt.
+    (function () {
+      try {
+        var stored = localStorage.getItem("pf-theme");
+        var theme = stored === "dark" || stored === "light"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <title>Pfandlerhof – Ferienwohnungen mit Bergblick in St. Martin in Passeier</title>
+  <meta name="description" content="Zwei Ferienwohnungen mit je 56 m², zwei Schlafzimmern und Balkon mit Blick über das Passeiertal. Ruhig gelegen, vier Kilometer von St. Martin in Passeier.">
+
+  <link rel="canonical" href="https://kmeans27.github.io/pfandlerhof/">
+  
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pfandlerhof">
+  <meta property="og:locale" content="de_AT">
+  <meta property="og:title" content="Pfandlerhof – Ferienwohnungen mit Bergblick in St. Martin in Passeier">
+  <meta property="og:description" content="Zwei Ferienwohnungen mit je 56 m², zwei Schlafzimmern und Balkon mit Blick über das Passeiertal. Ruhig gelegen, vier Kilometer von St. Martin in Passeier.">
+  <meta property="og:url" content="https://kmeans27.github.io/pfandlerhof/">
+  <meta property="og:image" content="https://kmeans27.github.io/pfandlerhof/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/pfandlerhof/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/pfandlerhof/apple-touch-icon.png">
+
+  <link rel="preload" href="/pfandlerhof/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/pfandlerhof/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/pfandlerhof/assets/css/main.css?v=mwe5bied">
+
+  
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Pfandlerhof",
+        "description": "Zwei Ferienwohnungen mit je 56 m², zwei Schlafzimmern und Balkon mit Blick über das Passeiertal. Ruhig gelegen, vier Kilometer von St. Martin in Passeier.",
+        "url": "https://kmeans27.github.io/pfandlerhof/",
+        "telephone": "+39 347 1604505",
+        "email": "info@pfandlerhof.com",
+        "image": "https://kmeans27.github.io/pfandlerhof/assets/img/hero-1200.jpg",
+        "priceRange": "€€",
+        "checkinTime": "14:00",
+        "checkoutTime": "10:00",
+        "petsAllowed": true,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kalmtaler Straße 5",
+          "postalCode": "39010",
+          "addressLocality": "St. Martin in Passeier",
+          "addressRegion": "Südtirol",
+          "addressCountry": "IT"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4,83",
+          "bestRating": "5",
+          "reviewCount": "66"
+        }
+      }
+    </script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header site-header--overlay" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="/pfandlerhof/">
+      <span class="brand__name">Pfandlerhof</span>
+      <span class="brand__sub">Ferienwohnungen in Passeier</span>
+    </a>
+
+    <nav class="site-nav" id="primary-nav" aria-label="Hauptnavigation" data-nav>
+      <ul class="site-nav__list">
+        
+          <li>
+            <a
+              class="site-nav__link is-active"
+              href="/pfandlerhof/ferienwohnungen/"
+              aria-current="page">Wohnungen</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/galerie/"
+              >Galerie</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/umgebung/"
+              >Umgebung</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/der-hof/"
+              >Am Hof</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/kontakt/"
+              >Kontakt</a>
+          </li>
+        
+      </ul>
+      <div class="site-nav__actions">
+        <button class="theme-toggle theme-toggle--menu" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <span class="theme-toggle__sun"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></span>
+            <span class="theme-toggle__moon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg></span>
+          </span>
+          <span class="theme-toggle__label" data-theme-label>Dunkelmodus</span>
+        </button>
+        <a class="site-nav__phone" href="tel:+393471604505">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><span>+39 347 1604505</span>
+        </a>
+        <a class="btn btn--primary btn--small" href="/pfandlerhof/kontakt/#anfrage">Anfrage</a>
+      </div>
+    </nav>
+
+    <div class="site-header__tools">
+      <button class="theme-toggle theme-toggle--icon" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+        <span class="theme-toggle__icons" aria-hidden="true">
+          <span class="theme-toggle__sun"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></span>
+          <span class="theme-toggle__moon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg></span>
+        </span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="nav-toggle__label">Menü</span>
+        <span class="nav-toggle__icon" aria-hidden="true">
+          <svg class="icon nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main">
+    
+
+
+
+
+
+<section class="hero hero--home">
+  <div class="hero__bg">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/hero-800.webp 800w, /pfandlerhof/assets/img/hero-1200.webp 1200w, /pfandlerhof/assets/img/hero-1600.webp 1600w, /pfandlerhof/assets/img/hero-2400.webp 2400w"
+      sizes="100vw">
+    <img
+      src="/pfandlerhof/assets/img/hero-2400.jpg"
+      srcset="/pfandlerhof/assets/img/hero-800.jpg 800w, /pfandlerhof/assets/img/hero-1200.jpg 1200w, /pfandlerhof/assets/img/hero-1600.jpg 1600w, /pfandlerhof/assets/img/hero-2400.jpg 2400w"
+      sizes="100vw"
+      width="2400"
+      height="1350"
+      alt="Der Pfandlerhof mit Blick über das Passeiertal"
+      class="hero__bg-img"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high">
+  </picture>
+
+  </div>
+
+  <div class="container hero__inner">
+    <p class="eyebrow eyebrow--light">Passeiertal · Südtirol</p>
+    <h1>Wohnen über dem Passeiertal.</h1>
+    <p class="hero__lead">Zwei Ferienwohnungen mit 56 m², zwei Schlafzimmern und Balkon. Ruhig, sonnig und nur vier Kilometer von St. Martin.</p>
+    <div class="hero__actions">
+      
+  <a class="btn btn--light" href="#anfrage">
+    <span>Verfügbarkeit anfragen</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+
+      
+  <a class="btn btn--secondary" href="#wohnungen">
+    <span>Wohnungen ansehen</span>
+    
+  </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container trust-strip__inner">
+    <p class="rating">
+      
+  <span class="stars" role="img" aria-label="5 von 5 Sternen">
+    <svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+  </span>
+
+      <span class="rating__value">4,83 / 5</span>
+      <span class="rating__meta">66 Bewertungen bei Airbnb</span>
+    </p>
+    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 4C10 4 4 8 4 14a6 6 0 0 0 6 6c6 0 10-6 10-16Z"/><path d="M4 20c2-6 7-9 12-11"/></svg> Roter Hahn · Urlaub auf dem Bauernhof</span>
+    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg> Direkt beim Gastgeber</span>
+  </div>
+</div>
+
+<section class="booking-band" id="anfrage">
+  <div class="container booking-band__inner">
+    <div class="booking-band__intro">
+      <p class="eyebrow eyebrow--light">Direkt beim Gastgeber</p>
+      <h2>Verfügbarkeit anfragen.</h2>
+      <p>Sagen Sie uns Ihren Wunschtermin. Wir prüfen die Verfügbarkeit und antworten persönlich mit einem Angebot – ohne Buchungsgebühr.</p>
+      <div class="booking-band__contact">
+        <a href="tel:+393471604505"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg> +39 347 1604505</a>
+        <a href="mailto:info@pfandlerhof.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@pfandlerhof.com</a>
+      </div>
+    </div>
+    <div class="booking-band__form">
+      
+      
+<form
+  class="form form--compact"
+  data-inquiry-form
+  data-recipient="info@pfandlerhof.com"
+  action="mailto:info@pfandlerhof.com"
+  method="post"
+  enctype="text/plain">
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="email">E-Mail <span class="required" aria-hidden="true">*</span></label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="arrival">Anreise <span class="required" aria-hidden="true">*</span></label>
+      <input id="arrival" name="arrival" type="date" required>
+    </div>
+    <div class="field">
+      <label for="departure">Abreise <span class="required" aria-hidden="true">*</span></label>
+      <input id="departure" name="departure" type="date" required>
+    </div>
+  </div>
+
+  <div class="form__row form__row--2">
+    <div class="field">
+      <label for="adults">Erwachsene <span class="required" aria-hidden="true">*</span></label>
+      <select id="adults" name="adults" required>
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="children">Kinder</label>
+      <select id="children" name="children">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="apartment">Ferienwohnung</label>
+    <select id="apartment" name="apartment">
+      <option value="">Noch offen</option>
+      
+        <option value="jaufenblick">Ferienwohnung Jaufenblick</option>
+      
+        <option value="meranersicht">Ferienwohnung Meranersicht</option>
+      
+    </select>
+  </div>
+
+  
+
+  <div class="field field--check">
+    <input id="privacy" name="privacy" type="checkbox" required>
+    <label for="privacy">Ich habe die <a href="/pfandlerhof/datenschutz/">Datenschutzhinweise</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung dieser Anfrage verwendet werden. <span class="required" aria-hidden="true">*</span></label>
+  </div>
+
+  <div class="form__actions">
+    <button class="btn btn--primary btn--block" type="submit">
+      <span>Anfrage senden</span><svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    </button>
+    
+  </div>
+
+  <p class="form__status" data-form-status role="status" tabindex="-1">
+    Ihr E-Mail-Programm sollte sich jetzt geöffnet haben. Bitte senden Sie die Nachricht dort ab. Falls sich nichts öffnet, schreiben Sie uns bitte direkt an <a href="mailto:info@pfandlerhof.com">info@pfandlerhof.com</a> oder rufen Sie an.
+  </p>
+</form>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container intro-statement" data-reveal>
+    <div>
+      <p class="eyebrow">Die Wohnungen</p>
+      <h2>Zwei Wohnungen. Ein Tal. Viel Ruhe.</h2>
+    </div>
+    <div class="intro-statement__text">
+      <p>Beide Wohnungen sind 56 m² groß, haben zwei Schlafzimmer, eine voll ausgestattete Wohnküche und einen Balkon. Sie wohnen für sich – mit eigenem Eingang, eigener Küche und viel Platz.</p>
+      <p>Der Hof liegt ruhig über dem Tal, St. Martin ist in wenigen Minuten erreichbar. Wandern, Skifahren oder einfach nichts tun: Von hier aus geht beides.</p>
+      <div class="intro-statement__meta">
+        <span>56 m²</span>
+        <span>2 Schlafzimmer</span>
+        <span>2–4 Gäste</span>
+        <span>Balkon mit Bergblick</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="wohnungen">
+  <div class="container">
+    <div class="apartment-list">
+      
+        <article class="apartment-feature" data-reveal>
+          <div class="apartment-feature__media">
+            
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.webp 640w, /pfandlerhof/assets/img/wohnen-2-960.webp 960w, /pfandlerhof/assets/img/wohnen-2-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-2-1600.webp 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.jpg 640w, /pfandlerhof/assets/img/wohnen-2-960.jpg 960w, /pfandlerhof/assets/img/wohnen-2-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-2-1600.jpg 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnküche der Ferienwohnung Jaufenblick mit Esstisch und Blick zum Balkon"
+      class="apartment-feature__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+          </div>
+          <div class="apartment-feature__body">
+            <p class="apartment-feature__index">Wohnung 1 / 2</p>
+            <h2 class="apartment-feature__title">Jaufenblick</h2>
+            <p class="apartment-feature__meta">56 m² · 2–4 Personen · ab 120 € / Nacht</p>
+            <p>Unsere Wohnung mit Infrarotkabine, zwei Schlafzimmern und Blick zum Jaufenkamm. Ideal für Familien, die nach einem Wandertag noch einmal richtig abschalten möchten.</p>
+            <ul class="check-list">
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>2 Schlafzimmer: Doppelbett und Etagenbett</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Infrarotkabine</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Balkon und Terrasse</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Haustiere erlaubt</span></li>
+              
+            </ul>
+            <div class="apartment-feature__actions">
+              
+  <a class="btn btn--primary" href="/pfandlerhof/kontakt/?wohnung=jaufenblick#anfrage">
+    <span>Diese Wohnung anfragen</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+
+              <a class="text-link" href="/pfandlerhof/ferienwohnungen/#jaufenblick">Details ansehen <svg class="icon text-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+      
+        <article class="apartment-feature apartment-feature--reverse" data-reveal>
+          <div class="apartment-feature__media">
+            
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-1-640.webp 640w, /pfandlerhof/assets/img/wohnen-1-960.webp 960w, /pfandlerhof/assets/img/wohnen-1-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-1-1600.webp 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-1-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-1-640.jpg 640w, /pfandlerhof/assets/img/wohnen-1-960.jpg 960w, /pfandlerhof/assets/img/wohnen-1-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-1-1600.jpg 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnbereich der Ferienwohnung Meranersicht mit Sofa und offener Balkontür"
+      class="apartment-feature__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+          </div>
+          <div class="apartment-feature__body">
+            <p class="apartment-feature__index">Wohnung 2 / 2</p>
+            <h2 class="apartment-feature__title">Meranersicht</h2>
+            <p class="apartment-feature__meta">56 m² · 2–4 Personen · ab 110 € / Nacht</p>
+            <p>Die sonnige Wohnung mit großzügigem Wohnbereich und Balkon. Vom Esstisch aus schauen Sie über St. Martin bis nach Meran – besonders schön beim Frühstück.</p>
+            <ul class="check-list">
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>2 Schlafzimmer: Doppelbett und Etagenbett</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Großer Balkon mit Bergblick</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Wohnküche mit Geschirrspüler</span></li>
+              
+                <li><svg class="icon check-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 12.5 5 5L20 6.5"/></svg><span>Haustiere erlaubt</span></li>
+              
+            </ul>
+            <div class="apartment-feature__actions">
+              
+  <a class="btn btn--primary" href="/pfandlerhof/kontakt/?wohnung=meranersicht#anfrage">
+    <span>Diese Wohnung anfragen</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+
+              <a class="text-link" href="/pfandlerhof/ferienwohnungen/#meranersicht">Details ansehen <svg class="icon text-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+      
+    </div>
+    <p class="apartments__note">Beide Wohnungen lassen sich auch miteinander kombinieren. <a class="text-link" href="/pfandlerhof/ferienwohnungen/">Alle Details und Preise <svg class="icon text-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Die Räume</p>
+      <h2>Ein Blick hinein.</h2>
+      <p class="section-head__text">Wohnküche, Schlafzimmer, Balkon – große Fenster, viel Holz und genug Platz für die ganze Familie.</p>
+    </header>
+  </div>
+  <div class="container container--wide">
+    <div class="room-grid" data-reveal>
+      <figure class="room room--living">
+        
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.webp 640w, /pfandlerhof/assets/img/wohnen-2-960.webp 960w, /pfandlerhof/assets/img/wohnen-2-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-2-1600.webp 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.jpg 640w, /pfandlerhof/assets/img/wohnen-2-960.jpg 960w, /pfandlerhof/assets/img/wohnen-2-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-2-1600.jpg 1600w"
+      sizes="(min-width: 900px) 58vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnküche mit Esstisch und offener Küche"
+      class=""
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+        <figcaption>Wohnküche mit Esstisch</figcaption>
+      </figure>
+      <figure class="room room--bedroom">
+        
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/elternzimmer-640.webp 640w, /pfandlerhof/assets/img/elternzimmer-960.webp 960w, /pfandlerhof/assets/img/elternzimmer-1400.webp 1400w, /pfandlerhof/assets/img/elternzimmer-1600.webp 1600w"
+      sizes="(min-width: 900px) 42vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/elternzimmer-1600.jpg"
+      srcset="/pfandlerhof/assets/img/elternzimmer-640.jpg 640w, /pfandlerhof/assets/img/elternzimmer-960.jpg 960w, /pfandlerhof/assets/img/elternzimmer-1400.jpg 1400w, /pfandlerhof/assets/img/elternzimmer-1600.jpg 1600w"
+      sizes="(min-width: 900px) 42vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Elternschlafzimmer mit Doppelbett"
+      class=""
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+        <figcaption>Elternschlafzimmer</figcaption>
+      </figure>
+      <figure class="room room--third">
+        
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/essen-640.webp 640w, /pfandlerhof/assets/img/essen-960.webp 960w, /pfandlerhof/assets/img/essen-1400.webp 1400w, /pfandlerhof/assets/img/essen-1600.webp 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw">
+    <img
+      src="/pfandlerhof/assets/img/essen-1600.jpg"
+      srcset="/pfandlerhof/assets/img/essen-640.jpg 640w, /pfandlerhof/assets/img/essen-960.jpg 960w, /pfandlerhof/assets/img/essen-1400.jpg 1400w, /pfandlerhof/assets/img/essen-1600.jpg 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw"
+      width="1600"
+      height="1067"
+      alt="Esstisch mit Blick ins Grüne"
+      class=""
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+        <figcaption>Esstisch mit Blick ins Grüne</figcaption>
+      </figure>
+      <figure class="room room--third">
+        
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-640.webp 640w, /pfandlerhof/assets/img/kinderzimmer-960.webp 960w, /pfandlerhof/assets/img/kinderzimmer-1400.webp 1400w, /pfandlerhof/assets/img/kinderzimmer-1600.webp 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw">
+    <img
+      src="/pfandlerhof/assets/img/kinderzimmer-1600.jpg"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-640.jpg 640w, /pfandlerhof/assets/img/kinderzimmer-960.jpg 960w, /pfandlerhof/assets/img/kinderzimmer-1400.jpg 1400w, /pfandlerhof/assets/img/kinderzimmer-1600.jpg 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw"
+      width="1600"
+      height="1068"
+      alt="Kinderzimmer mit Etagenbett"
+      class=""
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+        <figcaption>Kinderzimmer mit Etagenbett</figcaption>
+      </figure>
+      <figure class="room room--third">
+        
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/bad-640.webp 640w, /pfandlerhof/assets/img/bad-960.webp 960w, /pfandlerhof/assets/img/bad-1400.webp 1400w, /pfandlerhof/assets/img/bad-1600.webp 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw">
+    <img
+      src="/pfandlerhof/assets/img/bad-1600.jpg"
+      srcset="/pfandlerhof/assets/img/bad-640.jpg 640w, /pfandlerhof/assets/img/bad-960.jpg 960w, /pfandlerhof/assets/img/bad-1400.jpg 1400w, /pfandlerhof/assets/img/bad-1600.jpg 1600w"
+      sizes="(min-width: 900px) 32vw, 50vw"
+      width="1600"
+      height="1067"
+      alt="Badezimmer mit Dusche"
+      class=""
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+        <figcaption>Badezimmer mit Dusche</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="container">
+    <p class="u-center u-mt-lg">
+  <a class="btn btn--secondary" href="/pfandlerhof/galerie/">
+    <span>Alle Bilder ansehen</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+</p>
+  </div>
+</section>
+
+<section class="view-band" aria-label="Der Ausblick">
+  <div class="view-band__media">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/view-800.webp 800w, /pfandlerhof/assets/img/view-1200.webp 1200w, /pfandlerhof/assets/img/view-1600.webp 1600w, /pfandlerhof/assets/img/view-2400.webp 2400w"
+      sizes="100vw">
+    <img
+      src="/pfandlerhof/assets/img/view-2400.jpg"
+      srcset="/pfandlerhof/assets/img/view-800.jpg 800w, /pfandlerhof/assets/img/view-1200.jpg 1200w, /pfandlerhof/assets/img/view-1600.jpg 1600w, /pfandlerhof/assets/img/view-2400.jpg 2400w"
+      sizes="100vw"
+      width="2400"
+      height="1350"
+      alt="Der Blick vom Pfandlerhof auf St. Martin und das Passeiertal"
+      class="view-band__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+  </div>
+  <div class="container view-band__content">
+    <p class="eyebrow eyebrow--light">Der Ausblick</p>
+    <h2>Der Blick bleibt.</h2>
+    <p>Der Jaufenkamm links, St. Martin unten im Tal, Meran in der Ferne. Diesen Blick haben Sie jeden Morgen – und abends mit Sternen.</p>
+    
+  <a class="btn btn--light" href="/pfandlerhof/galerie/">
+    <span>Mehr Bilder</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Ausstattung</p>
+      <h2>Alles, was Sie brauchen.</h2>
+      <p class="section-head__text">Vom Geschirrspüler bis zur Fußbodenheizung: Die Wohnungen sind so eingerichtet, dass Sie nach der Anreise nichts mehr besorgen müssen.</p>
+    </header>
+    <ul class="info-grid info-grid--three" data-reveal>
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 19v-7h18v7"/><path d="M3 19v2M21 19v2"/><path d="M6 12V8h5v4"/><path d="M11 12h10"/></svg></span>
+    <div>
+      <h3>Zwei Schlafzimmer</h3>
+      <p>Doppelbett im Elternzimmer, Etagenbett im Kinderzimmer</p>
+    </div>
+  </li>
+
+        
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z"/><path d="M7 12V6a2 2 0 0 1 4 0"/><path d="m7 19-1 2M17 19l1 2"/></svg></span>
+    <div>
+      <h3>Badezimmer</h3>
+      <p>Dusche, WC, Bidet und Haartrockner</p>
+    </div>
+  </li>
+
+        
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6Z"/><path d="M4 10 2.5 8M20 10l1.5-2"/><path d="M8 6.5c0-1 1-1 1-2M12 6.5c0-1 1-1 1-2"/></svg></span>
+    <div>
+      <h3>Wohnküche</h3>
+      <p>Backofen, Geschirrspüler, Kaffeemaschine und Esstisch</p>
+    </div>
+  </li>
+
+        
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7" cy="6" r="2.5"/><path d="M7 1v1M2 6h1M3.5 2.5l.7.7"/><path d="M11 20v-8h9v8"/><path d="M11 15h9M13 12v8M16 12v8M19 12v8"/></svg></span>
+    <div>
+      <h3>Balkon &amp; Terrasse</h3>
+      <p>Mit Sitzgelegenheit und Blick ins Tal</p>
+    </div>
+  </li>
+
+        
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 9a13 13 0 0 1 16 0"/><path d="M7 12.5a8.5 8.5 0 0 1 10 0"/><path d="M10 16a4 4 0 0 1 4 0"/><circle cx="12" cy="19" r=".8" fill="currentColor" stroke="none"/></svg></span>
+    <div>
+      <h3>WLAN &amp; SAT-TV</h3>
+      <p>Kostenlos, mit deutschem Satellitenprogramm</p>
+    </div>
+  </li>
+
+        
+      
+        
+          
+  <li class="info-tile">
+    <span class="info-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 7h.01"/></svg></span>
+    <div>
+      <h3>Waschmaschine &amp; Trockner</h3>
+      <p>Gemeinsam nutzbar, ohne Aufpreis</p>
+    </div>
+  </li>
+
+        
+      
+        
+      
+        
+      
+    </ul>
+    <p class="u-mt"><a class="text-link" href="/pfandlerhof/ferienwohnungen/">Alle Details und Preise <svg class="icon text-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="container">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Gästestimmen</p>
+      <h2>Was Gäste sagen.</h2>
+    </header>
+    <div class="reviews__grid" data-reveal>
+      
+        
+          
+  <figure class="review">
+    <span class="review__mark" aria-hidden="true">„</span>
+    <blockquote class="review__text">Wir waren auf der Durchreise und leider nur eine Nacht da – aber es war absolut traumhaft! Die Lage, die Aussicht, die Wohnung: der Pfandlerhof ist definitiv weiterzuempfehlen. Wir haben sogar eine Führung durch den Bauernhof bekommen und durften die Tiere sehen.</blockquote>
+    <figcaption class="review__author">
+      <strong>Barbara</strong>
+      <span>Airbnb · Mai 2026</span>
+    </figcaption>
+  </figure>
+
+        
+      
+        
+          
+  <figure class="review">
+    <span class="review__mark" aria-hidden="true">„</span>
+    <blockquote class="review__text">Schöne Aussicht. Abgelegener Ort. Perfekt saubere, geräumige Wohnung mit großer Terrasse und Sitzgelegenheiten im Freien.</blockquote>
+    <figcaption class="review__author">
+      <strong>Jan</strong>
+      <span>Airbnb · Juli 2026</span>
+    </figcaption>
+  </figure>
+
+        
+      
+        
+          
+  <figure class="review">
+    <span class="review__mark" aria-hidden="true">„</span>
+    <blockquote class="review__text">Tolle Lage direkt am Berg, super Gastgeber. Die Wohnung war riesig und die Küche umfassend ausgestattet. Wir waren nur eine Nacht dort, aber es wäre perfekt für einen Wanderurlaub.</blockquote>
+    <figcaption class="review__author">
+      <strong>Matteo</strong>
+      <span>HolidayCheck · Mai 2023</span>
+    </figcaption>
+  </figure>
+
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="review-summary">
+      <p class="rating">
+        
+  <span class="stars" role="img" aria-label="5 von 5 Sternen">
+    <svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+  </span>
+
+        <span class="rating__value">4,83 / 5</span>
+        <span class="rating__meta">66 Bewertungen bei Airbnb</span>
+      </p>
+      <p class="rating">
+        
+  <span class="stars" role="img" aria-label="5 von 5 Sternen">
+    <svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><svg class="icon stars__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+  </span>
+
+        <span class="rating__value">6,0 / 6</span>
+        <span class="rating__meta">9 Bewertungen bei HolidayCheck · 100 % Weiterempfehlung</span>
+      </p>
+    </div>
+    <p class="review-source">Gekürzte Originalzitate von Airbnb und HolidayCheck.</p>
+  </div>
+</section>
+
+<section class="section section--green">
+  <div class="container">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow eyebrow--light">Rund um die Wohnungen</p>
+      <h2>Wandern, radeln, abschalten.</h2>
+      <p class="section-head__text">Der Pfandlerhof liegt dort, wo das Passeiertal seine sonnige Seite zeigt. Ob große Wanderung oder kleiner Spaziergang – vor der Haustür beginnt beides.</p>
+    </header>
+    <div class="teaser-grid" data-reveal>
+      <article class="teaser">
+        <span class="teaser__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="13" cy="4.5" r="1.5"/><path d="m10 21 2-5 2 2v3"/><path d="m8 12 2-3 3-1 3 3 2 1"/><path d="m8 12-2 5"/><path d="M3 21h4"/></svg></span>
+        <p class="teaser__meta">Direkt vor der Haustür</p>
+        <h3>Meraner Höhenweg</h3>
+        <p>Der bekannte Höhenweg rund um die Texelgruppe lässt sich in Etappen erwandern. Wir sagen Ihnen gerne, wo Sie am besten einsteigen.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5.5-8 11-8 11s-8-5.5-8-11a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <p class="teaser__meta">4 km / 17 km</p>
+        <h3>St. Martin &amp; Meran</h3>
+        <p>Der Dorfplatz von St. Martin, die Promenade in Meran und die Laubengasse: alles gut für einen halben oder einen ganzen Tag.</p>
+      </article>
+      <article class="teaser">
+        <span class="teaser__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2v20M4 6l16 12M20 6 4 18"/><path d="m9.5 3.5 2.5 2 2.5-2M9.5 20.5l2.5-2 2.5 2"/></svg></span>
+        <p class="teaser__meta">23 bis 44 km</p>
+        <h3>Winter in den Bergen</h3>
+        <p>Pfelders, Ratschings und Meran 2000 sind schnell erreichbar. Rodeln, Schneeschuhwandern und Einkehr gehören bei uns dazu.</p>
+      </article>
+    </div>
+    <p class="u-mt-lg">
+  <a class="btn btn--light" href="/pfandlerhof/umgebung/">
+    <span>Umgebung entdecken</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="farm-strip">
+      <div>
+        <p class="eyebrow">Am Hof</p>
+        <h2>Tiere, Frühstück und hofeigene Produkte.</h2>
+        <p>Wer möchte, lernt die Kühe, Schafe und Hühner kennen, bekommt morgens einen Frühstückskorb und nimmt Speck, Käse oder Marmelade mit nach Hause.</p>
+      </div>
+      <div>
+        
+  <a class="btn btn--secondary" href="/pfandlerhof/der-hof/">
+    <span>Am Hof vorbeischauen</span>
+    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <p class="eyebrow eyebrow--light">Anfrage</p>
+        <h2>Wir freuen uns auf Sie.</h2>
+        <p>Sagen Sie uns, wann Sie kommen möchten – wir melden uns persönlich mit einem Angebot. Direkt beim Gastgeber, ohne Buchungsgebühr.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--light" href="/pfandlerhof/kontakt/#anfrage">
+          <span>Anfrage senden</span><svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+        </a>
+        <a class="cta-band__link" href="tel:+393471604505"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg> +39 347 1604505</a>
+        <a class="cta-band__link" href="mailto:info@pfandlerhof.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@pfandlerhof.com</a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">Pfandlerhof</p>
+        <p class="footer__tagline">Ferienwohnungen<br>in St. Martin in Passeier</p>
+        <p class="footer__rating">
+          <svg class="icon footer__star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+          <span><strong>4,83</strong> / 5 · 66 Bewertungen</span>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Kontakt</h2>
+        <address class="footer__address">
+          Familie Pichler<br>
+          Kalmtaler Straße 5<br>
+          I-39010 St. Martin in Passeier<br>
+          Italien
+        </address>
+        <p><a href="tel:+393471604505"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg> +39 347 1604505</a></p>
+        <p><a href="mailto:info@pfandlerhof.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@pfandlerhof.com</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Seiten</h2>
+        <ul class="footer__list">
+          <li><a href="/pfandlerhof/">Startseite</a></li>
+          
+            <li><a href="/pfandlerhof/ferienwohnungen/">Wohnungen</a></li>
+          
+            <li><a href="/pfandlerhof/galerie/">Galerie</a></li>
+          
+            <li><a href="/pfandlerhof/umgebung/">Umgebung</a></li>
+          
+            <li><a href="/pfandlerhof/der-hof/">Am Hof</a></li>
+          
+            <li><a href="/pfandlerhof/kontakt/">Kontakt</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Rechtliches</h2>
+        <ul class="footer__list">
+          <li><a href="/pfandlerhof/impressum/">Impressum</a></li>
+          <li><a href="/pfandlerhof/datenschutz/">Datenschutz</a></li>
+          <li><a href="https://www.roterhahn.it/de/urlaub-auf-dem-bauernhof/suedtirol/ferienwohnungen-und-zimmer/pfandlerhof-st-martin-in-passeier+4635-1" target="_blank" rel="noopener">Roter Hahn</a></li>
+          <li><a href="https://www.airbnb.com/rooms/44055778" target="_blank" rel="noopener">Airbnb</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>©  Pfandlerhof · Familie Pichler · MwSt.-Nr. IT 01377250210</p>
+      <p class="footer__note">Alle Preise in Euro, inkl. Mehrwertsteuer. Änderungen und Irrtümer vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" aria-label="Schnellkontakt">
+  <a class="mobile-bar__item" href="tel:+393471604505">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><span>Anrufen</span>
+  </a>
+  <a class="mobile-bar__item mobile-bar__item--primary" href="/pfandlerhof/kontakt/#anfrage">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Anfrage</span>
+  </a>
+</div>
+
+
+  <dialog class="lightbox" id="lightbox" aria-label="Bildergalerie">
+  <button class="lightbox__close" type="button" data-lightbox-close aria-label="Galerie schließen">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  <img class="lightbox__img" data-lightbox-img alt="">
+  <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Vorheriges Bild">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Nächstes Bild">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </button>
+  <div class="lightbox__bar">
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <p class="lightbox__counter" data-lightbox-counter aria-live="polite"></p>
+  </div>
+</dialog>
+
+
+  <script src="/pfandlerhof/assets/js/main.js?v=mwe5bied" defer></script>
+</body>
+</html>

@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+
+  <script>
+    // Hell/Dunkel sofort setzen, damit beim Laden nichts aufblitzt.
+    (function () {
+      try {
+        var stored = localStorage.getItem("pf-theme");
+        var theme = stored === "dark" || stored === "light"
+          ? stored
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <title>Galerie · Pfandlerhof</title>
+  <meta name="description" content="Bilder der Ferienwohnungen, der Zimmer und des Ausblicks über das Passeiertal.">
+
+  <link rel="canonical" href="https://kmeans27.github.io/pfandlerhof/galerie/">
+  
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pfandlerhof">
+  <meta property="og:locale" content="de_AT">
+  <meta property="og:title" content="Galerie · Pfandlerhof">
+  <meta property="og:description" content="Bilder der Ferienwohnungen, der Zimmer und des Ausblicks über das Passeiertal.">
+  <meta property="og:url" content="https://kmeans27.github.io/pfandlerhof/galerie/">
+  <meta property="og:image" content="https://kmeans27.github.io/pfandlerhof/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/pfandlerhof/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/pfandlerhof/apple-touch-icon.png">
+
+  <link rel="preload" href="/pfandlerhof/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/pfandlerhof/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/pfandlerhof/assets/css/main.css?v=mwe5bied">
+
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="/pfandlerhof/">
+      <span class="brand__name">Pfandlerhof</span>
+      <span class="brand__sub">Ferienwohnungen in Passeier</span>
+    </a>
+
+    <nav class="site-nav" id="primary-nav" aria-label="Hauptnavigation" data-nav>
+      <ul class="site-nav__list">
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/ferienwohnungen/"
+              >Wohnungen</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link is-active"
+              href="/pfandlerhof/galerie/"
+              aria-current="page">Galerie</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/umgebung/"
+              >Umgebung</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/der-hof/"
+              >Am Hof</a>
+          </li>
+        
+          <li>
+            <a
+              class="site-nav__link"
+              href="/pfandlerhof/kontakt/"
+              >Kontakt</a>
+          </li>
+        
+      </ul>
+      <div class="site-nav__actions">
+        <button class="theme-toggle theme-toggle--menu" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <span class="theme-toggle__sun"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></span>
+            <span class="theme-toggle__moon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg></span>
+          </span>
+          <span class="theme-toggle__label" data-theme-label>Dunkelmodus</span>
+        </button>
+        <a class="site-nav__phone" href="tel:+393471604505">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><span>+39 347 1604505</span>
+        </a>
+        <a class="btn btn--primary btn--small" href="/pfandlerhof/kontakt/#anfrage">Anfrage</a>
+      </div>
+    </nav>
+
+    <div class="site-header__tools">
+      <button class="theme-toggle theme-toggle--icon" type="button" data-theme-toggle aria-pressed="false" aria-label="Dunkelmodus einschalten">
+        <span class="theme-toggle__icons" aria-hidden="true">
+          <span class="theme-toggle__sun"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></span>
+          <span class="theme-toggle__moon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg></span>
+        </span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="nav-toggle__label">Menü</span>
+        <span class="nav-toggle__icon" aria-hidden="true">
+          <svg class="icon nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main">
+    
+
+
+
+
+<section class="page-hero page-hero--plain">
+  <div class="container">
+    <div class="page-hero__text">
+      <p class="eyebrow">Galerie</p>
+      <h1>Bilder sagen mehr als Worte.</h1>
+      <p class="page-hero__lead">Ein paar Eindrücke von den Wohnungen, den Zimmern und dem Blick über das Passeiertal. Klicken oder tippen Sie auf ein Bild, um es größer zu sehen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="gallery-filters" role="group" aria-label="Galerie filtern">
+      <button type="button" class="gallery-filter" data-filter="all" aria-pressed="true">Alle</button>
+      <button type="button" class="gallery-filter" data-filter="wohnungen" aria-pressed="false">Wohnungen</button>
+      <button type="button" class="gallery-filter" data-filter="aussen" aria-pressed="false">Haus &amp; Ausblick</button>
+      <button type="button" class="gallery-filter" data-filter="hof" aria-pressed="false">Am Hof</button>
+    </div>
+    <p class="gallery-count" data-gallery-count aria-live="polite"></p>
+  </div>
+
+  <div class="container container--wide">
+    <div class="gallery__grid" data-gallery-grid>
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/hero-2400.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="aussen"
+    data-full="/pfandlerhof/assets/img/hero-2400.jpg"
+    data-caption="Der Pfandlerhof mit Blick über das Passeiertal"
+    aria-label="Bild vergrößern: Der Pfandlerhof mit Blick über das Passeiertal">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/hero-800.webp 800w, /pfandlerhof/assets/img/hero-1200.webp 1200w, /pfandlerhof/assets/img/hero-1600.webp 1600w, /pfandlerhof/assets/img/hero-2400.webp 2400w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/hero-2400.jpg"
+      srcset="/pfandlerhof/assets/img/hero-800.jpg 800w, /pfandlerhof/assets/img/hero-1200.jpg 1200w, /pfandlerhof/assets/img/hero-1600.jpg 1600w, /pfandlerhof/assets/img/hero-2400.jpg 2400w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="2400"
+      height="1350"
+      alt="Der Pfandlerhof mit Blick über das Passeiertal"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Der Pfandlerhof mit Blick über das Passeiertal</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/view-2400.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="aussen"
+    data-full="/pfandlerhof/assets/img/view-2400.jpg"
+    data-caption="Der Blick vom Hof ins Tal"
+    aria-label="Bild vergrößern: Der Blick vom Hof ins Tal">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/view-800.webp 800w, /pfandlerhof/assets/img/view-1200.webp 1200w, /pfandlerhof/assets/img/view-1600.webp 1600w, /pfandlerhof/assets/img/view-2400.webp 2400w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/view-2400.jpg"
+      srcset="/pfandlerhof/assets/img/view-800.jpg 800w, /pfandlerhof/assets/img/view-1200.jpg 1200w, /pfandlerhof/assets/img/view-1600.jpg 1600w, /pfandlerhof/assets/img/view-2400.jpg 2400w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="2400"
+      height="1350"
+      alt="Der Blick vom Hof über das Tal"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Der Blick vom Hof ins Tal</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/wohnen-1-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/wohnen-1-1600.jpg"
+    data-caption="Wohnbereich mit Balkon"
+    aria-label="Bild vergrößern: Wohnbereich mit Balkon">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-1-640.webp 640w, /pfandlerhof/assets/img/wohnen-1-960.webp 960w, /pfandlerhof/assets/img/wohnen-1-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-1-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-1-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-1-640.jpg 640w, /pfandlerhof/assets/img/wohnen-1-960.jpg 960w, /pfandlerhof/assets/img/wohnen-1-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-1-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnbereich mit Sofa und Blick zum Balkon"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Wohnbereich mit Balkon</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/wohnen-3-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/wohnen-3-1600.jpg"
+    data-caption="Wohnen und Essen in einem Raum"
+    aria-label="Bild vergrößern: Wohnen und Essen in einem Raum">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-3-640.webp 640w, /pfandlerhof/assets/img/wohnen-3-960.webp 960w, /pfandlerhof/assets/img/wohnen-3-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-3-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-3-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-3-640.jpg 640w, /pfandlerhof/assets/img/wohnen-3-960.jpg 960w, /pfandlerhof/assets/img/wohnen-3-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-3-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnbereich mit Sofa, Esstisch und Küche"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Wohnen und Essen in einem Raum</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/wohnen-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/wohnen-2-1600.jpg"
+    data-caption="Wohnküche mit Esstisch"
+    aria-label="Bild vergrößern: Wohnküche mit Esstisch">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.webp 640w, /pfandlerhof/assets/img/wohnen-2-960.webp 960w, /pfandlerhof/assets/img/wohnen-2-1400.webp 1400w, /pfandlerhof/assets/img/wohnen-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/wohnen-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/wohnen-2-640.jpg 640w, /pfandlerhof/assets/img/wohnen-2-960.jpg 960w, /pfandlerhof/assets/img/wohnen-2-1400.jpg 1400w, /pfandlerhof/assets/img/wohnen-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Wohnküche mit Esstisch und offener Küche"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Wohnküche mit Esstisch</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/essen-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/essen-1600.jpg"
+    data-caption="Esstisch mit Blick ins Grüne"
+    aria-label="Bild vergrößern: Esstisch mit Blick ins Grüne">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/essen-640.webp 640w, /pfandlerhof/assets/img/essen-960.webp 960w, /pfandlerhof/assets/img/essen-1400.webp 1400w, /pfandlerhof/assets/img/essen-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/essen-1600.jpg"
+      srcset="/pfandlerhof/assets/img/essen-640.jpg 640w, /pfandlerhof/assets/img/essen-960.jpg 960w, /pfandlerhof/assets/img/essen-1400.jpg 1400w, /pfandlerhof/assets/img/essen-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Esstisch mit Blick ins Grüne"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Esstisch mit Blick ins Grüne</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/kueche-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/kueche-1600.jpg"
+    data-caption="Küche mit Backofen und Geschirrspüler"
+    aria-label="Bild vergrößern: Küche mit Backofen und Geschirrspüler">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/kueche-640.webp 640w, /pfandlerhof/assets/img/kueche-960.webp 960w, /pfandlerhof/assets/img/kueche-1400.webp 1400w, /pfandlerhof/assets/img/kueche-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/kueche-1600.jpg"
+      srcset="/pfandlerhof/assets/img/kueche-640.jpg 640w, /pfandlerhof/assets/img/kueche-960.jpg 960w, /pfandlerhof/assets/img/kueche-1400.jpg 1400w, /pfandlerhof/assets/img/kueche-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Küche mit Backofen und Geschirrspüler"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Küche mit Backofen und Geschirrspüler</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/elternzimmer-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/elternzimmer-1600.jpg"
+    data-caption="Elternschlafzimmer"
+    aria-label="Bild vergrößern: Elternschlafzimmer">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/elternzimmer-640.webp 640w, /pfandlerhof/assets/img/elternzimmer-960.webp 960w, /pfandlerhof/assets/img/elternzimmer-1400.webp 1400w, /pfandlerhof/assets/img/elternzimmer-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/elternzimmer-1600.jpg"
+      srcset="/pfandlerhof/assets/img/elternzimmer-640.jpg 640w, /pfandlerhof/assets/img/elternzimmer-960.jpg 960w, /pfandlerhof/assets/img/elternzimmer-1400.jpg 1400w, /pfandlerhof/assets/img/elternzimmer-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Elternschlafzimmer mit Doppelbett"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Elternschlafzimmer</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/elternzimmer-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/elternzimmer-2-1600.jpg"
+    data-caption="Elternschlafzimmer, zweite Wohnung"
+    aria-label="Bild vergrößern: Elternschlafzimmer, zweite Wohnung">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/elternzimmer-2-640.webp 640w, /pfandlerhof/assets/img/elternzimmer-2-960.webp 960w, /pfandlerhof/assets/img/elternzimmer-2-1400.webp 1400w, /pfandlerhof/assets/img/elternzimmer-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/elternzimmer-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/elternzimmer-2-640.jpg 640w, /pfandlerhof/assets/img/elternzimmer-2-960.jpg 960w, /pfandlerhof/assets/img/elternzimmer-2-1400.jpg 1400w, /pfandlerhof/assets/img/elternzimmer-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Elternschlafzimmer der zweiten Wohnung"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Elternschlafzimmer, zweite Wohnung</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/kinderzimmer-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/kinderzimmer-1600.jpg"
+    data-caption="Kinderzimmer mit Etagenbett"
+    aria-label="Bild vergrößern: Kinderzimmer mit Etagenbett">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-640.webp 640w, /pfandlerhof/assets/img/kinderzimmer-960.webp 960w, /pfandlerhof/assets/img/kinderzimmer-1400.webp 1400w, /pfandlerhof/assets/img/kinderzimmer-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/kinderzimmer-1600.jpg"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-640.jpg 640w, /pfandlerhof/assets/img/kinderzimmer-960.jpg 960w, /pfandlerhof/assets/img/kinderzimmer-1400.jpg 1400w, /pfandlerhof/assets/img/kinderzimmer-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1068"
+      alt="Kinderzimmer mit Etagenbett"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Kinderzimmer mit Etagenbett</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/kinderzimmer-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/kinderzimmer-2-1600.jpg"
+    data-caption="Kinderzimmer, zweite Wohnung"
+    aria-label="Bild vergrößern: Kinderzimmer, zweite Wohnung">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-2-640.webp 640w, /pfandlerhof/assets/img/kinderzimmer-2-960.webp 960w, /pfandlerhof/assets/img/kinderzimmer-2-1400.webp 1400w, /pfandlerhof/assets/img/kinderzimmer-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/kinderzimmer-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/kinderzimmer-2-640.jpg 640w, /pfandlerhof/assets/img/kinderzimmer-2-960.jpg 960w, /pfandlerhof/assets/img/kinderzimmer-2-1400.jpg 1400w, /pfandlerhof/assets/img/kinderzimmer-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1068"
+      alt="Kinderzimmer der zweiten Wohnung"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Kinderzimmer, zweite Wohnung</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/bad-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/bad-1600.jpg"
+    data-caption="Badezimmer mit Dusche"
+    aria-label="Bild vergrößern: Badezimmer mit Dusche">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/bad-640.webp 640w, /pfandlerhof/assets/img/bad-960.webp 960w, /pfandlerhof/assets/img/bad-1400.webp 1400w, /pfandlerhof/assets/img/bad-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/bad-1600.jpg"
+      srcset="/pfandlerhof/assets/img/bad-640.jpg 640w, /pfandlerhof/assets/img/bad-960.jpg 960w, /pfandlerhof/assets/img/bad-1400.jpg 1400w, /pfandlerhof/assets/img/bad-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Badezimmer mit Dusche und Waschbecken"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Badezimmer mit Dusche</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/bad-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/bad-2-1600.jpg"
+    data-caption="Badezimmer, zweite Wohnung"
+    aria-label="Bild vergrößern: Badezimmer, zweite Wohnung">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/bad-2-640.webp 640w, /pfandlerhof/assets/img/bad-2-960.webp 960w, /pfandlerhof/assets/img/bad-2-1400.webp 1400w, /pfandlerhof/assets/img/bad-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/bad-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/bad-2-640.jpg 640w, /pfandlerhof/assets/img/bad-2-960.jpg 960w, /pfandlerhof/assets/img/bad-2-1400.jpg 1400w, /pfandlerhof/assets/img/bad-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Badezimmer der zweiten Wohnung"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Badezimmer, zweite Wohnung</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/balkon-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="wohnungen"
+    data-full="/pfandlerhof/assets/img/balkon-1600.jpg"
+    data-caption="Balkon mit Sitzgelegenheit"
+    aria-label="Bild vergrößern: Balkon mit Sitzgelegenheit">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/balkon-640.webp 640w, /pfandlerhof/assets/img/balkon-960.webp 960w, /pfandlerhof/assets/img/balkon-1400.webp 1400w, /pfandlerhof/assets/img/balkon-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/balkon-1600.jpg"
+      srcset="/pfandlerhof/assets/img/balkon-640.jpg 640w, /pfandlerhof/assets/img/balkon-960.jpg 960w, /pfandlerhof/assets/img/balkon-1400.jpg 1400w, /pfandlerhof/assets/img/balkon-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Balkon mit Tisch und Blick ins Tal"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Balkon mit Sitzgelegenheit</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/haus-terrasse-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="aussen"
+    data-full="/pfandlerhof/assets/img/haus-terrasse-1600.jpg"
+    data-caption="Terrasse und Eingang"
+    aria-label="Bild vergrößern: Terrasse und Eingang">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/haus-terrasse-640.webp 640w, /pfandlerhof/assets/img/haus-terrasse-960.webp 960w, /pfandlerhof/assets/img/haus-terrasse-1400.webp 1400w, /pfandlerhof/assets/img/haus-terrasse-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/haus-terrasse-1600.jpg"
+      srcset="/pfandlerhof/assets/img/haus-terrasse-640.jpg 640w, /pfandlerhof/assets/img/haus-terrasse-960.jpg 960w, /pfandlerhof/assets/img/haus-terrasse-1400.jpg 1400w, /pfandlerhof/assets/img/haus-terrasse-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Terrasse und Eingang des Ferienhauses"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Terrasse und Eingang</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/haus-strasse-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="aussen"
+    data-full="/pfandlerhof/assets/img/haus-strasse-1600.jpg"
+    data-caption="Der Weg zum Hof"
+    aria-label="Bild vergrößern: Der Weg zum Hof">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/haus-strasse-640.webp 640w, /pfandlerhof/assets/img/haus-strasse-960.webp 960w, /pfandlerhof/assets/img/haus-strasse-1400.webp 1400w, /pfandlerhof/assets/img/haus-strasse-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/haus-strasse-1600.jpg"
+      srcset="/pfandlerhof/assets/img/haus-strasse-640.jpg 640w, /pfandlerhof/assets/img/haus-strasse-960.jpg 960w, /pfandlerhof/assets/img/haus-strasse-1400.jpg 1400w, /pfandlerhof/assets/img/haus-strasse-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Der Weg zum Pfandlerhof"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Der Weg zum Hof</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/haus-strasse-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="aussen"
+    data-full="/pfandlerhof/assets/img/haus-strasse-2-1600.jpg"
+    data-caption="Der Hof von der Straße"
+    aria-label="Bild vergrößern: Der Hof von der Straße">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/haus-strasse-2-640.webp 640w, /pfandlerhof/assets/img/haus-strasse-2-960.webp 960w, /pfandlerhof/assets/img/haus-strasse-2-1400.webp 1400w, /pfandlerhof/assets/img/haus-strasse-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/haus-strasse-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/haus-strasse-2-640.jpg 640w, /pfandlerhof/assets/img/haus-strasse-2-960.jpg 960w, /pfandlerhof/assets/img/haus-strasse-2-1400.jpg 1400w, /pfandlerhof/assets/img/haus-strasse-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Der Pfandlerhof von der Straße aus"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Der Hof von der Straße</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/spielplatz-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="hof"
+    data-full="/pfandlerhof/assets/img/spielplatz-1600.jpg"
+    data-caption="Spielplatz am Hof"
+    aria-label="Bild vergrößern: Spielplatz am Hof">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/spielplatz-640.webp 640w, /pfandlerhof/assets/img/spielplatz-960.webp 960w, /pfandlerhof/assets/img/spielplatz-1400.webp 1400w, /pfandlerhof/assets/img/spielplatz-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/spielplatz-1600.jpg"
+      srcset="/pfandlerhof/assets/img/spielplatz-640.jpg 640w, /pfandlerhof/assets/img/spielplatz-960.jpg 960w, /pfandlerhof/assets/img/spielplatz-1400.jpg 1400w, /pfandlerhof/assets/img/spielplatz-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Spielplatz mit Schaukel am Hof"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Spielplatz am Hof</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/spielplatz-2-1600.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="hof"
+    data-full="/pfandlerhof/assets/img/spielplatz-2-1600.jpg"
+    data-caption="Spielplatz und Rutsche"
+    aria-label="Bild vergrößern: Spielplatz und Rutsche">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/spielplatz-2-640.webp 640w, /pfandlerhof/assets/img/spielplatz-2-960.webp 960w, /pfandlerhof/assets/img/spielplatz-2-1400.webp 1400w, /pfandlerhof/assets/img/spielplatz-2-1600.webp 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/spielplatz-2-1600.jpg"
+      srcset="/pfandlerhof/assets/img/spielplatz-2-640.jpg 640w, /pfandlerhof/assets/img/spielplatz-2-960.jpg 960w, /pfandlerhof/assets/img/spielplatz-2-1400.jpg 1400w, /pfandlerhof/assets/img/spielplatz-2-1600.jpg 1600w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1600"
+      height="1067"
+      alt="Spielplatz mit Rutsche und Wiese"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Spielplatz und Rutsche</span>
+  </a>
+
+      
+        
+  
+  <a
+    href="/pfandlerhof/assets/img/fruehstueck-1024.jpg"
+    class="gallery__item"
+    data-lightbox
+    data-category="hof"
+    data-full="/pfandlerhof/assets/img/fruehstueck-1024.jpg"
+    data-caption="Frühstückskorb mit hofeigenen Produkten"
+    aria-label="Bild vergrößern: Frühstückskorb mit hofeigenen Produkten">
+    
+  
+  
+  
+  
+  <picture class="picture">
+    <source
+      type="image/webp"
+      srcset="/pfandlerhof/assets/img/fruehstueck-640.webp 640w, /pfandlerhof/assets/img/fruehstueck-1024.webp 1024w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw">
+    <img
+      src="/pfandlerhof/assets/img/fruehstueck-1024.jpg"
+      srcset="/pfandlerhof/assets/img/fruehstueck-640.jpg 640w, /pfandlerhof/assets/img/fruehstueck-1024.jpg 1024w"
+      sizes="(min-width: 1000px) 33vw, (min-width: 640px) 50vw, 100vw"
+      width="1024"
+      height="698"
+      alt="Frühstückskorb mit hofeigenen Produkten auf der Terrasse"
+      class="gallery__img"
+      loading="lazy"
+      decoding="async"
+      >
+  </picture>
+
+    <span class="gallery__caption">Frühstückskorb mit hofeigenen Produkten</span>
+  </a>
+
+      
+    </div>
+  </div>
+
+  <div class="container">
+    
+  <p class="note"><svg class="icon note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg><span>Die Fotos zeigen beide Ferienwohnungen. Möbel und Dekoration können leicht variieren – fragen Sie einfach nach, wenn Ihnen etwas wichtig ist.</span></p>
+
+  </div>
+</section>
+
+
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <p class="eyebrow eyebrow--light">Anfrage senden</p>
+        <h2>Gefällt Ihnen, was Sie sehen?</h2>
+        <p>Dann schreiben Sie uns – wir beantworten gerne alle Fragen zu den Wohnungen, zum Hof und zur Anreise.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--light" href="/pfandlerhof/kontakt/#anfrage">
+          <span>Anfrage senden</span><svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+        </a>
+        <a class="cta-band__link" href="tel:+393471604505"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg> +39 347 1604505</a>
+        <a class="cta-band__link" href="mailto:info@pfandlerhof.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@pfandlerhof.com</a>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__name">Pfandlerhof</p>
+        <p class="footer__tagline">Ferienwohnungen<br>in St. Martin in Passeier</p>
+        <p class="footer__rating">
+          <svg class="icon footer__star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+          <span><strong>4,83</strong> / 5 · 66 Bewertungen</span>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Kontakt</h2>
+        <address class="footer__address">
+          Familie Pichler<br>
+          Kalmtaler Straße 5<br>
+          I-39010 St. Martin in Passeier<br>
+          Italien
+        </address>
+        <p><a href="tel:+393471604505"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg> +39 347 1604505</a></p>
+        <p><a href="mailto:info@pfandlerhof.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> info@pfandlerhof.com</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Seiten</h2>
+        <ul class="footer__list">
+          <li><a href="/pfandlerhof/">Startseite</a></li>
+          
+            <li><a href="/pfandlerhof/ferienwohnungen/">Wohnungen</a></li>
+          
+            <li><a href="/pfandlerhof/galerie/">Galerie</a></li>
+          
+            <li><a href="/pfandlerhof/umgebung/">Umgebung</a></li>
+          
+            <li><a href="/pfandlerhof/der-hof/">Am Hof</a></li>
+          
+            <li><a href="/pfandlerhof/kontakt/">Kontakt</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Rechtliches</h2>
+        <ul class="footer__list">
+          <li><a href="/pfandlerhof/impressum/">Impressum</a></li>
+          <li><a href="/pfandlerhof/datenschutz/">Datenschutz</a></li>
+          <li><a href="https://www.roterhahn.it/de/urlaub-auf-dem-bauernhof/suedtirol/ferienwohnungen-und-zimmer/pfandlerhof-st-martin-in-passeier+4635-1" target="_blank" rel="noopener">Roter Hahn</a></li>
+          <li><a href="https://www.airbnb.com/rooms/44055778" target="_blank" rel="noopener">Airbnb</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>©  Pfandlerhof · Familie Pichler · MwSt.-Nr. IT 01377250210</p>
+      <p class="footer__note">Alle Preise in Euro, inkl. Mehrwertsteuer. Änderungen und Irrtümer vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" aria-label="Schnellkontakt">
+  <a class="mobile-bar__item" href="tel:+393471604505">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 5.4 5.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><span>Anrufen</span>
+  </a>
+  <a class="mobile-bar__item mobile-bar__item--primary" href="/pfandlerhof/kontakt/#anfrage">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Anfrage</span>
+  </a>
+</div>
+
+
+  <dialog class="lightbox" id="lightbox" aria-label="Bildergalerie">
+  <button class="lightbox__close" type="button" data-lightbox-close aria-label="Galerie schließen">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  <img class="lightbox__img" data-lightbox-img alt="">
+  <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Vorheriges Bild">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Nächstes Bild">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+  </button>
+  <div class="lightbox__bar">
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <p class="lightbox__counter" data-lightbox-counter aria-live="polite"></p>
+  </div>
+</dialog>
+
+
+  <script src="/pfandlerhof/assets/js/main.js?v=mwe5bied" defer></script>
+</body>
+</html>
